@@ -1,7 +1,7 @@
 /* =========================================================
    VALTARA
    NAVBAR
-   ========================================================= */
+========================================================= */
 
 .valtara-navbar {
   position: sticky;
@@ -17,7 +17,7 @@
 
 /* =========================================================
    CONTENEDOR PRINCIPAL
-   ========================================================= */
+========================================================= */
 
 .valtara-navbar__container {
   width: 100%;
@@ -36,7 +36,7 @@
 
 /* =========================================================
    MARCA
-   ========================================================= */
+========================================================= */
 
 .valtara-brand {
   flex-shrink: 0;
@@ -52,8 +52,8 @@
 }
 
 /* =========================================================
-   LOGO TEMPORAL
-   ========================================================= */
+   LOGO
+========================================================= */
 
 .valtara-brand__logo {
   width: 46px;
@@ -87,7 +87,7 @@
 
 /* =========================================================
    NOMBRE Y DESCRIPTOR
-   ========================================================= */
+========================================================= */
 
 .valtara-brand__text {
   display: flex;
@@ -127,8 +127,8 @@
 }
 
 /* =========================================================
-   NAVEGACIÓN
-   ========================================================= */
+   NAVEGACIÓN DESKTOP
+========================================================= */
 
 .valtara-navbar__navigation {
   flex: 1;
@@ -140,12 +140,14 @@
 
   gap: 28px;
 
-  margin-left: 150px;
+  margin-left: 80px;
+
+  min-width: 0;
 }
 
 /* =========================================================
    ENLACES
-   ========================================================= */
+========================================================= */
 
 .valtara-navbar__link {
   position: relative;
@@ -157,6 +159,8 @@
   min-height: 44px;
 
   width: 105px;
+
+  flex-shrink: 0;
 
   padding: 5px 0;
 
@@ -176,7 +180,7 @@
 
 /* =========================================================
    LÍNEA DE HOVER
-   ========================================================= */
+========================================================= */
 
 .valtara-navbar__link::after {
   content: "";
@@ -207,69 +211,100 @@
 }
 
 /* =========================================================
+   BOTÓN HAMBURGUESA
+   OCULTO EN DESKTOP
+========================================================= */
+
+.valtara-navbar__menu-button {
+  display: none;
+}
+
+/* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1300px) {
-  .valtara-navbar__navigation {
-    margin-left: 80px;
+  .valtara-navbar__container {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 
-    gap: 18px;
+  .valtara-navbar__navigation {
+    margin-left: 45px;
+    gap: 14px;
   }
 
   .valtara-navbar__link {
-    width: 95px;
-
+    width: 90px;
     font-size: 12px;
   }
 }
 
 /* =========================================================
    PANTALLAS PEQUEÑAS
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1050px) {
-  .valtara-navbar__navigation {
-    margin-left: 35px;
+  .valtara-navbar__container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 
-    gap: 10px;
+  .valtara-navbar__navigation {
+    margin-left: 25px;
+    gap: 8px;
   }
 
   .valtara-navbar__link {
-    width: 80px;
-
+    width: 78px;
     font-size: 11px;
   }
 
   .valtara-brand__descriptor {
-    max-width: 200px;
-
+    max-width: 180px;
     font-size: 8px;
   }
 
   .valtara-brand__name {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
 /* =========================================================
    MÓVIL
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 760px) {
+
   .valtara-navbar__container {
     min-height: 76px;
 
-    padding: 9px 16px;
+    padding: 10px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
   }
 
-  .valtara-navbar__navigation {
-    display: none;
+  /* -----------------------------------------
+     MARCA
+  ----------------------------------------- */
+
+  .valtara-brand {
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
   }
 
   .valtara-brand__logo {
     width: 40px;
     height: 40px;
+
+    margin-top: 0;
 
     border-radius: 10px;
   }
@@ -290,5 +325,213 @@
     margin-top: 5px;
 
     font-size: 7px;
+  }
+
+  /* -----------------------------------------
+     BOTÓN HAMBURGUESA
+  ----------------------------------------- */
+
+  .valtara-navbar__menu-button {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    margin-left: 12px;
+
+    padding: 0;
+
+    border: 1px solid #d8e3ea;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    transition:
+      background 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .valtara-navbar__menu-button:hover {
+    background: #f5f9fb;
+    border-color: #b8ccd7;
+  }
+
+  .valtara-navbar__menu-button span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: #0d243b;
+
+    transition:
+      transform 180ms ease,
+      opacity 180ms ease;
+  }
+
+  /* -----------------------------------------
+     ANIMACIÓN HAMBURGUESA → X
+  ----------------------------------------- */
+
+  .valtara-navbar__menu-button.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .valtara-navbar__menu-button.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .valtara-navbar__menu-button.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* -----------------------------------------
+     MENÚ MÓVIL
+  ----------------------------------------- */
+
+  .valtara-navbar__navigation {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 8px 16px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    gap: 4px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #d8e3ea;
+
+    box-shadow: 0 10px 24px rgba(13, 36, 59, 0.08);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    pointer-events: none;
+
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease,
+      visibility 180ms ease;
+  }
+
+  /* -----------------------------------------
+     MENÚ ABIERTO
+  ----------------------------------------- */
+
+  .valtara-navbar__navigation.is-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+  }
+
+  /* -----------------------------------------
+     ENLACES MÓVILES
+  ----------------------------------------- */
+
+  .valtara-navbar__link {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    border-radius: 8px;
+
+    color: #2f4156;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    background: transparent;
+
+    transition:
+      background 180ms ease,
+      color 180ms ease;
+  }
+
+  .valtara-navbar__link:hover {
+    background: #f3f7f9;
+
+    color: #16587b;
+  }
+
+  .valtara-navbar__link::after {
+    display: none;
+  }
+}
+
+/* =========================================================
+   MÓVILES MUY PEQUEÑOS
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .valtara-navbar__container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .valtara-brand {
+    gap: 8px;
+  }
+
+  .valtara-brand__logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .valtara-brand__logo span {
+    font-size: 16px;
+  }
+
+  .valtara-brand__name {
+    font-size: 16px;
+  }
+
+  .valtara-brand__descriptor {
+    font-size: 6.5px;
+  }
+
+  .valtara-navbar__menu-button {
+    width: 42px;
+    height: 42px;
   }
 }
