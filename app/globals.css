@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ========================================
+     VALTARA — IDENTIDAD VISUAL
+     Resguardo y Recuperación Patrimonial
+     ======================================== */
+
+  /* Azules principales */
+  --valtara-navy: #2f4156;
+  --valtara-dark-blue: #0d243b;
+  --valtara-blue: #16587b;
+  --valtara-teal: #567c8d;
+  --valtara-french-blue: #3e4b8e;
+
+  /* Azules claros */
+  --valtara-sky-blue: #c8d9e6;
+  --valtara-powder-blue: #a6bcc9;
+  --valtara-rock-blue: #84b3ce;
+
+  /* Neutros */
+  --valtara-white: #ffffff;
+  --valtara-merino: #f5eedd;
+  --valtara-seashell: #fff4eb;
+  --valtara-silver: #b8c3c7;
+
+  /* Acentos */
+  --valtara-wheat: #f6e0b6;
+  --valtara-wine: #730f1a;
+  --valtara-midnight-violet: #3d1534;
+
+  /* ========================================
+     COLORES FUNCIONALES
+     ======================================== */
+
+  --background: var(--valtara-white);
+  --foreground: var(--valtara-navy);
+
+  --primary: var(--valtara-blue);
+  --primary-dark: var(--valtara-dark-blue);
+  --secondary: var(--valtara-teal);
+
+  --surface: var(--valtara-white);
+  --surface-soft: var(--valtara-sky-blue);
+
+  --border: var(--valtara-powder-blue);
+
+  --warning: var(--valtara-wheat);
+  --danger: var(--valtara-wine);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ========================================
+   CONFIGURACIÓN GENERAL
+   ======================================== */
+
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ========================================
+   ELEMENTOS GENERALES
+   ======================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ========================================
+   SELECCIÓN DE TEXTO
+   ======================================== */
+
+::selection {
+  background: var(--valtara-sky-blue);
+  color: var(--valtara-dark-blue);
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--valtara-seashell);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--valtara-powder-blue);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--valtara-teal);
 }

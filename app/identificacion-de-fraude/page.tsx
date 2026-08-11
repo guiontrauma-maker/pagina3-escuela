@@ -1,0 +1,753 @@
+import Navbar from "@/components/layout/Navbar";
+import styles from "./page.module.css";
+
+export default function IdentificacionFraudePage() {
+  return (
+    <>
+      <Navbar />
+
+      <main className={styles.page}>
+
+        {/* =====================================================
+            HERO
+            ===================================================== */}
+
+        <section className={styles.hero}>
+
+          <div className={styles.heroGlow}></div>
+
+          <div className={styles.heroContent}>
+
+            <div className={styles.eyebrow}>
+              <span></span>
+              IDENTIFICACIÓN DE FRAUDE
+            </div>
+
+            <h1>
+              ¿Crees que podrías
+              <br />
+              estar frente a un <em>fraude?</em>
+            </h1>
+
+            <p>
+              Responde algunas preguntas sobre tu situación y descubre
+              si existen señales que podrían requerir mayor atención.
+            </p>
+
+            <a
+              href="#evaluacion"
+              className={styles.heroButton}
+            >
+              Comenzar evaluación
+              <span>→</span>
+            </a>
+
+            <div className={styles.heroDisclaimer}>
+              Evaluación orientativa · No constituye una determinación legal
+            </div>
+
+          </div>
+
+          <div className={styles.heroDecoration}>
+
+            <div className={styles.decorationCircle}>
+              <span>!</span>
+            </div>
+
+            <div className={styles.decorationLine}></div>
+
+            <div className={styles.decorationLabel}>
+              ANALIZA · IDENTIFICA · ACTÚA
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            INTRO
+            ===================================================== */}
+
+        <section className={styles.intro}>
+
+          <div className={styles.introNumber}>
+            01
+          </div>
+
+          <div className={styles.introContent}>
+
+            <span>
+              ANTES DE TOMAR UNA DECISIÓN
+            </span>
+
+            <h2>
+              Las señales de alerta
+              <br />
+              pueden estar más cerca de lo que parece.
+            </h2>
+
+            <p>
+              Los fraudes pueden presentarse de muchas formas. Una
+              inversión, una compra, un préstamo, una transferencia o
+              incluso un mensaje aparentemente legítimo pueden contener
+              señales que conviene revisar.
+            </p>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            EVALUACIÓN
+            ===================================================== */}
+
+        <section
+          className={styles.evaluation}
+          id="evaluacion"
+        >
+
+          <div className={styles.evaluationHeader}>
+
+            <div>
+
+              <span className={styles.sectionLabel}>
+                EVALUACIÓN INICIAL
+              </span>
+
+              <h2>
+                Comencemos por
+                <br />
+                entender tu situación.
+              </h2>
+
+            </div>
+
+            <div className={styles.progressInfo}>
+
+              <span>
+                PASO 1 DE 4
+              </span>
+
+              <strong>
+                25%
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div className={styles.progressBar}>
+            <span></span>
+          </div>
+
+
+          <div className={styles.questionCard}>
+
+            <div className={styles.questionNumber}>
+              PREGUNTA 01
+            </div>
+
+            <h3>
+              ¿Qué tipo de situación estás enfrentando?
+            </h3>
+
+            <p>
+              Selecciona la opción que más se acerque a lo que ocurrió.
+            </p>
+
+
+            <div className={styles.options}>
+
+              <button className={styles.option}>
+                <span className={styles.optionIcon}>
+                  ◇
+                </span>
+
+                <span>
+                  Inversión
+                  <small>
+                    Propuesta o plataforma de inversión
+                  </small>
+                </span>
+
+                <b>→</b>
+              </button>
+
+
+              <button className={styles.option}>
+                <span className={styles.optionIcon}>
+                  ◈
+                </span>
+
+                <span>
+                  Transferencia bancaria
+                  <small>
+                    Pago o transferencia de dinero
+                  </small>
+                </span>
+
+                <b>→</b>
+              </button>
+
+
+              <button className={styles.option}>
+                <span className={styles.optionIcon}>
+                  □
+                </span>
+
+                <span>
+                  Compra o venta
+                  <small>
+                    Producto, servicio o comercio electrónico
+                  </small>
+                </span>
+
+                <b>→</b>
+              </button>
+
+
+              <button className={styles.option}>
+                <span className={styles.optionIcon}>
+                  ◎
+                </span>
+
+                <span>
+                  Contacto sospechoso
+                  <small>
+                    Llamada, mensaje, correo o comunicación
+                  </small>
+                </span>
+
+                <b>→</b>
+              </button>
+
+
+              <button className={styles.option}>
+                <span className={styles.optionIcon}>
+                  ○
+                </span>
+
+                <span>
+                  Préstamo o crédito
+                  <small>
+                    Oferta o solicitud relacionada con crédito
+                  </small>
+                </span>
+
+                <b>→</b>
+              </button>
+
+
+              <button className={styles.option}>
+                <span className={styles.optionIcon}>
+                  +
+                </span>
+
+                <span>
+                  Otra situación
+                  <small>
+                    Algo diferente a las opciones anteriores
+                  </small>
+                </span>
+
+                <b>→</b>
+              </button>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            SEÑALES
+            ===================================================== */}
+
+        <section className={styles.signals}>
+
+          <div className={styles.signalsHeader}>
+
+            <span>
+              SEÑALES DE ALERTA
+            </span>
+
+            <h2>
+              ¿Qué estamos buscando?
+            </h2>
+
+            <p>
+              Existen comportamientos y características que pueden
+              aumentar el nivel de riesgo de una situación.
+            </p>
+
+          </div>
+
+
+          <div className={styles.signalGrid}>
+
+            <article className={styles.signalCard}>
+
+              <div className={styles.signalIcon}>
+                !
+              </div>
+
+              <span>01</span>
+
+              <h3>
+                Presión para decidir
+              </h3>
+
+              <p>
+                Te piden realizar un pago o tomar una decisión
+                inmediatamente.
+              </p>
+
+            </article>
+
+
+            <article className={styles.signalCard}>
+
+              <div className={styles.signalIcon}>
+                %
+              </div>
+
+              <span>02</span>
+
+              <h3>
+                Ganancias garantizadas
+              </h3>
+
+              <p>
+                Prometen rendimientos extraordinarios sin explicar
+                claramente los riesgos.
+              </p>
+
+            </article>
+
+
+            <article className={styles.signalCard}>
+
+              <div className={styles.signalIcon}>
+                ◇
+              </div>
+
+              <span>03</span>
+
+              <h3>
+                Información poco clara
+              </h3>
+
+              <p>
+                No puedes verificar fácilmente quién está detrás
+                de la operación.
+              </p>
+
+            </article>
+
+
+            <article className={styles.signalCard}>
+
+              <div className={styles.signalIcon}>
+                ◈
+              </div>
+
+              <span>04</span>
+
+              <h3>
+                Solicitud de información
+              </h3>
+
+              <p>
+                Te solicitan contraseñas, códigos o información
+                financiera sensible.
+              </p>
+
+            </article>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            PROCESO
+            ===================================================== */}
+
+        <section className={styles.process}>
+
+          <div className={styles.processIntro}>
+
+            <span>
+              TU INFORMACIÓN
+            </span>
+
+            <h2>
+              Una evaluación
+              <br />
+              en cuatro pasos.
+            </h2>
+
+            <p>
+              La evaluación está diseñada para ayudarte a ordenar
+              la información y reconocer posibles señales de riesgo.
+            </p>
+
+          </div>
+
+
+          <div className={styles.processSteps}>
+
+            <div className={`${styles.processStep} ${styles.activeStep}`}>
+
+              <div className={styles.stepCircle}>
+                01
+              </div>
+
+              <div>
+                <strong>
+                  Identificamos
+                </strong>
+
+                <span>
+                  El tipo de situación
+                </span>
+              </div>
+
+            </div>
+
+
+            <div className={styles.processStep}>
+
+              <div className={styles.stepCircle}>
+                02
+              </div>
+
+              <div>
+                <strong>
+                  Analizamos
+                </strong>
+
+                <span>
+                  Las señales presentes
+                </span>
+              </div>
+
+            </div>
+
+
+            <div className={styles.processStep}>
+
+              <div className={styles.stepCircle}>
+                03
+              </div>
+
+              <div>
+                <strong>
+                  Evaluamos
+                </strong>
+
+                <span>
+                  El nivel de riesgo
+                </span>
+              </div>
+
+            </div>
+
+
+            <div className={styles.processStep}>
+
+              <div className={styles.stepCircle}>
+                04
+              </div>
+
+              <div>
+                <strong>
+                  Orientamos
+                </strong>
+
+                <span>
+                  Sobre posibles siguientes pasos
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            RESULTADO PREVIEW
+            ===================================================== */}
+
+        <section className={styles.resultSection}>
+
+          <div className={styles.resultIntro}>
+
+            <span>
+              RESULTADO
+            </span>
+
+            <h2>
+              ¿Cómo se verá
+              <br />
+              tu evaluación?
+            </h2>
+
+            <p>
+              Al finalizar podrás visualizar un nivel de riesgo
+              basado en las respuestas proporcionadas.
+            </p>
+
+          </div>
+
+
+          <div className={styles.resultCard}>
+
+            <div className={styles.resultTop}>
+
+              <div>
+
+                <span>
+                  NIVEL DE RIESGO ESTIMADO
+                </span>
+
+                <h3>
+                  Riesgo moderado
+                </h3>
+
+              </div>
+
+              <div className={styles.riskBadge}>
+                MODERADO
+              </div>
+
+            </div>
+
+
+            <div className={styles.riskScale}>
+
+              <div className={styles.scaleLabels}>
+                <span>Bajo</span>
+                <span>Moderado</span>
+                <span>Alto</span>
+              </div>
+
+              <div className={styles.scaleBar}>
+                <span></span>
+              </div>
+
+            </div>
+
+
+            <div className={styles.resultDivider}></div>
+
+
+            <div className={styles.resultMessage}>
+
+              <div className={styles.resultIcon}>
+                !
+              </div>
+
+              <div>
+
+                <strong>
+                  Algunas señales requieren atención.
+                </strong>
+
+                <p>
+                  Este resultado es orientativo. La presencia de
+                  determinadas señales no confirma por sí misma
+                  la existencia de un fraude.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <button className={styles.resultButton}>
+              Ver recomendaciones
+              <span>→</span>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            RECOMENDACIONES
+            ===================================================== */}
+
+        <section className={styles.recommendations}>
+
+          <div className={styles.recommendationHeading}>
+
+            <span>
+              MIENTRAS TANTO
+            </span>
+
+            <h2>
+              Si tienes dudas,
+              <br />
+              actúa con precaución.
+            </h2>
+
+          </div>
+
+
+          <div className={styles.recommendationList}>
+
+            <div className={styles.recommendationItem}>
+
+              <span>
+                01
+              </span>
+
+              <div>
+                <h3>
+                  No realices nuevas transferencias.
+                </h3>
+
+                <p>
+                  Si una situación genera dudas, evita enviar
+                  más dinero hasta contar con información suficiente.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div className={styles.recommendationItem}>
+
+              <span>
+                02
+              </span>
+
+              <div>
+                <h3>
+                  Conserva toda la información.
+                </h3>
+
+                <p>
+                  Guarda comprobantes, conversaciones, correos,
+                  capturas y cualquier documento relacionado.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div className={styles.recommendationItem}>
+
+              <span>
+                03
+              </span>
+
+              <div>
+                <h3>
+                  Verifica antes de confiar.
+                </h3>
+
+                <p>
+                  Comprueba la identidad de la persona o institución
+                  y utiliza canales oficiales cuando sea posible.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            DISCLAIMER
+            ===================================================== */}
+
+        <section className={styles.disclaimer}>
+
+          <div className={styles.disclaimerIcon}>
+            i
+          </div>
+
+          <div>
+
+            <strong>
+              Información importante
+            </strong>
+
+            <p>
+              La herramienta de identificación de fraude de VALTARA
+              proporciona una evaluación orientativa basada en la
+              información proporcionada por el usuario. El resultado
+              no constituye una determinación legal, financiera ni
+              profesional de la existencia de un fraude.
+            </p>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            CTA FINAL
+            ===================================================== */}
+
+        <section className={styles.finalCta}>
+
+          <div className={styles.finalGlow}></div>
+
+          <div className={styles.finalContent}>
+
+            <span>
+              VALTARA
+            </span>
+
+            <h2>
+              Cuando algo no parece correcto,
+              <br />
+              <em>vale la pena revisarlo.</em>
+            </h2>
+
+            <p>
+              Identifica las señales antes de tomar una decisión.
+            </p>
+
+            <a
+              href="#evaluacion"
+              className={styles.finalButton}
+            >
+              Comenzar evaluación
+            </a>
+
+            <div className={styles.motto}>
+              Tu patrimonio, nuestra prioridad.
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            ESPACIO PARA FUTURO FOOTER
+            ===================================================== */}
+
+        <div className={styles.footerSpace}>
+          <span>
+            VALTARA · Resguardo y Recuperación Patrimonial
+          </span>
+        </div>
+
+      </main>
+    </>
+  );
+}

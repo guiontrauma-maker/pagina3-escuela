@@ -1,0 +1,96 @@
+.actions {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.whatsapp,
+.email {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  min-height: 52px;
+  padding: 9px 16px;
+
+  border: 1px solid rgba(13, 36, 59, 0.1);
+  border-radius: 11px;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.whatsapp {
+  background: #0d243b;
+  color: #ffffff;
+}
+
+.email {
+  background: #ffffff;
+  color: #0d243b;
+}
+
+.whatsapp:hover,
+.email:hover {
+  transform: translateY(-2px);
+
+  border-color: #84b3ce;
+
+  box-shadow: 0 12px 25px rgba(13, 36, 59, 0.09);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: rgba(167, 202, 223, 0.12);
+
+  color: #a7cadf;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.email .icon {
+  background: #e9f2f6;
+  color: #16587b;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.text strong {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.text small {
+  font-size: 9px;
+  opacity: 0.58;
+}
+
+@media (max-width: 650px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .whatsapp,
+  .email {
+    width: 100%;
+  }
+}

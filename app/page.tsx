@@ -1,69 +1,923 @@
-import Image from "next/image";
+import Navbar from "@/components/layout/Navbar";
+import styles from "./page.module.css";
+
+const WHATSAPP_URL =
+  "https://wa.me/521XXXXXXXXXX?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20orientaci%C3%B3n%20sobre%20una%20situaci%C3%B3n%20relacionada%20con%20mi%20patrimonio.";
+
+const EMAIL_URL =
+  "mailto:contacto@valtara.mx?subject=Solicitud%20de%20asesor%C3%ADa";
+
+function WhatsAppIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.7 6L.2 24l6.3-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.2 21.7h-.1c-1.8 0-3.5-.5-5-1.3l-.4-.2-3.7 1 1-3.6-.2-.4a9.7 9.7 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9-.1 5.3-4.5 9.7-9.7 9.7Zm5.4-7.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5s0-.4-.1-.6c-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.4Z"
+      />
+    </svg>
+  );
+}
+
+function EmailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 4h18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.5l9 6.2 9-6.2V6H3Zm18 12V9l-8.4 5.8a1 1 0 0 1-1.2 0L3 9v9h18Z" />
+    </svg>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="m9.2 16.6-4-4 1.4-1.4 2.6 2.6 7.9-7.9 1.4 1.4-9.3 9.3Z" />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <Navbar />
+
+      <main className={styles.home}>
+
+        {/* =====================================================
+            HERO
+            ===================================================== */}
+
+        <section className={styles.hero} id="inicio">
+
+          <div className={styles.heroGlow}></div>
+
+          <div className={styles.heroContent}>
+
+            <div className={styles.badge}>
+              <span className={styles.badgeDot}></span>
+              Resguardo y Recuperación Patrimonial
+            </div>
+
+            <h1 className={styles.heroTitle}>
+              Protegemos lo que
+              <br />
+              <span>más importa.</span>
+            </h1>
+
+            <p className={styles.heroDescription}>
+              En VALTARA te ayudamos a identificar señales de fraude,
+              comprender tu situación y conocer las alternativas disponibles
+              para proteger tu patrimonio.
+            </p>
+
+            <div className={styles.heroActions}>
+
+              <a
+                href="/identificacion-de-fraude"
+                className={styles.primaryButton}
+              >
+                Identificar un posible fraude
+              </a>
+
+              <a
+                href="#como-funciona"
+                className={styles.secondaryButton}
+              >
+                Conoce cómo funciona
+              </a>
+
+            </div>
+
+            <div className={styles.heroNote}>
+              <span className={styles.noteIcon}>
+                <CheckIcon />
+              </span>
+
+              Orientación inicial · Información confidencial
+            </div>
+
+            <div className={styles.trustBar}>
+
+              <div className={styles.trustItem}>
+
+                <span className={styles.trustIcon}>
+                  <span></span>
+                </span>
+
+                <div>
+                  <strong>Información protegida</strong>
+                  <span>Tratamiento confidencial</span>
+                </div>
+
+              </div>
+
+              <div className={styles.trustItem}>
+
+                <span className={styles.trustIcon}>
+                  <span></span>
+                </span>
+
+                <div>
+                  <strong>Atención clara</strong>
+                  <span>Proceso paso a paso</span>
+                </div>
+
+              </div>
+
+              <div className={styles.trustItem}>
+
+                <span className={styles.trustIcon}>
+                  <span></span>
+                </span>
+
+                <div>
+                  <strong>Análisis inicial</strong>
+                  <span>Sin compromiso</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* ===================================================
+              PANEL
+              =================================================== */}
+
+          <div className={styles.panelWrapper}>
+
+            <div className={styles.operationalPanel}>
+
+              <div className={styles.panelHeader}>
+
+                <div className={styles.panelHeaderContent}>
+
+                  <span className={styles.panelEyebrow}>
+                    VALTARA
+                  </span>
+
+                  <h2>
+                    Tu patrimonio,
+                    <br />
+                    bajo una segunda mirada.
+                  </h2>
+
+                  <p>
+                    Indicadores generales para ayudarte a comprender
+                    posibles situaciones de riesgo patrimonial.
+                  </p>
+
+                </div>
+
+                <div className={styles.status}>
+                  <span></span>
+                  Plataforma activa
+                </div>
+
+              </div>
+
+
+              <div className={styles.panelDivider}></div>
+
+
+              {/* INDICADORES */}
+
+              <div className={styles.statsGrid}>
+
+                <div className={styles.statCard}>
+
+                  <span className={styles.statIndex}>
+                    01
+                  </span>
+
+                  <strong className={styles.statNumber}>
+                    10
+                  </strong>
+
+                  <span className={styles.statLabel}>
+                    Tipos de fraude
+                    <br />
+                    identificables
+                  </span>
+
+                </div>
+
+
+                <div className={styles.statCard}>
+
+                  <span className={styles.statIndex}>
+                    02
+                  </span>
+
+                  <strong className={styles.statNumber}>
+                    18
+                  </strong>
+
+                  <span className={styles.statLabel}>
+                    Indicadores
+                    <br />
+                    de riesgo
+                  </span>
+
+                </div>
+
+
+                <div className={styles.statCard}>
+
+                  <span className={styles.statIndex}>
+                    03
+                  </span>
+
+                  <strong className={styles.statNumber}>
+                    24<span className={styles.statPlus}>h</span>
+                  </strong>
+
+                  <span className={styles.statLabel}>
+                    Tiempo de
+                    <br />
+                    orientación
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              {/* ASESORÍA */}
+
+              <div className={styles.panelContact}>
+
+                <div className={styles.panelContactText}>
+
+                  <span>
+                    ORIENTACIÓN DIRECTA
+                  </span>
+
+                  <h3>
+                    ¿Necesitas asesoría?
+                  </h3>
+
+                  <p>
+                    Comunícate con nosotros y recibe orientación
+                    sobre tu situación.
+                  </p>
+
+                </div>
+
+
+                <div className={styles.contactOptions}>
+
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.contactOption}
+                    aria-label="Pedir asesoría por WhatsApp"
+                    title="Pedir asesoría por WhatsApp"
+                  >
+
+                    <span className={styles.contactIcon}>
+                      <WhatsAppIcon />
+                    </span>
+
+                  </a>
+
+
+                  <a
+                    href={EMAIL_URL}
+                    className={styles.contactOption}
+                    aria-label="Pedir asesoría por correo electrónico"
+                    title="Pedir asesoría por correo electrónico"
+                  >
+
+                    <span className={styles.contactIcon}>
+                      <EmailIcon />
+                    </span>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            REFERENTES
+            ===================================================== */}
+
+        <section className={styles.references}>
+
+          <p>
+            REFERENTES Y MARCOS REGULATORIOS
           </p>
+
+          <div className={styles.referenceList}>
+
+            <span>CONDUSEF</span>
+            <i></i>
+
+            <span>CNBV</span>
+            <i></i>
+
+            <span>PROFECO</span>
+            <i></i>
+
+            <span>FCA</span>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            IDENTIDAD
+            ===================================================== */}
+
+        <section className={styles.identity}>
+
+          <div className={styles.identityInner}>
+
+            <span className={styles.identityLabel}>
+              VALTARA
+            </span>
+
+            <h2>
+              Tu patrimonio,
+              <br />
+              <em>nuestra prioridad.</em>
+            </h2>
+
+            <p>
+              Protección, información y orientación para ayudarte
+              a tomar decisiones con mayor claridad frente a
+              situaciones que puedan poner en riesgo tu patrimonio.
+            </p>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            RIESGO
+            ===================================================== */}
+
+        <section
+          className={styles.riskSection}
+          id="fraude"
+        >
+
+          <div className={styles.sectionIntro}>
+
+            <span>
+              IDENTIFICACIÓN
+            </span>
+
+            <h2>
+              ¿Tu patrimonio
+              <br />
+              está en riesgo?
+            </h2>
+
+            <p>
+              Conocer las señales de alerta puede ayudarte a reconocer
+              situaciones sospechosas antes de tomar una decisión.
+            </p>
+
+          </div>
+
+
+          <div className={styles.riskGrid}>
+
+            <article className={styles.riskCard}>
+              <span className={styles.cardNumber}>01</span>
+
+              <div className={styles.cardIcon}>
+                01
+              </div>
+
+              <h3>
+                Fraude financiero
+              </h3>
+
+              <p>
+                Operaciones, servicios o propuestas que presentan
+                señales de irregularidad.
+              </p>
+            </article>
+
+
+            <article className={styles.riskCard}>
+              <span className={styles.cardNumber}>02</span>
+
+              <div className={styles.cardIcon}>
+                02
+              </div>
+
+              <h3>
+                Fraude digital
+              </h3>
+
+              <p>
+                Engaños realizados mediante plataformas digitales,
+                sitios web o comunicaciones electrónicas.
+              </p>
+            </article>
+
+
+            <article className={styles.riskCard}>
+              <span className={styles.cardNumber}>03</span>
+
+              <div className={styles.cardIcon}>
+                03
+              </div>
+
+              <h3>
+                Suplantación
+              </h3>
+
+              <p>
+                Uso indebido de identidades, instituciones o
+                información personal para generar confianza.
+              </p>
+            </article>
+
+
+            <article className={styles.riskCard}>
+              <span className={styles.cardNumber}>04</span>
+
+              <div className={styles.cardIcon}>
+                04
+              </div>
+
+              <h3>
+                Inversiones sospechosas
+              </h3>
+
+              <p>
+                Promesas de ganancias extraordinarias o condiciones
+                que requieren especial atención.
+              </p>
+            </article>
+
+
+            <article className={styles.riskCard}>
+              <span className={styles.cardNumber}>05</span>
+
+              <div className={styles.cardIcon}>
+                05
+              </div>
+
+              <h3>
+                Phishing y engaños
+              </h3>
+
+              <p>
+                Mensajes o comunicaciones diseñadas para obtener
+                información o provocar transferencias.
+              </p>
+            </article>
+
+
+            <article className={styles.riskCard}>
+              <span className={styles.cardNumber}>06</span>
+
+              <div className={styles.cardIcon}>
+                06
+              </div>
+
+              <h3>
+                Esquemas piramidales
+              </h3>
+
+              <p>
+                Modelos que dependen principalmente de incorporar
+                nuevos participantes para sostener sus operaciones.
+              </p>
+            </article>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            COMO FUNCIONA
+            ===================================================== */}
+
+        <section
+          className={styles.processSection}
+          id="como-funciona"
+        >
+
+          <div className={styles.processHeading}>
+
+            <span>
+              NUESTRO PROCESO
+            </span>
+
+            <h2>
+              Cómo te ayudamos
+            </h2>
+
+            <p>
+              Convertimos información compleja en un proceso más claro,
+              ordenado y fácil de comprender.
+            </p>
+
+          </div>
+
+
+          <div className={styles.processGrid}>
+
+            <article className={styles.processItem}>
+              <span>01</span>
+
+              <h3>
+                Identificamos
+              </h3>
+
+              <p>
+                Analizamos las señales y características principales
+                de la situación que estás enfrentando.
+              </p>
+            </article>
+
+
+            <article className={styles.processItem}>
+              <span>02</span>
+
+              <h3>
+                Organizamos
+              </h3>
+
+              <p>
+                Reunimos la información relevante para comprender
+                mejor el contexto del caso.
+              </p>
+            </article>
+
+
+            <article className={styles.processItem}>
+              <span>03</span>
+
+              <h3>
+                Orientamos
+              </h3>
+
+              <p>
+                Presentamos alternativas y próximos pasos de forma
+                clara y comprensible.
+              </p>
+            </article>
+
+
+            <article className={styles.processItem}>
+              <span>04</span>
+
+              <h3>
+                Damos seguimiento
+              </h3>
+
+              <p>
+                Facilitamos el seguimiento de la información y evolución
+                del proceso.
+              </p>
+            </article>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            MENSAJE HUMANO
+            ===================================================== */}
+
+        <section className={styles.messageSection}>
+
+          <div className={styles.messageBox}>
+
+            <div className={styles.messageAccent}></div>
+
+            <span>
+              UNA SITUACIÓN DIFÍCIL NO TIENE QUE SER CONFUSA
+            </span>
+
+            <h2>
+              No estás frente
+              <br />
+              al problema solo.
+            </h2>
+
+            <p>
+              Cuando ocurre un fraude, tomar decisiones puede resultar
+              complicado. Nuestro objetivo es ayudarte a entender la
+              situación y recuperar el control mediante información clara.
+            </p>
+
+            <a
+              href="/identificacion-de-fraude"
+              className={styles.lightButton}
+            >
+              Comenzar una evaluación
+            </a>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            TIPOS DE CASOS
+            ===================================================== */}
+
+        <section className={styles.casesSection}>
+
+          <div className={styles.sectionIntroCentered}>
+
+            <span>
+              CASOS
+            </span>
+
+            <h2>
+              Situaciones que podemos ayudarte a identificar
+            </h2>
+
+            <p>
+              Algunos de los escenarios más comunes relacionados con
+              riesgos patrimoniales y financieros.
+            </p>
+
+          </div>
+
+
+          <div className={styles.caseTags}>
+
+            <span>Fraude bancario</span>
+            <span>Inversiones fraudulentas</span>
+            <span>Criptomonedas</span>
+            <span>Phishing</span>
+            <span>Suplantación de identidad</span>
+            <span>Esquemas piramidales</span>
+            <span>Fraudes inmobiliarios</span>
+            <span>Comercio electrónico</span>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            CENTRO DE CONOCIMIENTO
+            ===================================================== */}
+
+        <section className={styles.knowledgeSection}>
+
+          <div className={styles.knowledgeHeading}>
+
+            <span>
+              CENTRO DE CONOCIMIENTO
+            </span>
+
+            <h2>
+              Información para tomar
+              <br />
+              mejores decisiones.
+            </h2>
+
+          </div>
+
+
+          <div className={styles.articleGrid}>
+
+            <article className={styles.articleCard}>
+
+              <span>
+                PREVENCIÓN
+              </span>
+
+              <h3>
+                ¿Cómo identificar una inversión sospechosa?
+              </h3>
+
+              <p>
+                Conoce algunas señales que pueden ayudarte a detectar
+                propuestas de inversión que requieren mayor atención.
+              </p>
+
+              <a href="#">
+                Leer artículo →
+              </a>
+
+            </article>
+
+
+            <article className={styles.articleCard}>
+
+              <span>
+                SEGURIDAD
+              </span>
+
+              <h3>
+                5 señales de alerta antes de transferir dinero
+              </h3>
+
+              <p>
+                Antes de realizar una operación, existen ciertos
+                indicadores que conviene revisar.
+              </p>
+
+              <a href="#">
+                Leer artículo →
+              </a>
+
+            </article>
+
+
+            <article className={styles.articleCard}>
+
+              <span>
+                ORIENTACIÓN
+              </span>
+
+              <h3>
+                ¿Qué hacer después de una posible estafa?
+              </h3>
+
+              <p>
+                Una guía inicial para organizar la información y
+                comprender los siguientes pasos.
+              </p>
+
+              <a href="#">
+                Leer artículo →
+              </a>
+
+            </article>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            PREGUNTAS FRECUENTES
+            ===================================================== */}
+
+        <section className={styles.faqSection}>
+
+          <div className={styles.faqHeading}>
+
+            <span>
+              PREGUNTAS FRECUENTES
+            </span>
+
+            <h2>
+              Respuestas claras
+              <br />
+              para tus dudas.
+            </h2>
+
+          </div>
+
+
+          <div className={styles.faqList}>
+
+            <details>
+              <summary>
+                ¿VALTARA puede recuperar mi dinero?
+                <span>+</span>
+              </summary>
+
+              <p>
+                VALTARA funciona como una plataforma de orientación y
+                seguimiento. La recuperación de fondos depende de las
+                características y circunstancias de cada caso.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>
+                ¿Qué información necesito proporcionar?
+                <span>+</span>
+              </summary>
+
+              <p>
+                Inicialmente puedes proporcionar información general
+                sobre la situación para identificar posibles señales
+                de riesgo.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>
+                ¿Mis datos son confidenciales?
+                <span>+</span>
+              </summary>
+
+              <p>
+                La plataforma está diseñada bajo un enfoque de
+                confidencialidad y protección de la información.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>
+                ¿Qué hago si todavía estoy siendo contactado?
+                <span>+</span>
+              </summary>
+
+              <p>
+                Evita compartir información adicional o realizar nuevas
+                transferencias hasta comprender mejor la situación.
+              </p>
+            </details>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            CTA FINAL
+            ===================================================== */}
+
+        <section className={styles.finalCta}>
+
+          <div className={styles.finalCtaGlow}></div>
+
+          <div className={styles.finalCtaContent}>
+
+            <span>
+              VALTARA
+            </span>
+
+            <h2>
+              Tu patrimonio merece
+              <br />
+              una segunda mirada.
+            </h2>
+
+            <p>
+              Identifica las señales. Comprende tu situación.
+              Decide con información.
+            </p>
+
+            <a
+              href="/identificacion-de-fraude"
+              className={styles.finalButton}
+            >
+              Iniciar evaluación
+            </a>
+
+            <div className={styles.finalMotto}>
+              Tu patrimonio, nuestra prioridad.
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            ESPACIO PARA FOOTER FUTURO
+            ===================================================== */}
+
+        <div className={styles.footerSpace}>
+
+          <span>
+            VALTARA · Resguardo y Recuperación Patrimonial
+          </span>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
       </main>
-    </div>
+
+
+      {/* =====================================================
+          WHATSAPP FLOTANTE
+          ===================================================== */}
+
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.floatingWhatsapp}
+        aria-label="Contactar a VALTARA por WhatsApp"
+        title="WhatsApp"
+      >
+        <WhatsAppIcon />
+      </a>
+
+    </>
   );
 }
