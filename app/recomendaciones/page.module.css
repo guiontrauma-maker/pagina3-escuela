@@ -1,0 +1,1101 @@
+/* =========================================================
+   VALTARA
+   RECOMENDACIONES
+   ========================================================= */
+
+.page {
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #f5eeeb;
+
+  color: #0d243b;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 105px 7vw 115px;
+
+  background: #f5eeeb;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -250px;
+  top: -250px;
+
+  border: 1px solid rgba(22, 88, 123, 0.08);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 70px rgba(22, 88, 123, 0.025),
+    0 0 0 140px rgba(22, 88, 123, 0.018);
+
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1100px, 100%);
+
+  margin: 0 auto;
+}
+
+.heroEyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #16587b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.heroEyebrow::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #567c8d;
+}
+
+.heroGrid {
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  align-items: end;
+
+  gap: 80px;
+
+  margin-top: 28px;
+}
+
+.heroTitle h1 {
+  margin: 0;
+
+  color: #0d243b;
+
+  font-size: clamp(48px, 6.2vw, 78px);
+
+  line-height: 0.96;
+
+  letter-spacing: -0.05em;
+
+  font-weight: 800;
+}
+
+.heroTitle h1 em {
+  color: #567c8d;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.heroDescription {
+  max-width: 470px;
+
+  padding-bottom: 6px;
+}
+
+.heroDescription p {
+  margin: 0 0 16px;
+
+  color: #617582;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+.heroDescription span {
+  display: block;
+
+  color: #9aa6ab;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESULTADO
+   ========================================================= */
+
+.resultSection {
+  width: min(1100px, 90%);
+
+  margin: 0 auto;
+
+  padding: 100px 0 120px;
+}
+
+.resultHeader {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 45px;
+}
+
+.sectionLabel {
+  color: #16587b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+}
+
+.resultHeader h2 {
+  margin: 16px 0 0;
+
+  color: #0d243b;
+
+  font-size: clamp(38px, 4.5vw, 58px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.resultHeader h2 em {
+  color: #730f1a;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.riskBadge {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 5px;
+
+  padding-bottom: 5px;
+}
+
+.riskBadge span {
+  color: #8a999f;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.riskBadge strong {
+  padding: 9px 14px;
+
+  border-radius: 99px;
+
+  background: rgba(115, 15, 26, 0.08);
+
+  color: #730f1a;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+}
+
+.riskCard {
+  padding: 35px;
+
+  border: 1px solid rgba(13, 36, 59, 0.09);
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow: 0 25px 60px rgba(13, 36, 59, 0.07);
+}
+
+.riskScale {
+  margin-bottom: 35px;
+}
+
+.scaleLabels {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  color: #8998a0;
+
+  font-size: 9px;
+}
+
+.scaleBar {
+  position: relative;
+
+  width: 100%;
+
+  height: 8px;
+
+  border-radius: 99px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #84b3ce 0%,
+      #f6e0b6 50%,
+      #730f1a 100%
+    );
+}
+
+.scaleBar span {
+  position: absolute;
+
+  top: 50%;
+  left: 55%;
+
+  width: 16px;
+  height: 16px;
+
+  transform: translate(-50%, -50%);
+
+  border: 3px solid #ffffff;
+
+  border-radius: 50%;
+
+  background: #730f1a;
+
+  box-shadow: 0 3px 9px rgba(13, 36, 59, 0.18);
+}
+
+.riskExplanation {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+
+  padding-top: 28px;
+
+  border-top: 1px solid rgba(13, 36, 59, 0.08);
+}
+
+.riskIcon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(115, 15, 26, 0.08);
+
+  color: #730f1a;
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+.riskExplanation strong {
+  display: block;
+
+  color: #0d243b;
+
+  font-size: 13px;
+}
+
+.riskExplanation p {
+  max-width: 800px;
+
+  margin: 7px 0 0;
+
+  color: #718390;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   SEÑALES
+   ========================================================= */
+
+.signalsSection {
+  padding: 120px 7vw;
+
+  background: #e9f2f6;
+}
+
+.signalsIntro {
+  width: min(1100px, 100%);
+
+  margin: 0 auto 55px;
+}
+
+.signalsIntro h2 {
+  margin: 16px 0 18px;
+
+  color: #0d243b;
+
+  font-size: clamp(38px, 4.5vw, 58px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.signalsIntro h2 em {
+  color: #730f1a;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.signalsIntro p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #657a88;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.signalList {
+  width: min(1100px, 100%);
+
+  margin: 0 auto;
+
+  border-top: 1px solid rgba(13, 36, 59, 0.12);
+}
+
+.signalItem {
+  display: grid;
+
+  grid-template-columns: 55px 55px 1fr;
+
+  align-items: start;
+
+  gap: 20px;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid rgba(13, 36, 59, 0.12);
+}
+
+.signalNumber {
+  color: #84b3ce;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.signalIcon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: rgba(115, 15, 26, 0.08);
+
+  font-size: 17px;
+
+  filter: grayscale(1) sepia(0.25) saturate(1.8);
+}
+
+.signalContent h3 {
+  margin: 0 0 8px;
+
+  color: #0d243b;
+
+  font-size: 17px;
+}
+
+.signalContent p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #687c87;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   ACCIONES
+   ========================================================= */
+
+.actionSection {
+  width: min(1100px, 90%);
+
+  margin: 0 auto;
+
+  padding: 125px 0;
+}
+
+.actionIntro {
+  max-width: 700px;
+
+  margin-bottom: 55px;
+}
+
+.actionIntro h2 {
+  margin: 16px 0 18px;
+
+  color: #0d243b;
+
+  font-size: clamp(38px, 4.5vw, 58px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.actionIntro h2 em {
+  color: #730f1a;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.actionIntro p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #657a88;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.actionGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+}
+
+.actionCard {
+  position: relative;
+
+  min-height: 250px;
+
+  padding: 30px;
+
+  border: 1px solid rgba(13, 36, 59, 0.09);
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.actionCard:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 45px rgba(13, 36, 59, 0.08);
+}
+
+.actionNumber {
+  position: absolute;
+
+  top: 28px;
+  right: 28px;
+
+  color: #b0bcc1;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.actionIcon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 12px;
+
+  background: #e9f2f6;
+
+  font-size: 19px;
+
+  filter: grayscale(1) sepia(0.25) saturate(1.8);
+}
+
+.actionCard h3 {
+  margin: 0 0 10px;
+
+  color: #0d243b;
+
+  font-size: 18px;
+}
+
+.actionCard p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: #6d808b;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   EVIDENCIA
+   ========================================================= */
+
+.evidenceSection {
+  padding: 120px 7vw;
+
+  background: #0d243b;
+
+  color: #ffffff;
+}
+
+.evidenceHeader {
+  width: min(1100px, 100%);
+
+  margin: 0 auto 55px;
+}
+
+.evidenceHeader .sectionLabel {
+  color: #a7cadf;
+}
+
+.evidenceHeader h2 {
+  margin: 16px 0 0;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 4.5vw, 58px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.evidenceHeader h2 em {
+  color: #f6e0b6;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.evidenceGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  width: min(1100px, 100%);
+
+  margin: 0 auto;
+}
+
+.evidenceColumn {
+  min-height: 210px;
+
+  padding: 0 28px;
+
+  border-left: 1px solid rgba(167, 202, 223, 0.15);
+}
+
+.evidenceColumn:first-child {
+  padding-left: 0;
+
+  border-left: 0;
+}
+
+.evidenceColumn > span {
+  color: #84b3ce;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.evidenceColumn h3 {
+  margin: 28px 0 10px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+.evidenceColumn p {
+  margin: 0;
+
+  color: rgba(245, 238, 235, 0.53);
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+.contactSection {
+  padding: 115px 7vw;
+
+  background: #f5eeeb;
+}
+
+.contactInner {
+  display: grid;
+
+  grid-template-columns: 1fr 0.7fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  width: min(1000px, 100%);
+
+  margin: 0 auto;
+}
+
+.contactText > span {
+  color: #16587b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+}
+
+.contactText h2 {
+  margin: 17px 0;
+
+  color: #0d243b;
+
+  font-size: clamp(40px, 4.5vw, 58px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.contactText h2 em {
+  color: #730f1a;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.contactText p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #657a88;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.contactActions {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 54px;
+
+  padding: 0 20px;
+
+  border-radius: 9px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.primaryButton {
+  background: #0d243b;
+
+  color: #ffffff;
+}
+
+.primaryButton span {
+  color: #a7cadf;
+
+  font-size: 17px;
+}
+
+.secondaryButton {
+  border: 1px solid rgba(13, 36, 59, 0.15);
+
+  background: transparent;
+
+  color: #0d243b;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.primaryButton:hover {
+  background: #16587b;
+}
+
+.secondaryButton:hover {
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   SEGURIDAD
+   ========================================================= */
+
+.securitySection {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  width: min(850px, 90%);
+
+  margin: 0 auto;
+
+  padding: 70px 0;
+
+  color: #657a88;
+}
+
+.securityIcon {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #a7cadf;
+
+  border-radius: 50%;
+
+  font-size: 13px;
+
+  filter: grayscale(1);
+}
+
+.securitySection strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #0d243b;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+.securitySection p {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   DISCLAIMER
+   ========================================================= */
+
+.disclaimer {
+  width: min(850px, 90%);
+
+  margin: 0 auto;
+
+  padding: 0 0 70px;
+}
+
+.disclaimer > span {
+  color: #16587b;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.disclaimer p {
+  margin: 10px 0 0;
+
+  color: #87959b;
+
+  font-size: 10px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   FOOTER SPACE
+   ========================================================= */
+
+.footerSpace {
+  min-height: 160px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 20px;
+
+  background: #e9f2f6;
+
+  color: rgba(13, 36, 59, 0.35);
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .actionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .evidenceGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px 0;
+  }
+
+  .evidenceColumn:nth-child(3) {
+    padding-left: 0;
+
+    border-left: 0;
+  }
+
+  .contactInner {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .hero {
+    padding: 80px 20px 90px;
+  }
+
+  .heroGrid {
+    gap: 28px;
+  }
+
+  .resultSection {
+    width: calc(100% - 40px);
+
+    padding: 80px 0 90px;
+  }
+
+  .resultHeader {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .riskBadge {
+    align-items: flex-start;
+  }
+
+  .riskCard {
+    padding: 25px 20px;
+  }
+
+  .signalsSection {
+    padding: 85px 20px;
+  }
+
+  .signalItem {
+    grid-template-columns: 40px 48px 1fr;
+
+    gap: 12px;
+  }
+
+  .actionSection {
+    width: calc(100% - 40px);
+
+    padding: 85px 0;
+  }
+
+  .actionCard {
+    min-height: auto;
+
+    padding: 25px 20px;
+  }
+
+  .evidenceSection {
+    padding: 85px 20px;
+  }
+
+  .evidenceGrid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .evidenceColumn,
+  .evidenceColumn:nth-child(3) {
+    min-height: auto;
+
+    padding: 0 0 30px;
+
+    border-left: 0;
+
+    border-bottom: 1px solid rgba(167, 202, 223, 0.15);
+  }
+
+  .evidenceColumn:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+  }
+
+  .contactSection {
+    padding: 85px 20px;
+  }
+
+  .securitySection {
+    padding: 55px 0;
+  }
+
+  .disclaimer {
+    padding-bottom: 55px;
+  }
+
+  .footerSpace {
+    min-height: 140px;
+  }
+
+}

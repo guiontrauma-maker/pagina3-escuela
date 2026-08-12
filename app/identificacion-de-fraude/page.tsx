@@ -1,7 +1,64 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import styles from "./page.module.css";
 
+type FraudType =
+  | "Inversión"
+  | "Transferencia bancaria"
+  | "Compra o venta"
+  | "Contacto sospechoso"
+  | "Préstamo o crédito"
+  | "Otra situación"
+  | null;
+
+type Answer = "si" | "no" | null;
+
 export default function IdentificacionFraudePage() {
+  const [fraudType, setFraudType] = useState<FraudType>(null);
+  const [stillContacting, setStillContacting] = useState<Answer>(null);
+  const [askedForMore, setAskedForMore] = useState<Answer>(null);
+  const [showQuestions, setShowQuestions] = useState(false);
+  const [showFinalActions, setShowFinalActions] = useState(false);
+
+  const currentStep = useMemo(() => {
+    if (!fraudType) return 1;
+    if (!stillContacting) return 2;
+    if (!askedForMore) return 3;
+    return 4;
+  }, [fraudType, stillContacting, askedForMore]);
+
+  const progress = (currentStep / 4) * 100;
+
+  const selectFraudType = (type: FraudType) => {
+    setFraudType(type);
+    setStillContacting(null);
+    setAskedForMore(null);
+    setShowQuestions(true);
+    setShowFinalActions(false);
+  };
+
+  const selectStillContacting = (answer: Answer) => {
+    setStillContacting(answer);
+    setAskedForMore(null);
+    setShowFinalActions(false);
+  };
+
+  const selectAskedForMore = (answer: Answer) => {
+    setAskedForMore(answer);
+    setShowFinalActions(true);
+  };
+
+  const resetEvaluation = () => {
+    setFraudType(null);
+    setStillContacting(null);
+    setAskedForMore(null);
+    setShowQuestions(false);
+    setShowFinalActions(false);
+  };
+
   return (
     <>
       <Navbar />
@@ -9,61 +66,44 @@ export default function IdentificacionFraudePage() {
       <main className={styles.page}>
 
         {/* =====================================================
-            HERO
-            ===================================================== */}
+    HERO
+    ===================================================== */}
 
-        <section className={styles.hero}>
+<section className={styles.hero}>
 
-          <div className={styles.heroGlow}></div>
+  <div className={styles.heroContent}>
 
-          <div className={styles.heroContent}>
+    <div className={styles.eyebrow}>
+      <span></span>
+      IDENTIFICACIÓN DE FRAUDE
+    </div>
 
-            <div className={styles.eyebrow}>
-              <span></span>
-              IDENTIFICACIÓN DE FRAUDE
-            </div>
+    <h1>
+      ¿Crees que podrías
+      <br />
+      estar frente a un <em>fraude?</em>
+    </h1>
 
-            <h1>
-              ¿Crees que podrías
-              <br />
-              estar frente a un <em>fraude?</em>
-            </h1>
+    <p>
+      Responde algunas preguntas sobre tu situación y descubre
+      si existen señales que podrían requerir mayor atención.
+    </p>
 
-            <p>
-              Responde algunas preguntas sobre tu situación y descubre
-              si existen señales que podrían requerir mayor atención.
-            </p>
+    <a
+      href="#evaluacion"
+      className={styles.heroButton}
+    >
+      Comenzar evaluación
+      <span>→</span>
+    </a>
 
-            <a
-              href="#evaluacion"
-              className={styles.heroButton}
-            >
-              Comenzar evaluación
-              <span>→</span>
-            </a>
+    <div className={styles.heroDisclaimer}>
+      Evaluación orientativa · No constituye una determinación legal
+    </div>
 
-            <div className={styles.heroDisclaimer}>
-              Evaluación orientativa · No constituye una determinación legal
-            </div>
+  </div>
 
-          </div>
-
-          <div className={styles.heroDecoration}>
-
-            <div className={styles.decorationCircle}>
-              <span>!</span>
-            </div>
-
-            <div className={styles.decorationLine}></div>
-
-            <div className={styles.decorationLabel}>
-              ANALIZA · IDENTIFICA · ACTÚA
-            </div>
-
-          </div>
-
-        </section>
-
+</section>
 
         {/* =====================================================
             INTRO
@@ -127,11 +167,11 @@ export default function IdentificacionFraudePage() {
             <div className={styles.progressInfo}>
 
               <span>
-                PASO 1 DE 4
+                PASO {currentStep} DE 4
               </span>
 
               <strong>
-                25%
+                {Math.round(progress)}%
               </strong>
 
             </div>
@@ -140,125 +180,354 @@ export default function IdentificacionFraudePage() {
 
 
           <div className={styles.progressBar}>
-            <span></span>
+            <span
+              style={{
+                width: `${progress}%`,
+              }}
+            ></span>
           </div>
 
 
-          <div className={styles.questionCard}>
+          {/* =================================================
+              PREGUNTA 1
+              ================================================= */}
 
-            <div className={styles.questionNumber}>
-              PREGUNTA 01
+          {!showQuestions && !fraudType && (
+            <div className={styles.questionCard}>
+
+              <div className={styles.questionNumber}>
+                PREGUNTA 01
+              </div>
+
+              <h3>
+                ¿Qué tipo de situación estás enfrentando?
+              </h3>
+
+              <p>
+                Selecciona la opción que más se acerque a lo que ocurrió.
+              </p>
+
+              <div className={styles.options}>
+
+                <button
+                  type="button"
+                  className={styles.option}
+                  onClick={() => selectFraudType("Inversión")}
+                >
+                  <span className={styles.optionIcon}>💰</span>
+
+                  <span>
+                    Inversión
+                    <small>
+                      Propuesta o plataforma de inversión
+                    </small>
+                  </span>
+
+                  <b>→</b>
+                </button>
+
+
+                <button
+                  type="button"
+                  className={styles.option}
+                  onClick={() => selectFraudType("Transferencia bancaria")}
+                >
+                  <span className={styles.optionIcon}>🏦</span>
+
+                  <span>
+                    Transferencia bancaria
+                    <small>
+                      Pago o transferencia de dinero
+                    </small>
+                  </span>
+
+                  <b>→</b>
+                </button>
+
+
+                <button
+                  type="button"
+                  className={styles.option}
+                  onClick={() => selectFraudType("Compra o venta")}
+                >
+                  <span className={styles.optionIcon}>🛒</span>
+
+                  <span>
+                    Compra o venta
+                    <small>
+                      Producto, servicio o comercio electrónico
+                    </small>
+                  </span>
+
+                  <b>→</b>
+                </button>
+
+
+                <button
+                  type="button"
+                  className={styles.option}
+                  onClick={() => selectFraudType("Contacto sospechoso")}
+                >
+                  <span className={styles.optionIcon}>📱</span>
+
+                  <span>
+                    Contacto sospechoso
+                    <small>
+                      Llamada, mensaje, correo o comunicación
+                    </small>
+                  </span>
+
+                  <b>→</b>
+                </button>
+
+
+                <button
+                  type="button"
+                  className={styles.option}
+                  onClick={() => selectFraudType("Préstamo o crédito")}
+                >
+                  <span className={styles.optionIcon}>💳</span>
+
+                  <span>
+                    Préstamo o crédito
+                    <small>
+                      Oferta o solicitud relacionada con crédito
+                    </small>
+                  </span>
+
+                  <b>→</b>
+                </button>
+
+
+                <button
+                  type="button"
+                  className={styles.option}
+                  onClick={() => selectFraudType("Otra situación")}
+                >
+                  <span className={styles.optionIcon}>❓</span>
+
+                  <span>
+                    Otra situación
+                    <small>
+                      Algo diferente a las opciones anteriores
+                    </small>
+                  </span>
+
+                  <b>→</b>
+                </button>
+
+              </div>
+
             </div>
-
-            <h3>
-              ¿Qué tipo de situación estás enfrentando?
-            </h3>
-
-            <p>
-              Selecciona la opción que más se acerque a lo que ocurrió.
-            </p>
+          )}
 
 
-            <div className={styles.options}>
+          {/* =================================================
+              PREGUNTA 2
+              ================================================= */}
 
-              <button className={styles.option}>
-                <span className={styles.optionIcon}>
-                  ◇
+          {fraudType && !stillContacting && (
+            <div className={styles.questionCard}>
+
+              <div className={styles.questionTopRow}>
+                <div className={styles.questionNumber}>
+                  PREGUNTA 02
+                </div>
+
+                <span className={styles.selectedType}>
+                  {fraudType}
                 </span>
+              </div>
 
-                <span>
-                  Inversión
-                  <small>
-                    Propuesta o plataforma de inversión
-                  </small>
-                </span>
+              <h3>
+                ¿La persona, empresa o plataforma
+                <br />
+                te sigue contactando?
+              </h3>
 
-                <b>→</b>
-              </button>
+              <p>
+                Indica si continúan intentando comunicarse contigo
+                después de lo ocurrido.
+              </p>
 
+              <div className={styles.binaryOptions}>
 
-              <button className={styles.option}>
-                <span className={styles.optionIcon}>
-                  ◈
-                </span>
+                <button
+                  type="button"
+                  className={styles.binaryOption}
+                  onClick={() => selectStillContacting("si")}
+                >
+                  <span className={styles.binaryEmoji}>📞</span>
 
-                <span>
-                  Transferencia bancaria
-                  <small>
-                    Pago o transferencia de dinero
-                  </small>
-                </span>
+                  <span>
+                    Sí, todavía me contactan
+                    <small>
+                      Siguen enviándome mensajes, llamadas o solicitudes.
+                    </small>
+                  </span>
 
-                <b>→</b>
-              </button>
-
-
-              <button className={styles.option}>
-                <span className={styles.optionIcon}>
-                  □
-                </span>
-
-                <span>
-                  Compra o venta
-                  <small>
-                    Producto, servicio o comercio electrónico
-                  </small>
-                </span>
-
-                <b>→</b>
-              </button>
+                  <b>→</b>
+                </button>
 
 
-              <button className={styles.option}>
-                <span className={styles.optionIcon}>
-                  ◎
-                </span>
+                <button
+                  type="button"
+                  className={styles.binaryOption}
+                  onClick={() => selectStillContacting("no")}
+                >
+                  <span className={styles.binaryEmoji}>🔕</span>
 
-                <span>
-                  Contacto sospechoso
-                  <small>
-                    Llamada, mensaje, correo o comunicación
-                  </small>
-                </span>
+                  <span>
+                    No, ya no me contactan
+                    <small>
+                      La comunicación terminó después de lo ocurrido.
+                    </small>
+                  </span>
 
-                <b>→</b>
-              </button>
+                  <b>→</b>
+                </button>
 
+              </div>
 
-              <button className={styles.option}>
-                <span className={styles.optionIcon}>
-                  ○
-                </span>
-
-                <span>
-                  Préstamo o crédito
-                  <small>
-                    Oferta o solicitud relacionada con crédito
-                  </small>
-                </span>
-
-                <b>→</b>
-              </button>
+            </div>
+          )}
 
 
-              <button className={styles.option}>
-                <span className={styles.optionIcon}>
-                  +
-                </span>
+          {/* =================================================
+              PREGUNTA 3
+              ================================================= */}
 
-                <span>
-                  Otra situación
-                  <small>
-                    Algo diferente a las opciones anteriores
-                  </small>
-                </span>
+          {fraudType && stillContacting && !askedForMore && (
+            <div className={styles.questionCard}>
 
-                <b>→</b>
+              <div className={styles.questionNumber}>
+                PREGUNTA 03
+              </div>
+
+              <h3>
+                ¿Te han pedido realizar otro pago
+                <br />
+                o entregar información sensible?
+              </h3>
+
+              <p>
+                Por ejemplo, nuevos depósitos, cargos adicionales,
+                contraseñas, códigos de seguridad o información bancaria.
+              </p>
+
+              <div className={styles.binaryOptions}>
+
+                <button
+                  type="button"
+                  className={styles.binaryOption}
+                  onClick={() => selectAskedForMore("si")}
+                >
+                  <span className={styles.binaryEmoji}>⚠️</span>
+
+                  <span>
+                    Sí, me han solicitado algo más
+                    <small>
+                      Me han pedido dinero, códigos o información adicional.
+                    </small>
+                  </span>
+
+                  <b>→</b>
+                </button>
+
+
+                <button
+                  type="button"
+                  className={styles.binaryOption}
+                  onClick={() => selectAskedForMore("no")}
+                >
+                  <span className={styles.binaryEmoji}>🛡️</span>
+
+                  <span>
+                    No, no me han solicitado nada más
+                    <small>
+                      No he recibido nuevas solicitudes después del incidente.
+                    </small>
+                  </span>
+
+                  <b>→</b>
+                </button>
+
+              </div>
+
+            </div>
+          )}
+
+
+          {/* =================================================
+              FINAL DE EVALUACIÓN
+              ================================================= */}
+
+          {showFinalActions && (
+            <div className={styles.finalEvaluationCard}>
+
+              <div className={styles.finalEvaluationEmoji}>
+                ⏱️
+              </div>
+
+              <span>
+                EVALUACIÓN COMPLETADA
+              </span>
+
+              <h3>
+                No pierdas más tiempo
+                <br />
+                si algo no parece correcto.
+              </h3>
+
+              <p>
+                Tus respuestas muestran elementos que vale la pena
+                revisar con mayor atención. Podemos ayudarte a organizar
+                la información y conocer cuáles podrían ser tus siguientes
+                pasos.
+              </p>
+
+              <div className={styles.actionButtons}>
+
+                <Link
+                  href="/contacto"
+                  className={styles.primaryAction}
+                >
+                  Hablar con VALTARA
+                  <span>→</span>
+                </Link>
+
+
+                <a
+                  href="https://wa.me/5210000000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.secondaryAction}
+                >
+                  <span>💬</span>
+                  WhatsApp
+                </a>
+
+
+                <a
+                  href="mailto:contacto@valtara.com"
+                  className={styles.secondaryAction}
+                >
+                  <span>✉️</span>
+                  Escribir por correo
+                </a>
+
+              </div>
+
+              <button
+                type="button"
+                className={styles.restartButton}
+                onClick={resetEvaluation}
+              >
+                Volver a realizar la evaluación
               </button>
 
             </div>
-
-          </div>
+          )}
 
         </section>
 
@@ -292,7 +561,7 @@ export default function IdentificacionFraudePage() {
             <article className={styles.signalCard}>
 
               <div className={styles.signalIcon}>
-                !
+                ⚠️
               </div>
 
               <span>01</span>
@@ -312,7 +581,7 @@ export default function IdentificacionFraudePage() {
             <article className={styles.signalCard}>
 
               <div className={styles.signalIcon}>
-                %
+                💰
               </div>
 
               <span>02</span>
@@ -332,7 +601,7 @@ export default function IdentificacionFraudePage() {
             <article className={styles.signalCard}>
 
               <div className={styles.signalIcon}>
-                ◇
+                🔎
               </div>
 
               <span>03</span>
@@ -352,7 +621,7 @@ export default function IdentificacionFraudePage() {
             <article className={styles.signalCard}>
 
               <div className={styles.signalIcon}>
-                ◈
+                🔐
               </div>
 
               <span>04</span>
@@ -401,8 +670,9 @@ export default function IdentificacionFraudePage() {
 
           <div className={styles.processSteps}>
 
-            <div className={`${styles.processStep} ${styles.activeStep}`}>
-
+            <div
+              className={`${styles.processStep} ${styles.activeStep}`}
+            >
               <div className={styles.stepCircle}>
                 01
               </div>
@@ -416,7 +686,6 @@ export default function IdentificacionFraudePage() {
                   El tipo de situación
                 </span>
               </div>
-
             </div>
 
 
@@ -432,7 +701,7 @@ export default function IdentificacionFraudePage() {
                 </strong>
 
                 <span>
-                  Las señales presentes
+                  Si la situación continúa
                 </span>
               </div>
 
@@ -451,7 +720,7 @@ export default function IdentificacionFraudePage() {
                 </strong>
 
                 <span>
-                  El nivel de riesgo
+                  Las señales presentes
                 </span>
               </div>
 
@@ -482,7 +751,7 @@ export default function IdentificacionFraudePage() {
 
 
         {/* =====================================================
-            RESULTADO PREVIEW
+            RESULTADO
             ===================================================== */}
 
         <section className={styles.resultSection}>
@@ -551,7 +820,7 @@ export default function IdentificacionFraudePage() {
             <div className={styles.resultMessage}>
 
               <div className={styles.resultIcon}>
-                !
+                ⚠️
               </div>
 
               <div>
@@ -571,10 +840,13 @@ export default function IdentificacionFraudePage() {
             </div>
 
 
-            <button className={styles.resultButton}>
+            <Link
+              href="/recomendaciones"
+              className={styles.resultButton}
+            >
               Ver recomendaciones
               <span>→</span>
-            </button>
+            </Link>
 
           </div>
 
@@ -582,7 +854,7 @@ export default function IdentificacionFraudePage() {
 
 
         {/* =====================================================
-            RECOMENDACIONES
+            RECOMENDACIONES PREVENTIVAS
             ===================================================== */}
 
         <section className={styles.recommendations}>
@@ -675,7 +947,7 @@ export default function IdentificacionFraudePage() {
         <section className={styles.disclaimer}>
 
           <div className={styles.disclaimerIcon}>
-            i
+            ℹ️
           </div>
 
           <div>
@@ -738,7 +1010,7 @@ export default function IdentificacionFraudePage() {
 
 
         {/* =====================================================
-            ESPACIO PARA FUTURO FOOTER
+            FOOTER SPACE
             ===================================================== */}
 
         <div className={styles.footerSpace}>

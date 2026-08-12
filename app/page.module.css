@@ -917,6 +917,12 @@
   font-weight: 800;
 }
 
+
+/* =========================================================
+   ICONOS DE IDENTIFICACIÓN
+   SVG MONOCROMÁTICOS
+   ========================================================= */
+
 .cardIcon {
   width: 45px;
   height: 45px;
@@ -930,14 +936,24 @@
 
   border-radius: 11px;
 
-  background: rgba(115, 15, 26, 0.07);
+  background: rgba(22, 88, 123, 0.08);
 
-  color: #730f1a;
-
-  font-size: 10px;
-
-  font-weight: 800;
+  color: #16587b;
 }
+
+.cardIcon svg {
+  width: 24px;
+  height: 24px;
+
+  display: block;
+
+  fill: currentColor;
+}
+
+
+/* =========================================================
+   RISK CARD TEXT
+   ========================================================= */
 
 .riskCard h3 {
   margin: 0 0 11px;
@@ -1412,6 +1428,8 @@
 
   gap: 20px;
 
+  width: 100%;
+
   padding: 22px 0;
 
   color: #0d243b;
@@ -1429,12 +1447,45 @@
   display: none;
 }
 
+.faqList summary::marker {
+  display: none;
+}
+
 .faqList summary span {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
   color: #84b3ce;
 
   font-size: 20px;
 
   font-weight: 400;
+
+  line-height: 1;
+
+  transition: transform 180ms ease;
+}
+
+.faqList details[open] summary span {
+  font-size: 0;
+}
+
+.faqList details[open] summary span::before {
+  content: "−";
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  color: #84b3ce;
 }
 
 .faqList details p {
@@ -1447,6 +1498,10 @@
   font-size: 12px;
 
   line-height: 1.7;
+}
+
+.faqList details[open] summary {
+  color: #16587b;
 }
 
 
@@ -1598,61 +1653,6 @@
 
 
 /* =========================================================
-   WHATSAPP FLOTANTE
-   ========================================================= */
-
-.floatingWhatsapp {
-  position: fixed;
-
-  right: 24px;
-  bottom: 24px;
-
-  z-index: 9999;
-
-  width: 62px;
-  height: 62px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border: 2px solid rgba(255, 255, 255, 0.8);
-
-  border-radius: 50%;
-
-  background: #25d366;
-
-  color: #ffffff;
-
-  text-decoration: none;
-
-  box-shadow:
-    0 12px 30px rgba(13, 36, 59, 0.28),
-    0 0 0 5px rgba(37, 211, 102, 0.12);
-
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.floatingWhatsapp:hover {
-  transform: translateY(-4px) scale(1.04);
-
-  box-shadow:
-    0 16px 35px rgba(13, 36, 59, 0.32),
-    0 0 0 7px rgba(37, 211, 102, 0.13);
-}
-
-.floatingWhatsapp svg {
-  width: 31px;
-  height: 31px;
-
-  fill: currentColor;
-}
-
-
-/* =========================================================
    RESPONSIVE
    ========================================================= */
 
@@ -1664,6 +1664,7 @@
     gap: 40px;
 
     padding-left: 5vw;
+
     padding-right: 5vw;
   }
 
@@ -1682,6 +1683,7 @@
     min-height: auto;
 
     padding-top: 90px;
+
     padding-bottom: 85px;
   }
 
@@ -1693,6 +1695,7 @@
 
   .heroDescription {
     margin-left: auto;
+
     margin-right: auto;
   }
 
@@ -1852,6 +1855,16 @@
     padding: 85px 0;
   }
 
+  .faqList summary {
+    padding: 19px 0;
+
+    font-size: 12px;
+  }
+
+  .faqList details p {
+    font-size: 12px;
+  }
+
   .finalCta {
     padding: 95px 20px;
   }
@@ -1862,14 +1875,17 @@
 
   .floatingWhatsapp {
     right: 18px;
+
     bottom: 18px;
 
     width: 58px;
+
     height: 58px;
   }
 
   .floatingWhatsapp svg {
     width: 29px;
+
     height: 29px;
   }
 

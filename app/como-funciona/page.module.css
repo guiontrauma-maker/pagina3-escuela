@@ -1,0 +1,887 @@
+/* =========================================================
+   VALTARA
+   COMO FUNCIONA
+   ========================================================= */
+
+.page {
+  min-height: 100vh;
+
+  background: #f5eeeb;
+
+  color: #0d243b;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  width: min(1180px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 75px 0 0;
+}
+
+.heroTop {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid rgba(13, 36, 59, 0.12);
+}
+
+.eyebrow,
+.sectionLabel {
+  color: #16587b;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+}
+
+.heroIndex {
+  color: #8a9aa3;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.heroGrid {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 100px;
+
+  padding: 90px 0 80px;
+}
+
+.heroGrid h1 {
+  margin: 0;
+
+  color: #0d243b;
+
+  font-size: clamp(70px, 9vw, 125px);
+
+  line-height: 0.86;
+
+  letter-spacing: -0.065em;
+
+  font-weight: 800;
+}
+
+.heroGrid h1 em {
+  color: #16587b;
+
+  font-weight: 500;
+
+  font-style: italic;
+}
+
+.heroDescription {
+  align-self: end;
+
+  max-width: 500px;
+
+  padding-bottom: 8px;
+}
+
+.heroDescription .lead {
+  margin: 0 0 25px;
+
+  color: #0d243b;
+
+  font-size: 20px;
+
+  line-height: 1.55;
+
+  font-weight: 500;
+}
+
+.heroDescription p:not(.lead) {
+  margin: 0;
+
+  color: #657a88;
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+.heroLine {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  border-top: 1px solid rgba(13, 36, 59, 0.13);
+
+  border-bottom: 1px solid rgba(13, 36, 59, 0.13);
+}
+
+.heroLine span {
+  padding: 18px 10px;
+
+  color: #6d808b;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+
+  text-align: center;
+}
+
+.heroLine span:not(:last-child) {
+  border-right: 1px solid rgba(13, 36, 59, 0.1);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+  width: min(1180px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 145px 0;
+}
+
+.introLabel {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 55px;
+}
+
+.introLabel span:first-child {
+  color: #84b3ce;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+.introLabel span:last-child {
+  color: #8a9aa3;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+}
+
+.introContent {
+  display: grid;
+
+  grid-template-columns: 1fr 0.8fr;
+
+  gap: 120px;
+}
+
+.introContent h2 {
+  margin: 0;
+
+  color: #0d243b;
+
+  font-size: clamp(48px, 5.2vw, 72px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.introContent h2 em {
+  color: #16587b;
+
+  font-weight: 500;
+
+  font-style: italic;
+}
+
+.introContent > div {
+  padding-top: 8px;
+}
+
+.introContent p {
+  margin: 0 0 22px;
+
+  color: #657a88;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+.textLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 12px;
+
+  color: #16587b;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.textLink span {
+  font-size: 16px;
+
+  transition: transform 180ms ease;
+}
+
+.textLink:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   PROCESS
+   ========================================================= */
+
+.process {
+  padding: 130px 7vw;
+
+  background: #ffffff;
+}
+
+.processHeader {
+  width: min(1120px, 100%);
+
+  margin: 0 auto 75px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.65fr;
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+.processHeader h2 {
+  margin: 20px 0 0;
+
+  color: #0d243b;
+
+  font-size: clamp(45px, 5vw, 68px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.processHeader > p {
+  margin: 0;
+
+  color: #657a88;
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   STEPS
+   ========================================================= */
+
+.steps {
+  width: min(1120px, 100%);
+
+  margin: 0 auto;
+
+  border-top: 1px solid rgba(13, 36, 59, 0.12);
+}
+
+.step {
+  display: grid;
+
+  grid-template-columns: 110px 1fr;
+
+  gap: 55px;
+
+  padding: 42px 0;
+
+  border-bottom: 1px solid rgba(13, 36, 59, 0.12);
+}
+
+.stepNumber {
+  color: #84b3ce;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.stepContent {
+  display: grid;
+
+  grid-template-columns: 0.7fr 1.3fr 0.6fr;
+
+  gap: 45px;
+
+  align-items: start;
+}
+
+.stepContent h3 {
+  margin: 0;
+
+  color: #0d243b;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+}
+
+.stepContent p {
+  margin: 0;
+
+  color: #657a88;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.stepContent > span {
+  color: #8a9aa3;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  line-height: 1.6;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   EXPLANATION
+   ========================================================= */
+
+.explanation {
+  display: grid;
+
+  grid-template-columns: 1fr 0.8fr;
+
+  gap: 120px;
+
+  padding: 145px max(7vw, calc((100vw - 1120px) / 2));
+
+  background: #e9f2f6;
+}
+
+.explanationHeader h2 {
+  margin: 20px 0 0;
+
+  color: #0d243b;
+
+  font-size: clamp(45px, 5vw, 70px);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+.explanationHeader h2 em {
+  color: #16587b;
+
+  font-weight: 500;
+
+  font-style: italic;
+}
+
+.explanationBody {
+  padding-top: 8px;
+}
+
+.explanationBody > p {
+  margin: 0 0 22px;
+
+  color: #657a88;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+.note {
+  margin-top: 35px;
+
+  padding: 22px;
+
+  border-left: 3px solid #84b3ce;
+
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.note span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #16587b;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+}
+
+.note p {
+  margin: 0;
+
+  color: #657a88;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRINCIPLES
+   ========================================================= */
+
+.principles {
+  width: min(1120px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 145px 0;
+}
+
+.principlesIntro {
+  margin-bottom: 65px;
+}
+
+.principlesIntro h2 {
+  margin: 20px 0 0;
+
+  color: #0d243b;
+
+  font-size: clamp(45px, 5vw, 67px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.principlesGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.principleCard {
+  min-height: 270px;
+
+  padding: 30px;
+
+  border: 1px solid rgba(13, 36, 59, 0.1);
+
+  border-radius: 18px;
+
+  background: #f8f6f4;
+}
+
+.principleCard > span {
+  color: #84b3ce;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.principleCard h3 {
+  margin: 65px 0 14px;
+
+  color: #0d243b;
+
+  font-size: 22px;
+}
+
+.principleCard p {
+  margin: 0;
+
+  color: #6d808b;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contactSection {
+  padding: 120px 7vw;
+
+  background: #ffffff;
+}
+
+.contactBox {
+  position: relative;
+
+  width: min(1000px, 100%);
+
+  margin: 0 auto;
+
+  padding: 75px;
+
+  border-radius: 24px;
+
+  background: #0d243b;
+
+  overflow: hidden;
+}
+
+.contactBox::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -230px;
+  top: -260px;
+
+  border-radius: 50%;
+
+  background: rgba(132, 179, 206, 0.12);
+
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+.contactEyebrow {
+  position: relative;
+
+  z-index: 2;
+
+  color: #a7cadf;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.contactBox h2 {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 20px 0;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 5vw, 65px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.contactBox > p {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 570px;
+
+  margin: 0 0 32px;
+
+  color: rgba(245, 238, 235, 0.6);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.contactButton {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  min-height: 52px;
+
+  padding: 0 23px;
+
+  border-radius: 9px;
+
+  background: #f6e0b6;
+
+  color: #0d243b;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.contactButton:hover {
+  background: #f5eeeb;
+
+  transform: translateY(-2px);
+}
+
+.contactButton span {
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footerSpace {
+  min-height: 180px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 20px;
+
+  background: #f5eeeb;
+
+  color: rgba(13, 36, 59, 0.3);
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .heroDescription {
+    max-width: 650px;
+  }
+
+  .introContent {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .processHeader {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .stepContent {
+    grid-template-columns: 0.7fr 1.3fr;
+  }
+
+  .stepContent > span {
+    display: none;
+  }
+
+  .explanation {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .principlesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .principleCard {
+    min-height: auto;
+  }
+
+  .principleCard h3 {
+    margin-top: 45px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .hero,
+  .intro,
+  .principles {
+    width: calc(100% - 40px);
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .heroTop {
+    align-items: flex-start;
+  }
+
+  .heroIndex {
+    display: none;
+  }
+
+  .heroGrid {
+    padding: 65px 0 55px;
+  }
+
+  .heroGrid h1 {
+    font-size: clamp(62px, 18vw, 90px);
+  }
+
+  .heroDescription .lead {
+    font-size: 17px;
+  }
+
+  .heroLine {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroLine span {
+    border-bottom: 1px solid rgba(13, 36, 59, 0.1);
+  }
+
+  .heroLine span:nth-child(2n) {
+    border-right: none;
+  }
+
+  .intro {
+    padding: 95px 0;
+  }
+
+  .introContent h2 {
+    font-size: clamp(43px, 12vw, 60px);
+  }
+
+  .process {
+    padding: 90px 20px;
+  }
+
+  .processHeader {
+    margin-bottom: 55px;
+  }
+
+  .processHeader h2 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .step {
+    grid-template-columns: 45px 1fr;
+
+    gap: 20px;
+
+    padding: 32px 0;
+  }
+
+  .stepContent {
+    display: block;
+  }
+
+  .stepContent h3 {
+    margin-bottom: 12px;
+
+    font-size: 21px;
+  }
+
+  .stepContent p {
+    font-size: 12px;
+  }
+
+  .stepContent > span {
+    display: block;
+
+    margin-top: 15px;
+  }
+
+  .explanation {
+    padding: 90px 20px;
+  }
+
+  .explanationHeader h2 {
+    font-size: clamp(43px, 12vw, 60px);
+  }
+
+  .principles {
+    padding: 90px 0;
+  }
+
+  .principlesIntro h2 {
+    font-size: clamp(43px, 12vw, 60px);
+  }
+
+  .contactSection {
+    padding: 80px 20px;
+  }
+
+  .contactBox {
+    padding: 50px 28px;
+  }
+
+  .contactBox h2 {
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .footerSpace {
+    min-height: 150px;
+  }
+}

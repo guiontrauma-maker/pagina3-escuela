@@ -1,11 +1,19 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import styles from "./page.module.css";
 
 const WHATSAPP_URL =
-  "https://wa.me/521XXXXXXXXXX?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20orientaci%C3%B3n%20sobre%20una%20situaci%C3%B3n%20relacionada%20con%20mi%20patrimonio.";
+  "https://wa.me/521XXXXXXXXXX?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20orientaci%C3%B3n%20sobre%20una%20situaci%C3%B3n%20relacionada%20con%20mi%20patrimonio";
 
 const EMAIL_URL =
   "mailto:contacto@valtara.mx?subject=Solicitud%20de%20asesor%C3%ADa";
+
+
+/* =========================================================
+   ICONOS
+   ========================================================= */
 
 function WhatsAppIcon() {
   return (
@@ -33,7 +41,68 @@ function CheckIcon() {
   );
 }
 
+
+/* =========================================================
+   ICONOS DE RIESGO
+   Todos son SVG monocromáticos
+   ========================================================= */
+
+function MoneyIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2C7.58 2 4 4.24 4 7v10c0 2.76 3.58 5 8 5s8-2.24 8-5V7c0-2.76-3.58-5-8-5Zm0 2c3.31 0 6 1.35 6 3s-2.69 3-6 3-6-1.35-6-3 2.69-3 6-3Zm0 16c-3.31 0-6-1.35-6-3v-2.04C7.41 16.24 9.55 17 12 17s4.59-.76 6-2.04V17c0 1.65-2.69 3-6 3Zm0-5c-3.31 0-6-1.35-6-3V9.96C7.41 11.24 9.55 12 12 12s4.59-.76 6-2.04V12c0 1.65-2.69 3-6 3Z" />
+    </svg>
+  );
+}
+
+function DigitalIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6v1h3v2H7v-2h3v-1H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v10h16V6H4Z" />
+    </svg>
+  );
+}
+
+function IdentityIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v12h16V6H4Zm8 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm0 1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm-5 6c.32-1.7 1.85-2.9 3.65-2.9h2.7c1.8 0 3.33 1.2 3.65 2.9H7Z" />
+    </svg>
+  );
+}
+
+function InvestmentIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 18h16v2H4v-2Zm1-2 4.2-5.2 3 2.4L18 7.4l1.4 1.4-7 7-3-2.4L6.6 17H5v-1Zm0-8 4 2 3-3 3 1.5L19 5l1.4 1.4-4.5 4.5-3-1.5-3 3-4.9-2.45V8Z" />
+    </svg>
+  );
+}
+
+function PhishingIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 3c-.7 0-1.27.57-1.27 1.27v3.1c-1.25.34-2.16 1.48-2.16 2.84 0 1.62 1.31 2.93 2.93 2.93h1v2.02h-2.3v1.5h2.3v2.3h1.5v-2.3h2.3v-1.5H14v-2.02h1c1.62 0 2.93-1.31 2.93-2.93 0-1.36-.91-2.5-2.16-2.84v-3.1C15.77 3.57 15.2 3 14.5 3h-2.5Zm0 1.5h2.5v2.74h-2.5V4.5Zm-2 5.71c0-.79.64-1.43 1.43-1.43h1.14c.79 0 1.43.64 1.43 1.43s-.64 1.43-1.43 1.43h-1.14c-.79 0-1.43-.64-1.43-1.43ZM4 19.5h16v1.5H4v-1.5Z" />
+    </svg>
+  );
+}
+
+function PyramidIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 3 3 20h18L12 3Zm0 3.2L17.55 18H6.45L12 6.2ZM11 10h2v5h-2v-5Zm0 6h2v2h-2v-2Z" />
+    </svg>
+  );
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
 export default function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   return (
     <>
       <Navbar />
@@ -96,7 +165,6 @@ export default function Home() {
             <div className={styles.trustBar}>
 
               <div className={styles.trustItem}>
-
                 <span className={styles.trustIcon}>
                   <span></span>
                 </span>
@@ -105,11 +173,9 @@ export default function Home() {
                   <strong>Información protegida</strong>
                   <span>Tratamiento confidencial</span>
                 </div>
-
               </div>
 
               <div className={styles.trustItem}>
-
                 <span className={styles.trustIcon}>
                   <span></span>
                 </span>
@@ -118,11 +184,9 @@ export default function Home() {
                   <strong>Atención clara</strong>
                   <span>Proceso paso a paso</span>
                 </div>
-
               </div>
 
               <div className={styles.trustItem}>
-
                 <span className={styles.trustIcon}>
                   <span></span>
                 </span>
@@ -131,7 +195,6 @@ export default function Home() {
                   <strong>Análisis inicial</strong>
                   <span>Sin compromiso</span>
                 </div>
-
               </div>
 
             </div>
@@ -179,14 +242,11 @@ export default function Home() {
               <div className={styles.panelDivider}></div>
 
 
-              {/* INDICADORES */}
-
               <div className={styles.statsGrid}>
 
                 <div className={styles.statCard}>
-
                   <span className={styles.statIndex}>
-                    01
+                    Los
                   </span>
 
                   <strong className={styles.statNumber}>
@@ -194,18 +254,16 @@ export default function Home() {
                   </strong>
 
                   <span className={styles.statLabel}>
-                    Tipos de fraude
+                    Tipos de fraudes
                     <br />
                     identificables
                   </span>
-
                 </div>
 
 
                 <div className={styles.statCard}>
-
                   <span className={styles.statIndex}>
-                    02
+                    Nuestros
                   </span>
 
                   <strong className={styles.statNumber}>
@@ -217,14 +275,12 @@ export default function Home() {
                     <br />
                     de riesgo
                   </span>
-
                 </div>
 
 
                 <div className={styles.statCard}>
-
                   <span className={styles.statIndex}>
-                    03
+                    Brindamos atencion
                   </span>
 
                   <strong className={styles.statNumber}>
@@ -232,17 +288,14 @@ export default function Home() {
                   </strong>
 
                   <span className={styles.statLabel}>
-                    Tiempo de
+                    los 7 dias
                     <br />
-                    orientación
+                    de la semana
                   </span>
-
                 </div>
 
               </div>
 
-
-              {/* ASESORÍA */}
 
               <div className={styles.panelContact}>
 
@@ -274,11 +327,9 @@ export default function Home() {
                     aria-label="Pedir asesoría por WhatsApp"
                     title="Pedir asesoría por WhatsApp"
                   >
-
                     <span className={styles.contactIcon}>
                       <WhatsAppIcon />
                     </span>
-
                   </a>
 
 
@@ -288,11 +339,9 @@ export default function Home() {
                     aria-label="Pedir asesoría por correo electrónico"
                     title="Pedir asesoría por correo electrónico"
                   >
-
                     <span className={styles.contactIcon}>
                       <EmailIcon />
                     </span>
-
                   </a>
 
                 </div>
@@ -398,7 +447,7 @@ export default function Home() {
               <span className={styles.cardNumber}>01</span>
 
               <div className={styles.cardIcon}>
-                01
+                <MoneyIcon />
               </div>
 
               <h3>
@@ -416,7 +465,7 @@ export default function Home() {
               <span className={styles.cardNumber}>02</span>
 
               <div className={styles.cardIcon}>
-                02
+                <DigitalIcon />
               </div>
 
               <h3>
@@ -434,7 +483,7 @@ export default function Home() {
               <span className={styles.cardNumber}>03</span>
 
               <div className={styles.cardIcon}>
-                03
+                <IdentityIcon />
               </div>
 
               <h3>
@@ -452,7 +501,7 @@ export default function Home() {
               <span className={styles.cardNumber}>04</span>
 
               <div className={styles.cardIcon}>
-                04
+                <InvestmentIcon />
               </div>
 
               <h3>
@@ -470,7 +519,7 @@ export default function Home() {
               <span className={styles.cardNumber}>05</span>
 
               <div className={styles.cardIcon}>
-                05
+                <PhishingIcon />
               </div>
 
               <h3>
@@ -488,7 +537,7 @@ export default function Home() {
               <span className={styles.cardNumber}>06</span>
 
               <div className={styles.cardIcon}>
-                06
+                <PyramidIcon />
               </div>
 
               <h3>
@@ -622,7 +671,7 @@ export default function Home() {
             </p>
 
             <a
-              href="/identificacion-de-fraude"
+              href="/contacto"
               className={styles.lightButton}
             >
               Comenzar una evaluación
@@ -711,7 +760,7 @@ export default function Home() {
                 propuestas de inversión que requieren mayor atención.
               </p>
 
-              <a href="#">
+              <a href="/articulos/inversion-sospechosa">
                 Leer artículo →
               </a>
 
@@ -733,7 +782,7 @@ export default function Home() {
                 indicadores que conviene revisar.
               </p>
 
-              <a href="#">
+              <a href="/articulos/senales-alerta-transferir-dinero">
                 Leer artículo →
               </a>
 
@@ -755,7 +804,7 @@ export default function Home() {
                 comprender los siguientes pasos.
               </p>
 
-              <a href="#">
+              <a href="/articulos/que-hacer-despues-de-una-estafa">
                 Leer artículo →
               </a>
 
@@ -789,8 +838,14 @@ export default function Home() {
 
           <div className={styles.faqList}>
 
-            <details>
-              <summary>
+            <details open={openFaq === 0}>
+
+              <summary
+                onClick={(event) => {
+                  event.preventDefault();
+                  setOpenFaq(openFaq === 0 ? null : 0);
+                }}
+              >
                 ¿VALTARA puede recuperar mi dinero?
                 <span>+</span>
               </summary>
@@ -800,11 +855,18 @@ export default function Home() {
                 seguimiento. La recuperación de fondos depende de las
                 características y circunstancias de cada caso.
               </p>
+
             </details>
 
 
-            <details>
-              <summary>
+            <details open={openFaq === 1}>
+
+              <summary
+                onClick={(event) => {
+                  event.preventDefault();
+                  setOpenFaq(openFaq === 1 ? null : 1);
+                }}
+              >
                 ¿Qué información necesito proporcionar?
                 <span>+</span>
               </summary>
@@ -814,11 +876,18 @@ export default function Home() {
                 sobre la situación para identificar posibles señales
                 de riesgo.
               </p>
+
             </details>
 
 
-            <details>
-              <summary>
+            <details open={openFaq === 2}>
+
+              <summary
+                onClick={(event) => {
+                  event.preventDefault();
+                  setOpenFaq(openFaq === 2 ? null : 2);
+                }}
+              >
                 ¿Mis datos son confidenciales?
                 <span>+</span>
               </summary>
@@ -827,11 +896,18 @@ export default function Home() {
                 La plataforma está diseñada bajo un enfoque de
                 confidencialidad y protección de la información.
               </p>
+
             </details>
 
 
-            <details>
-              <summary>
+            <details open={openFaq === 3}>
+
+              <summary
+                onClick={(event) => {
+                  event.preventDefault();
+                  setOpenFaq(openFaq === 3 ? null : 3);
+                }}
+              >
                 ¿Qué hago si todavía estoy siendo contactado?
                 <span>+</span>
               </summary>
@@ -840,6 +916,7 @@ export default function Home() {
                 Evita compartir información adicional o realizar nuevas
                 transferencias hasta comprender mejor la situación.
               </p>
+
             </details>
 
           </div>
@@ -889,7 +966,7 @@ export default function Home() {
 
 
         {/* =====================================================
-            ESPACIO PARA FOOTER FUTURO
+            FOOTER SPACE
             ===================================================== */}
 
         <div className={styles.footerSpace}>
@@ -901,23 +978,6 @@ export default function Home() {
         </div>
 
       </main>
-
-
-      {/* =====================================================
-          WHATSAPP FLOTANTE
-          ===================================================== */}
-
-      <a
-        href={WHATSAPP_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.floatingWhatsapp}
-        aria-label="Contactar a VALTARA por WhatsApp"
-        title="WhatsApp"
-      >
-        <WhatsAppIcon />
-      </a>
-
     </>
   );
 }

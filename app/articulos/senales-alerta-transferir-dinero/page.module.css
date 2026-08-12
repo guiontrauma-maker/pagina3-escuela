@@ -1,0 +1,445 @@
+.articlePage {
+  min-height: 100vh;
+  background: #f5eeeb;
+  color: #0d243b;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.articleHero {
+  padding: 100px 25px 90px;
+
+  background:
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(132, 179, 206, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #0d243b,
+      #16587b
+    );
+
+  color: #ffffff;
+}
+
+.heroInner {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-block;
+
+  margin-bottom: 55px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: #ffffff;
+}
+
+.category {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #a7cadf;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+}
+
+.articleHero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(45px, 6vw, 76px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.articleHero h1 em {
+  color: #f6e0b6;
+
+  font-weight: 500;
+
+  font-style: italic;
+}
+
+.intro {
+  max-width: 680px;
+
+  margin: 30px 0 0;
+
+  color: rgba(245, 238, 235, 0.68);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.articleMeta {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 35px;
+
+  color: rgba(245, 238, 235, 0.4);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.articleContent {
+  padding: 100px 25px;
+
+  background: #ffffff;
+}
+
+.articleMain {
+  width: min(780px, 100%);
+
+  margin: 0 auto;
+}
+
+.lead {
+  margin: 0 0 55px;
+
+  color: #38566a;
+
+  font-size: 19px;
+
+  line-height: 1.8;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ALERT CARDS
+   ========================================================= */
+
+.alertCard {
+  display: grid;
+
+  grid-template-columns: 55px 1fr;
+
+  gap: 25px;
+
+  padding: 35px 0;
+
+  border-top: 1px solid rgba(13, 36, 59, 0.1);
+}
+
+.alertCard:last-of-type {
+  border-bottom: 1px solid rgba(13, 36, 59, 0.1);
+}
+
+.alertCard > span {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f5eeeb;
+
+  color: #16587b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.alertCard h2 {
+  margin: 0 0 13px;
+
+  color: #0d243b;
+
+  font-size: 24px;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.02em;
+}
+
+.alertCard p {
+  margin: 0 0 15px;
+
+  color: #657a88;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+.alertCard p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PAUSE BOX
+   ========================================================= */
+
+.pauseBox {
+  margin: 60px 0;
+
+  padding: 38px;
+
+  border-radius: 18px;
+
+  background: #0d243b;
+}
+
+.pauseBox > span {
+  color: #a7cadf;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.pauseBox h3 {
+  margin: 15px 0;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1.2;
+}
+
+.pauseBox p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: rgba(245, 238, 235, 0.58);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.finalHeading {
+  margin: 65px 0 20px;
+
+  color: #0d243b;
+
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.035em;
+}
+
+.articleMain > p:not(.lead) {
+  color: #657a88;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+
+  margin: 0 0 20px;
+}
+
+.finalNote {
+  margin-top: 60px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(13, 36, 59, 0.1);
+}
+
+.finalNote strong {
+  color: #16587b;
+
+  font-size: 10px;
+
+  letter-spacing: 0.18em;
+}
+
+.finalNote p {
+  max-width: 600px;
+
+  margin-top: 12px;
+
+  color: #7a8b94;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.articleCta {
+  padding: 100px 25px;
+
+  background: #0d243b;
+
+  text-align: center;
+}
+
+.articleCta > span {
+  color: #a7cadf;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.articleCta h2 {
+  margin: 18px 0;
+
+  color: #ffffff;
+
+  font-size: clamp(35px, 5vw, 55px);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+.articleCta p {
+  max-width: 550px;
+
+  margin: 0 auto 30px;
+
+  color: rgba(245, 238, 235, 0.55);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.ctaButton {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 0 25px;
+
+  border-radius: 9px;
+
+  background: #f6e0b6;
+
+  color: #0d243b;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition: transform 180ms ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  padding: 40px 25px;
+
+  background: #f5eeeb;
+
+  text-align: center;
+}
+
+.footer a {
+  color: #16587b;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .articleHero {
+    padding: 75px 20px;
+  }
+
+  .articleContent {
+    padding: 70px 20px;
+  }
+
+  .alertCard {
+    grid-template-columns: 42px 1fr;
+
+    gap: 17px;
+  }
+
+  .alertCard h2 {
+    font-size: 21px;
+  }
+
+  .pauseBox {
+    padding: 28px;
+  }
+
+  .finalHeading {
+    font-size: 28px;
+  }
+
+  .articleCta {
+    padding: 80px 20px;
+  }
+}

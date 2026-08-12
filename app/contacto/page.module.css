@@ -1,0 +1,1055 @@
+/* =========================================================
+   VALTARA
+   CONTACTO
+   ========================================================= */
+
+.contactPage {
+  min-height: 100vh;
+
+  background: #f5eeeb;
+
+  color: #0d243b;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.introSection {
+  width: min(1200px, 90%);
+
+  margin: 0 auto;
+
+  padding: 95px 0 90px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 300px;
+
+  gap: 80px;
+
+  align-items: end;
+
+  border-bottom: 1px solid rgba(13, 36, 59, 0.1);
+}
+
+.introInner {
+  max-width: 800px;
+}
+
+.introLabel {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+
+  color: #16587b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+}
+
+.introDot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #84b3ce;
+}
+
+.introInner h1 {
+  margin: 0;
+
+  color: #0d243b;
+
+  font-size: clamp(50px, 6.5vw, 82px);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 800;
+}
+
+.introInner h1 em {
+  color: #16587b;
+
+  font-weight: 500;
+
+  font-style: italic;
+}
+
+.introInner p {
+  max-width: 650px;
+
+  margin: 32px 0 0;
+
+  color: #657a88;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+.introSide {
+  padding-left: 25px;
+
+  border-left: 1px solid rgba(13, 36, 59, 0.13);
+}
+
+.introSide span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #84b3ce;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.introSide p {
+  margin: 0;
+
+  color: #718390;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   MAIN SECTION
+   ========================================================= */
+
+.mainSection {
+  padding: 100px 0 120px;
+
+  background: #ffffff;
+}
+
+.mainGrid {
+  width: min(1100px, 90%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+
+  gap: 90px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.formHeader {
+  max-width: 700px;
+
+  margin-bottom: 45px;
+}
+
+.sectionLabel {
+  color: #16587b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.formHeader h2 {
+  margin: 17px 0 15px;
+
+  color: #0d243b;
+
+  font-size: clamp(38px, 4vw, 55px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.formHeader p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #718390;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.caseForm {
+  width: 100%;
+
+  padding: 38px;
+
+  border: 1px solid rgba(13, 36, 59, 0.1);
+
+  border-radius: 20px;
+
+  background: #f8f6f4;
+
+  box-shadow:
+    0 20px 60px rgba(13, 36, 59, 0.05);
+}
+
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.formGroup label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #0d243b;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(13, 36, 59, 0.13);
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #0d243b;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.formGroup input,
+.formGroup select {
+  min-height: 48px;
+
+  padding: 0 14px;
+}
+
+.formGroup textarea {
+  min-height: 150px;
+
+  padding: 14px;
+
+  resize: vertical;
+
+  line-height: 1.65;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #a0adb4;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: #84b3ce;
+
+  box-shadow:
+    0 0 0 3px rgba(132, 179, 206, 0.12);
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+.phoneRow {
+  display: grid;
+
+  grid-template-columns: 125px 1fr;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   AMOUNT
+   ========================================================= */
+
+.amountRow {
+  display: grid;
+
+  grid-template-columns: 95px 1fr;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   HINT
+   ========================================================= */
+
+.fieldHint {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #94a0a7;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.checkboxRow {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin: 30px 0;
+
+  color: #718390;
+
+  font-size: 10px;
+
+  line-height: 1.65;
+
+  cursor: pointer;
+}
+
+.checkboxRow input {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+
+  margin: 1px 0 0;
+
+  accent-color: #16587b;
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.submitButton {
+  width: 100%;
+
+  min-height: 56px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #0d243b;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.submitButton span {
+  color: #a7cadf;
+
+  font-size: 18px;
+
+  line-height: 1;
+}
+
+.submitButton:hover {
+  background: #16587b;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SECURITY NOTE
+   ========================================================= */
+
+.securityNote {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  color: #929da3;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+.lockIcon {
+  width: 17px;
+  height: 17px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #9aa5ab;
+}
+
+.lockIcon svg {
+  width: 100%;
+  height: 100%;
+
+  fill: currentColor;
+}
+
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.successMessage {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-top: 20px;
+
+  padding: 18px;
+
+  border-left: 3px solid #84b3ce;
+
+  background: rgba(132, 179, 206, 0.1);
+
+  color: #526b7b;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+.successMessage strong {
+  color: #16587b;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   SIDE COLUMN
+   ========================================================= */
+
+.sideColumn {
+  position: sticky;
+
+  top: 100px;
+}
+
+
+/* =========================================================
+   SIDE CARD
+   ========================================================= */
+
+.sideCard {
+  padding: 32px;
+
+  border-radius: 18px;
+
+  background: #0d243b;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.sideNumber {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: #84b3ce;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.sideLabel {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #a7cadf;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+}
+
+.sideCard h3 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.025em;
+}
+
+.sideCard p {
+  margin: 0;
+
+  color: rgba(245, 238, 235, 0.55);
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   STEPS
+   ========================================================= */
+
+.sideSteps {
+  margin-top: 20px;
+
+  padding: 25px 0;
+
+  border-top: 1px solid rgba(13, 36, 59, 0.1);
+
+  border-bottom: 1px solid rgba(13, 36, 59, 0.1);
+}
+
+.sideStepsHeader {
+  margin-bottom: 22px;
+
+  color: #16587b;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+}
+
+.step {
+  display: grid;
+
+  grid-template-columns: 32px 1fr;
+
+  gap: 14px;
+
+  padding: 15px 0;
+
+  border-top: 1px solid rgba(13, 36, 59, 0.07);
+}
+
+.step:first-of-type {
+  border-top: none;
+}
+
+.stepNumber {
+  color: #84b3ce;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.step strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #0d243b;
+
+  font-size: 11px;
+}
+
+.step p {
+  margin: 0;
+
+  color: #7b8b95;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   DIRECT CONTACT
+   ========================================================= */
+
+.directContact {
+  padding-top: 25px;
+}
+
+.directContact > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #16587b;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+.directContact > p {
+  margin: 0 0 18px;
+
+  color: #718390;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+.directLinks {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.directLinks a {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 12px 14px;
+
+  border: 1px solid rgba(13, 36, 59, 0.1);
+
+  border-radius: 8px;
+
+  color: #16587b;
+
+  background: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.directLinks a:hover {
+  border-color: rgba(132, 179, 206, 0.6);
+
+  background: #f8f6f4;
+}
+
+.directLinks a span {
+  color: #84b3ce;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PROTECTION
+   ========================================================= */
+
+.protectionSection {
+  padding: 115px 7vw;
+
+  background: #e9f2f6;
+}
+
+.protectionInner {
+  width: min(1100px, 100%);
+
+  margin: 0 auto;
+}
+
+.protectionHeading {
+  margin-bottom: 55px;
+}
+
+.protectionHeading > span {
+  color: #16587b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.protectionHeading h2 {
+  margin: 17px 0 0;
+
+  color: #0d243b;
+
+  font-size: clamp(40px, 4.5vw, 60px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.protectionHeading h2 em {
+  color: #16587b;
+
+  font-weight: 500;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   PROTECTION GRID
+   ========================================================= */
+
+.protectionGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.protectionItem {
+  min-height: 220px;
+
+  padding: 28px;
+
+  border-top: 1px solid rgba(13, 36, 59, 0.18);
+}
+
+.protectionItem > span {
+  color: #84b3ce;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.protectionItem h3 {
+  margin: 27px 0 12px;
+
+  color: #0d243b;
+
+  font-size: 17px;
+
+  line-height: 1.25;
+}
+
+.protectionItem p {
+  margin: 0;
+
+  color: #657a88;
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.closingSection {
+  padding: 120px 7vw;
+
+  background: #f5eeeb;
+}
+
+.closingContent {
+  width: min(850px, 100%);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.closingContent > span {
+  color: #16587b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+}
+
+.closingContent h2 {
+  margin: 20px 0;
+
+  color: #0d243b;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.closingContent p {
+  max-width: 650px;
+
+  margin: 0 auto 30px;
+
+  color: #657a88;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.closingLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #16587b;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.closingLink span {
+  color: #84b3ce;
+
+  font-size: 17px;
+
+  transition: transform 180ms ease;
+}
+
+.closingLink:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .introSection {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .introSide {
+    max-width: 500px;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .sideColumn {
+    position: static;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+  }
+
+  .sideCard {
+    height: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .sideSteps {
+    margin-top: 0;
+
+    padding: 25px;
+
+    border: 1px solid rgba(13, 36, 59, 0.1);
+
+    border-radius: 18px;
+
+    background: #f8f6f4;
+  }
+
+  .directContact {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .introSection {
+    width: calc(100% - 40px);
+
+    padding: 70px 0 65px;
+
+    gap: 35px;
+  }
+
+  .introInner h1 {
+    font-size: clamp(45px, 13vw, 62px);
+  }
+
+  .introInner p {
+    font-size: 14px;
+  }
+
+  .introSide {
+    padding-left: 18px;
+  }
+
+  .mainSection {
+    padding: 75px 0 85px;
+  }
+
+  .mainGrid {
+    width: calc(100% - 40px);
+  }
+
+  .formHeader h2 {
+    font-size: clamp(37px, 11vw, 52px);
+  }
+
+  .caseForm {
+    padding: 24px 20px;
+
+    border-radius: 16px;
+  }
+
+  .phoneRow {
+    grid-template-columns: 105px 1fr;
+  }
+
+  .amountRow {
+    grid-template-columns: 85px 1fr;
+  }
+
+  .sideColumn {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .sideSteps {
+    margin-top: 0;
+  }
+
+  .protectionSection {
+    padding: 85px 20px;
+  }
+
+  .protectionHeading h2 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  .protectionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .protectionItem {
+    min-height: auto;
+
+    padding: 25px 0;
+  }
+
+  .closingSection {
+    padding: 90px 20px;
+  }
+
+  .closingContent h2 {
+    font-size: clamp(39px, 11vw, 55px);
+  }
+
+}
