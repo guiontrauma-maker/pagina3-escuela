@@ -773,112 +773,132 @@ export default function IdentificacionFraudePage() {
 
 
         {/* =====================================================
-            PROCESO
-            ===================================================== */}
+    PROCESO
+    ===================================================== */}
 
-        <section className={styles.process}>
+<section className={styles.process}>
 
-          <div className={styles.processIntro}>
+  <div className={styles.processIntro}>
 
-            <span>
-              TU INFORMACIÓN
-            </span>
+    <span>
+      TU INFORMACIÓN
+    </span>
 
-            <h2>
-              Una evaluación
-              <br />
-              en cuatro pasos.
-            </h2>
+    <h2>
+      Una evaluación
+      <br />
+      en cuatro pasos.
+    </h2>
 
-            <p>
-              La evaluación está diseñada para ayudarte a ordenar
-              la información y reconocer posibles señales de riesgo.
-            </p>
+    <p>
+      La evaluación está diseñada para ayudarte a ordenar
+      la información, identificar patrones y reconocer
+      posibles señales de riesgo en tu situación.
+    </p>
 
-          </div>
-
-
-          <div className={styles.processSteps}>
-
-            <div
-              className={`${styles.processStep} ${styles.activeStep}`}
-            >
-              <div className={styles.stepCircle}>
-                01
-              </div>
-
-              <div>
-                <strong>
-                  Identificamos
-                </strong>
-
-                <span>
-                  El tipo de situación
-                </span>
-              </div>
-            </div>
+  </div>
 
 
-            <div className={styles.processStep}>
+  <div className={styles.processSteps}>
 
-              <div className={styles.stepCircle}>
-                02
-              </div>
+    <div
+      className={`${styles.processStep} ${styles.activeStep}`}
+    >
+      <div className={styles.stepCircle}>
+        01
+      </div>
 
-              <div>
-                <strong>
-                  Analizamos
-                </strong>
+      <div>
+        <strong>
+          Identificamos
+        </strong>
 
-                <span>
-                  Si la situación continúa
-                </span>
-              </div>
+        <span>
+          El tipo de situación
+        </span>
 
-            </div>
-
-
-            <div className={styles.processStep}>
-
-              <div className={styles.stepCircle}>
-                03
-              </div>
-
-              <div>
-                <strong>
-                  Evaluamos
-                </strong>
-
-                <span>
-                  Las señales presentes
-                </span>
-              </div>
-
-            </div>
+        <p>
+          Revisamos lo ocurrido y determinamos qué tipo
+          de situación podría estar relacionada con el caso.
+        </p>
+      </div>
+    </div>
 
 
-            <div className={styles.processStep}>
+    <div className={styles.processStep}>
 
-              <div className={styles.stepCircle}>
-                04
-              </div>
+      <div className={styles.stepCircle}>
+        02
+      </div>
 
-              <div>
-                <strong>
-                  Orientamos
-                </strong>
+      <div>
+        <strong>
+          Analizamos
+        </strong>
 
-                <span>
-                  Sobre posibles siguientes pasos
-                </span>
-              </div>
+        <span>
+          Si la situación continúa
+        </span>
 
-            </div>
+        <p>
+          Observamos si existen nuevos contactos, solicitudes
+          o movimientos que puedan representar un riesgo.
+        </p>
+      </div>
 
-          </div>
+    </div>
 
-        </section>
 
+    <div className={styles.processStep}>
+
+      <div className={styles.stepCircle}>
+        03
+      </div>
+
+      <div>
+        <strong>
+          Evaluamos
+        </strong>
+
+        <span>
+          Las señales presentes
+        </span>
+
+        <p>
+          Organizamos los datos disponibles para reconocer
+          señales de alerta y comprender mejor el nivel de riesgo.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div className={styles.processStep}>
+
+      <div className={styles.stepCircle}>
+        04
+      </div>
+
+      <div>
+        <strong>
+          Orientamos
+        </strong>
+
+        <span>
+          Sobre posibles siguientes pasos
+        </span>
+
+        <p>
+          Te explicamos las alternativas disponibles y qué
+          información puede ser útil para continuar con tu caso.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
         {/* =====================================================
             RESULTADO

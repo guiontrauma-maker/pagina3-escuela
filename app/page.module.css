@@ -1662,7 +1662,7 @@
 
   color: #0d243b;
 
-  font-size: 13px;
+  font-size: 20px;
 
   font-weight: 700;
 
@@ -2117,4 +2117,91 @@
     height: 29px;
   }
 
+}
+/* =========================================================
+   AJUSTE DE LEGIBILIDAD — TEXTOS SECUNDARIOS DEL HERO
+   Solo aumenta textos pequeños.
+   NO modifica los títulos principales.
+   ========================================================= */
+
+.badge {
+  font-size: 12px;
+}
+
+.heroDescription {
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.heroNote {
+  font-size: 14px;
+}
+
+.noteIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.noteIcon svg {
+  width: 10px;
+  height: 10px;
+}
+
+
+/* =========================================================
+   TRUST BAR
+   ========================================================= */
+
+.trustItem strong {
+  font-size: 12px;
+}
+
+.trustItem div > span {
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   PANEL
+   ========================================================= */
+
+.panelEyebrow {
+  font-size: 12px;
+}
+
+.panelHeader p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.status {
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.statIndex {
+  font-size: 11px;
+}
+
+.statLabel {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONTACTO DEL PANEL
+   ========================================================= */
+
+.panelContactText > span {
+  font-size: 11px;
+}
+
+.panelContactText p {
+  font-size: 14px;
+  line-height: 1.7;
 }
