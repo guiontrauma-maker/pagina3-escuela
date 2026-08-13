@@ -130,13 +130,20 @@
 }
 
 .heroTitle span {
+  display: inline-block;
+
   color: #f6e0b6;
+
+  font-size: clamp(52px, 5.8vw, 82px) !important;
+
+  line-height: 0.96 !important;
+
+  letter-spacing: -0.055em !important;
 
   font-weight: 500;
 
   font-style: italic;
 }
-
 .heroDescription {
   max-width: 650px;
 

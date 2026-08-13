@@ -1,42 +1,30 @@
 @import "tailwindcss";
 
-/* =====================================================
-   VALTARA — IDENTIDAD VISUAL
-   Resguardo y Recuperación Patrimonial
-   ===================================================== */
-
 :root {
   /* ========================================
-     AZULES PRINCIPALES
+     VALTARA — IDENTIDAD VISUAL
+     Resguardo y Recuperación Patrimonial
      ======================================== */
 
+  /* Azules principales */
   --valtara-navy: #2f4156;
   --valtara-dark-blue: #0d243b;
   --valtara-blue: #16587b;
   --valtara-teal: #567c8d;
   --valtara-french-blue: #3e4b8e;
 
-  /* ========================================
-     AZULES CLAROS
-     ======================================== */
-
+  /* Azules claros */
   --valtara-sky-blue: #c8d9e6;
   --valtara-powder-blue: #a6bcc9;
   --valtara-rock-blue: #84b3ce;
 
-  /* ========================================
-     NEUTROS
-     ======================================== */
-
+  /* Neutros */
   --valtara-white: #ffffff;
   --valtara-merino: #f5eedd;
   --valtara-seashell: #fff4eb;
   --valtara-silver: #b8c3c7;
 
-  /* ========================================
-     ACENTOS
-     ======================================== */
-
+  /* Acentos */
   --valtara-wheat: #f6e0b6;
   --valtara-wine: #730f1a;
   --valtara-midnight-violet: #3d1534;
@@ -62,181 +50,84 @@
 }
 
 
-/* =====================================================
+/* ========================================
    CONFIGURACIÓN GENERAL
-   ===================================================== */
+   ======================================== */
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-size: 17px;
-
+  font-size: 18px;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-
-  background: var(--background);
-
-  color: var(--foreground);
-
-  font-size: 17px;
-
+  font-size: 1rem;
   line-height: 1.7;
-
-  -webkit-font-smoothing: antialiased;
-
-  text-rendering: optimizeLegibility;
+  color: var(--foreground);
 }
 
 
-/* =====================================================
+/* ========================================
    LEGIBILIDAD GLOBAL
-   ===================================================== */
+   ========================================
 
-/*
-   IMPORTANTE:
-   Muchos componentes de VALTARA tienen sus tamaños
-   definidos directamente en px.
-
-   Por eso usamos !important únicamente en los
-   elementos destinados a texto de lectura.
-*/
+   Estos tamaños tienen !important porque
+   algunas páginas tienen tamaños definidos
+   directamente en sus CSS individuales.
+   ======================================== */
 
 
-/* -----------------------------------------
-   PÁRRAFOS
-   ----------------------------------------- */
-
-p {
-  font-size: 18px !important;
-
-  line-height: 1.7 !important;
-}
-
-
-/* -----------------------------------------
-   LISTAS
-   ----------------------------------------- */
-
+/* Texto normal */
+p,
 li {
-  font-size: 18px !important;
-
-  line-height: 1.7 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
 }
 
 
-/* -----------------------------------------
-   TEXTO PEQUEÑO
-   ----------------------------------------- */
-
+/* Textos pequeños */
 small {
-  font-size: 16px !important;
-
+  font-size: 0.95rem !important;
   line-height: 1.6 !important;
 }
 
 
-/* -----------------------------------------
-   ETIQUETAS DE FORMULARIOS
-   ----------------------------------------- */
-
+/* Etiquetas, indicadores y textos auxiliares */
 label {
-  font-size: 17px !important;
-
-  line-height: 1.6 !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
 }
 
 
-/* -----------------------------------------
-   CAMPOS DE FORMULARIO
-   ----------------------------------------- */
-
-input,
-textarea,
-select {
-  font-size: 17px;
+/* Textos dentro de spans */
+span {
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
 }
 
 
-/* -----------------------------------------
-   BOTONES
-   ----------------------------------------- */
+/* Enlaces */
+a {
+  font-size: 1rem !important;
+}
 
+
+/* Botones */
 button {
-  font-size: 16px;
+  font-size: 1rem !important;
 }
 
 
-/* =====================================================
-   TEXTO DE LECTURA DENTRO DEL CONTENIDO PRINCIPAL
-   ===================================================== */
-
-/*
-   Esto cubre tarjetas, artículos y diferentes
-   secciones de las páginas sin tocar h1-h6.
-*/
-
-main p {
-  font-size: 18px !important;
-
-  line-height: 1.7 !important;
-}
-
-main li {
-  font-size: 18px !important;
-
-  line-height: 1.7 !important;
-}
-
-main small {
-  font-size: 16px !important;
-
-  line-height: 1.6 !important;
-}
-
-
-/* =====================================================
-   ENLACES DE CONTENIDO
-   ===================================================== */
-
-/*
-   No modificamos todos los <a> porque el Navbar
-   tiene su propio diseño.
-
-   Solo aumentamos enlaces que estén dentro de main.
-*/
-
-main a {
-  line-height: 1.5;
-}
-
-
-/* =====================================================
-   ACCESIBILIDAD VISUAL
-   ===================================================== */
-
-main p,
-main li,
-main small {
-  letter-spacing: 0.005em;
-}
-
-
-/* =====================================================
-   TÍTULOS
-   ===================================================== */
-
-/*
-   NO forzamos font-size aquí.
-
-   Los títulos de cada página ya tienen tamaños
-   definidos correctamente en sus respectivos
-   archivos CSS Modules.
-*/
+/* ========================================
+   NO TOCAR LOS TÍTULOS
+   Los títulos que ya quedaron bien
+   conservan sus tamaños definidos
+   en cada página.
+   ======================================== */
 
 h1,
 h2,
@@ -248,69 +139,76 @@ h6 {
 }
 
 
-/* =====================================================
-   TABLETS
-   ===================================================== */
+/* ========================================
+   FORMULARIOS
+   ======================================== */
 
-@media (max-width: 1000px) {
+input,
+textarea,
+select {
+  font-size: 1rem;
+}
 
-  body {
-    font-size: 17px;
-  }
 
+/* ========================================
+   MEJOR LEGIBILIDAD EN PANTALLAS GRANDES
+   ======================================== */
+
+@media (min-width: 1200px) {
   p,
-  main p {
-    font-size: 17px !important;
-
-    line-height: 1.7 !important;
+  li {
+    font-size: 1.08rem !important;
   }
 
-  li,
-  main li {
-    font-size: 17px !important;
-
-    line-height: 1.65 !important;
+  small {
+    font-size: 0.98rem !important;
   }
 
-  small,
-  main small {
-    font-size: 16px !important;
+  span,
+  label {
+    font-size: 1.02rem !important;
   }
 }
 
 
-/* =====================================================
+/* ========================================
+   TABLETS
+   ======================================== */
+
+@media (max-width: 900px) {
+  p,
+  li {
+    font-size: 1.05rem !important;
+  }
+
+  span,
+  label {
+    font-size: 1rem !important;
+  }
+}
+
+
+/* ========================================
    MÓVILES
-   ===================================================== */
+   ======================================== */
 
-@media (max-width: 700px) {
-
-  body {
-    font-size: 16px;
+@media (max-width: 600px) {
+  html {
+    font-size: 17px;
   }
 
   p,
-  main p {
-    font-size: 17px !important;
-
+  li {
+    font-size: 1.03rem !important;
     line-height: 1.7 !important;
   }
 
-  li,
-  main li {
-    font-size: 17px !important;
-
-    line-height: 1.65 !important;
+  small {
+    font-size: 0.95rem !important;
   }
 
-  small,
-  main small {
-    font-size: 15px !important;
-
-    line-height: 1.6 !important;
-  }
-
+  span,
   label {
-    font-size: 16px !important;
+    font-size: 1rem !important;
   }
 }
