@@ -105,40 +105,170 @@ export default function IdentificacionFraudePage() {
 
 </section>
 
-        {/* =====================================================
-            INTRO
-            ===================================================== */}
+{/* =====================================================
+    SERVICIOS DE ASISTENCIA A VÍCTIMAS DE FRAUDE
+    ===================================================== */}
 
-        <section className={styles.intro}>
+<section className={styles.servicesSection}>
 
-          <div className={styles.introNumber}>
-            01
-          </div>
+  <div className={styles.servicesHeader}>
 
-          <div className={styles.introContent}>
+    <h2>
+      Servicios de Asistencia a Víctimas de Fraude
+    </h2>
 
-            <span>
-              ANTES DE TOMAR UNA DECISIÓN
-            </span>
+    <p>
+      Analizamos tu caso de forma personalizada para activar los
+      mecanismos de recuperación correspondientes.
+    </p>
 
-            <h2>
-              Las señales de alerta
-              <br />
-              pueden estar más cerca de lo que parece.
-            </h2>
-
-            <p>
-              Los fraudes pueden presentarse de muchas formas. Una
-              inversión, una compra, un préstamo, una transferencia o
-              incluso un mensaje aparentemente legítimo pueden contener
-              señales que conviene revisar.
-            </p>
-
-          </div>
-
-        </section>
+  </div>
 
 
+  <div className={styles.servicesGrid}>
+
+
+    {/* =================================================
+        SERVICIO 01 — CHARGEBACK
+        ================================================= */}
+
+    <article className={styles.serviceCard}>
+
+      <div className={styles.serviceImageWrapper}>
+
+        <img
+          src="/images/chargeback.jpg"
+          alt="Gestión de Chargeback"
+          className={styles.serviceImage}
+        />
+
+      </div>
+
+      <div className={styles.serviceContent}>
+
+        <span className={styles.serviceCategory}>
+          PROCEDIMIENTO BANCARIO
+        </span>
+
+        <h3>
+          Gestión de
+          <br />
+          Chargeback
+        </h3>
+
+        <p>
+          Tramitamos solicitudes formales de retrocesión de fondos
+          mediante VISA/Mastercard ante tu entidad bancaria por
+          cobros fraudulentos o falta de entrega de servicio.
+        </p>
+
+        <Link
+          href="/contacto"
+          className={styles.serviceButton}
+        >
+          Quiero recuperar mi dinero
+        </Link>
+
+      </div>
+
+    </article>
+
+
+    {/* =================================================
+        SERVICIO 02 — BLOCKCHAIN FORENSICS
+        ================================================= */}
+
+    <article className={styles.serviceCard}>
+
+      <div className={styles.serviceImageWrapper}>
+
+        <img
+          src="/images/blockchain-forensics.jpg"
+          alt="Rastreo de Criptoactivos"
+          className={styles.serviceImage}
+        />
+
+      </div>
+
+      <div className={styles.serviceContent}>
+
+        <span className={styles.serviceCategory}>
+          BLOCKCHAIN FORENSICS
+        </span>
+
+        <h3>
+          Rastreo de
+          <br />
+          Criptoactivos
+        </h3>
+
+        <p>
+          Auditamos y rastreamos transferencias en la cadena de
+          bloques (Bitcoin, USDT, Ethereum) para identificar las
+          billeteras receptoras y Exchange regulados destino.
+        </p>
+
+        <Link
+          href="/contacto"
+          className={styles.serviceButton}
+        >
+          Quiero recuperar mi dinero
+        </Link>
+
+      </div>
+
+    </article>
+
+
+    {/* =================================================
+        SERVICIO 03 — DEFENSA LEGAL
+        ================================================= */}
+
+    <article className={styles.serviceCard}>
+
+      <div className={styles.serviceImageWrapper}>
+
+        <img
+          src="/images/defensa-legal.jpg"
+          alt="Denuncias y Reguladores"
+          className={styles.serviceImage}
+        />
+
+      </div>
+
+      <div className={styles.serviceContent}>
+
+        <span className={styles.serviceCategory}>
+          DEFENSA LEGAL
+        </span>
+
+        <h3>
+          Denuncias y
+          <br />
+          Reguladores
+        </h3>
+
+        <p>
+          Elaboramos la documentación legal pertinente para
+          presentar denuncias formales ante organismos de regulación
+          financiera y fiscalías especializadas.
+        </p>
+
+        <Link
+          href="/contacto"
+          className={styles.serviceButton}
+        >
+          Quiero recuperar mi dinero
+        </Link>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
         {/* =====================================================
             EVALUACIÓN
             ===================================================== */}

@@ -381,36 +381,141 @@ export default function Home() {
           </div>
 
         </section>
+{/* =====================================================
+    IDENTIDAD / RECUPERACIÓN DE FONDOS
+    ===================================================== */}
+
+<section className={styles.identity}>
+
+  <div className={styles.identityInner}>
+
+    {/* =================================================
+        CONTENIDO IZQUIERDO
+        ================================================= */}
+
+    <div className={styles.identityContent}>
+
+      <h2>
+        Recupera tu dinero perdido con la ayuda de nuestros abogados expertos
+      </h2>
 
 
-        {/* =====================================================
-            IDENTIDAD
-            ===================================================== */}
+      {/* =================================================
+          PROBLEMA 01
+          ================================================= */}
 
-        <section className={styles.identity}>
+      <div className={styles.identityProblem}>
 
-          <div className={styles.identityInner}>
+        <div className={styles.identityProblemIcon}>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v10h16V7H4Zm2 2h5v2H6V9Zm0 3h8v2H6v-2Zm10-3h2v5h-2V9Z" />
+          </svg>
+        </div>
 
-            <span className={styles.identityLabel}>
-              VALTARA
-            </span>
+        <div className={styles.identityProblemContent}>
 
-            <h2>
-              Tu patrimonio,
-              <br />
-              <em>nuestra prioridad.</em>
-            </h2>
+          <h3>
+            Problema – Estafas en plataformas de trading
+          </h3>
 
-            <p>
-              Protección, información y orientación para ayudarte
-              a tomar decisiones con mayor claridad frente a
-              situaciones que puedan poner en riesgo tu patrimonio.
-            </p>
+          <p>
+            Las plataformas fraudulentas de trading prometen grandes
+            rendimientos, pero una vez que los inversores depositan su
+            dinero, pueden desaparecer. Nuestros abogados expertos
+            utilizan información y herramientas de investigación para
+            rastrear estas operaciones y analizar las posibilidades
+            de recuperación.
+          </p>
 
-          </div>
+        </div>
 
-        </section>
+      </div>
 
+
+      {/* =================================================
+          PROBLEMA 02
+          ================================================= */}
+
+      <div className={styles.identityProblem}>
+
+        <div className={styles.identityProblemIcon}>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3 3 7l9 4 9-4-9-4Zm-6.5 6.8V16L12 19l6.5-3V9.8L12 12.7 5.5 9.8ZM4 17v2l8 3 8-3v-2l-8 3-8-3Z" />
+          </svg>
+        </div>
+
+        <div className={styles.identityProblemContent}>
+
+          <h3>
+            Problema – Manipulación de precios en plataformas
+          </h3>
+
+          <p>
+            La manipulación de precios y la falta de transparencia son
+            prácticas que pueden presentarse en plataformas o brokers
+            no regulados. Analizamos la información disponible para
+            identificar posibles irregularidades y determinar las
+            alternativas correspondientes.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      {/* =================================================
+          PROBLEMA 03
+          ================================================= */}
+
+      <div className={styles.identityProblem}>
+
+        <div className={styles.identityProblemIcon}>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2 4 5v6c0 5.2 3.4 9.9 8 11 4.6-1.1 8-5.8 8-11V5l-8-3Zm0 2.2 6 2.25V11c0 4-2.45 7.65-6 8.75C8.45 18.65 6 15 6 11V6.45l6-2.25Zm-1 4.3v5.2h2V8.5h-2Zm0 6.5v2h2v-2h-2Z" />
+          </svg>
+        </div>
+
+        <div className={styles.identityProblemContent}>
+
+          <h3>
+            Problema – Phishing y robo de fondos en inversiones
+          </h3>
+
+          <p>
+            Si tus fondos fueron comprometidos mediante phishing,
+            suplantación, accesos no autorizados u otras formas de
+            fraude digital, nuestro equipo puede ayudarte a organizar
+            la información y analizar las operaciones relacionadas.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    {/* =================================================
+        ESPACIO PARA LA FOTO
+        ================================================= */}
+
+    <div className={styles.identityImageWrapper}>
+
+      <div className={styles.identityImageFrame}>
+
+        <img
+          src="/images/abogado-trading.jpg"
+          alt="Abogado especialista en recuperación de fondos de trading"
+          className={styles.identityImage}
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
         {/* =====================================================
             RIESGO

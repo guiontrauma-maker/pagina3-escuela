@@ -748,74 +748,295 @@
   background: #84b3ce;
 }
 
-
 /* =========================================================
-   IDENTIDAD
+   IDENTIDAD / RECUPERACIÓN DE FONDOS
    ========================================================= */
 
 .identity {
   width: 100%;
 
-  padding: 165px 30px 170px;
+  padding: 125px 7vw 135px;
 
   background: #f5eeeb;
 
-  text-align: center;
+  color: #0d243b;
 }
 
 .identityInner {
-  width: min(850px, 100%);
+  width: min(1180px, 100%);
 
   margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 80px;
 }
 
-.identityLabel {
-  display: inline-block;
 
-  margin-bottom: 25px;
+/* =========================================================
+   CONTENIDO IZQUIERDO
+   ========================================================= */
 
-  color: #16587b;
+.identityContent {
+  width: 100%;
 
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 0.25em;
+  max-width: 650px;
 }
 
-.identity h2 {
-  margin: 0;
+.identityContent h2 {
+  margin: 0 0 45px;
 
   color: #0d243b;
 
-  font-size: clamp(50px, 6vw, 80px);
+  font-size: clamp(38px, 4.3vw, 62px);
 
-  line-height: 0.98;
+  line-height: 1.03;
 
-  letter-spacing: -0.055em;
+  letter-spacing: -0.045em;
+
+  font-weight: 800;
 }
 
-.identity h2 em {
+
+/* =========================================================
+   PROBLEMAS
+   ========================================================= */
+
+.identityProblem {
+  display: grid;
+
+  grid-template-columns: 48px 1fr;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 23px 0;
+
+  border-top: 1px solid rgba(13, 36, 59, 0.12);
+}
+
+.identityProblem:last-child {
+  border-bottom: 1px solid rgba(13, 36, 59, 0.12);
+}
+
+
+/* =========================================================
+   ICONOS DE PROBLEMAS
+   ========================================================= */
+
+.identityProblemIcon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(22, 88, 123, 0.15);
+
+  border-radius: 11px;
+
+  background: rgba(22, 88, 123, 0.07);
+
   color: #16587b;
-
-  font-weight: 500;
-
-  font-style: italic;
 }
 
-.identity p {
-  width: min(650px, 100%);
+.identityProblemIcon svg {
+  width: 22px;
+  height: 22px;
 
-  margin: 32px auto 0;
+  display: block;
 
-  color: #657a88;
+  fill: currentColor;
+}
+
+
+/* =========================================================
+   TEXTO DE PROBLEMAS
+   ========================================================= */
+
+.identityProblemContent {
+  min-width: 0;
+}
+
+.identityProblemContent h3 {
+  margin: 0 0 8px;
+
+  color: #0d243b;
 
   font-size: 15px;
 
-  line-height: 1.85;
+  line-height: 1.35;
+
+  font-weight: 800;
+}
+
+.identityProblemContent p {
+  margin: 0;
+
+  color: #657a88;
+
+  font-size: 12px;
+
+  line-height: 1.7;
 }
 
 
+/* =========================================================
+   ESPACIO PARA LA FOTO
+   ========================================================= */
+
+.identityImageWrapper {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.identityImageFrame {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 520px;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #dce8ee;
+
+  box-shadow:
+    0 25px 60px rgba(13, 36, 59, 0.12),
+    0 5px 20px rgba(13, 36, 59, 0.05);
+}
+
+
+/* =========================================================
+   FOTO
+   ========================================================= */
+
+.identityImage {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .identity {
+    padding: 100px 5vw 110px;
+  }
+
+  .identityInner {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .identityContent {
+    max-width: 850px;
+
+    margin: 0 auto;
+  }
+
+  .identityContent h2 {
+    max-width: 750px;
+  }
+
+  .identityImageWrapper {
+    width: min(650px, 100%);
+
+    margin: 0 auto;
+  }
+
+  .identityImageFrame {
+    max-width: 100%;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .identity {
+    padding: 85px 20px 95px;
+  }
+
+  .identityInner {
+    gap: 45px;
+  }
+
+  .identityContent h2 {
+    margin-bottom: 35px;
+
+    font-size: clamp(34px, 10vw, 50px);
+
+    line-height: 1.05;
+  }
+
+  .identityProblem {
+    grid-template-columns: 40px 1fr;
+
+    gap: 14px;
+
+    padding: 20px 0;
+  }
+
+  .identityProblemIcon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+  }
+
+  .identityProblemIcon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .identityProblemContent h3 {
+    font-size: 14px;
+  }
+
+  .identityProblemContent p {
+    font-size: 11px;
+
+    line-height: 1.65;
+  }
+
+  .identityImageWrapper {
+    width: 100%;
+  }
+
+  .identityImageFrame {
+    aspect-ratio: 4 / 5;
+
+    border-radius: 20px;
+  }
+
+}
 /* =========================================================
    RISK
    ========================================================= */
