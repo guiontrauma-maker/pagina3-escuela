@@ -58,15 +58,54 @@ export default function CasosReales() {
     testimonialPermission: false,
   });
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
 
-    console.log("Caso enviado:", formData);
+  try {
+    const response = await fetch("/api/admin/registros", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        tipo: "caso",
+        datos: formData,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(
+        result.message || "No fue posible registrar el caso."
+      );
+    }
 
     alert(
-      "Tu información fue registrada para revisión. Próximamente podrás continuar con el proceso de orientación."
+      "Tu información fue registrada correctamente para revisión."
     );
-  };
+
+    setFormData({
+      name: "",
+      email: "",
+      country: "",
+      phone: "",
+      amount: "",
+      type: "",
+      description: "",
+      contactPermission: false,
+      testimonialPermission: false,
+    });
+  } catch (error) {
+    console.error(error);
+
+    alert(
+      error instanceof Error
+        ? error.message
+        : "No fue posible registrar el caso."
+    );
+  }
+};
 
   const handleChange = (
     field: keyof typeof formData,
