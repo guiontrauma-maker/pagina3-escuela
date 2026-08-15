@@ -13,10 +13,50 @@ const EMAIL_URL =
 export default function ContactoPage() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSubmitted(true);
-  }
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+      event.preventDefault();
+
+        const form = event.currentTarget;
+          const formData = new FormData(form);
+
+            const data = {
+                name: formData.get("name"),
+                    email: formData.get("email"),
+                        countryCode: formData.get("countryCode"),
+                            phone: formData.get("phone"),
+                                currency: formData.get("currency"),
+                                    amount: formData.get("amount"),
+                                        caseType: formData.get("caseType"),
+                                            description: formData.get("description"),
+                                                privacy: formData.get("privacy") === "on",
+                                                  };
+
+                                                    try {
+                                                        const response = await fetch("/api/contacto", {
+                                                              method: "POST",
+                                                                    headers: {
+                                                                            "Content-Type": "application/json",
+                                                                                  },
+                                                                                        body: JSON.stringify(data),
+                                                                                            });
+
+                                                                                                const result = await response.json();
+
+                                                                                                    if (!response.ok) {
+                                                                                                          throw new Error(result.message || "No fue posible enviar el formulario.");
+                                                                                                              }
+
+                                                                                                                  setSubmitted(true);
+                                                                                                                      form.reset();
+                                                                                                                        } catch (error) {
+                                                                                                                            console.error("Error al enviar el formulario:", error);
+
+                                                                                                                                alert(
+                                                                                                                                      "No fue posible enviar la información. Por favor, inténtalo nuevamente."
+                                                                                                                                          );
+                                                                                                                                            }
+                                                                                                                                            }
+  
 
   return (
     <>
