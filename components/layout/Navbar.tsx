@@ -54,11 +54,11 @@ export default function Navbar() {
 
           <div className="valtara-brand__text">
             <div className="valtara-brand__name">
-              VALTARA
+              AER
             </div>
 
             <div className="valtara-brand__descriptor">
-              Resguardo y Recuperación Patrimonial
+              Asesoria Especializada en Recuperación 
             </div>
           </div>
         </Link>

@@ -121,7 +121,7 @@ export default function Home() {
 
             <div className={styles.badge}>
               <span className={styles.badgeDot}></span>
-              Resguardo y Recuperación Patrimonial
+             Asesoría Especializada en Recuperación 
             </div>
 
             <h1 className={styles.heroTitle}>
@@ -131,7 +131,7 @@ export default function Home() {
             </h1>
 
             <p className={styles.heroDescription}>
-              En VALTARA te ayudamos a identificar señales de fraude,
+              En AER te ayudamos a identificar señales de fraude,
               comprender tu situación y conocer las alternativas disponibles
               para proteger tu patrimonio.
             </p>
@@ -215,7 +215,7 @@ export default function Home() {
                 <div className={styles.panelHeaderContent}>
 
                   <span className={styles.panelEyebrow}>
-                    VALTARA
+                    AER
                   </span>
 
                   <h2>
