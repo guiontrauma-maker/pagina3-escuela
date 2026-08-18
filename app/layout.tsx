@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "AER | Asesoría Especializada en Recuperación",
   description:
     "Orientación para identificar riesgos, comprender situaciones de fraude y proteger tu patrimonio.",
+  icons: {
+    icon: "/valtara-logo.png",
+  },
 };
 
 export default function RootLayout({
