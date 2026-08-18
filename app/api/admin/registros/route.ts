@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 import clientPromise from "@/lib/mongodb";
 
-const DATABASE_NAME = process.env.MONGODB_DB || "valtara";
+const DATABASE_NAME = process.env.MONGODB_DB || "aer";
 const COLLECTION_NAME = "registros";
 
 export async function GET(request: Request) {

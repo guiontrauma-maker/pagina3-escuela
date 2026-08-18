@@ -95,7 +95,7 @@ export default function AdminPage() {
             <div className="admin-logo">V</div>
 
             <div className="admin-brand-text">
-              <strong>VALTARA</strong>
+              <strong>AER</strong>
               <span>Panel administrativo</span>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function AdminPage() {
 
             <div>
               <strong>Sistema activo</strong>
-              <small>VALTARA operativo</small>
+              <small>AER operativo</small>
             </div>
           </div>
 
@@ -146,7 +146,7 @@ export default function AdminPage() {
       <section className="admin-main">
         <header className="admin-topbar">
           <span className="admin-breadcrumb">
-            VALTARA / ADMINISTRACIÓN / INICIO
+            AER / ADMINISTRACIÓN / INICIO
           </span>
 
           <div className="admin-user">
@@ -168,7 +168,7 @@ export default function AdminPage() {
 
               <p>
                 Consulta el estado actual de la información recibida
-                por VALTARA.
+                por AER.
               </p>
             </div>
 

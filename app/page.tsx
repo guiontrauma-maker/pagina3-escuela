@@ -951,12 +951,12 @@ export default function Home() {
                   setOpenFaq(openFaq === 0 ? null : 0);
                 }}
               >
-                ¿VALTARA puede recuperar mi dinero?
+                ¿AER puede recuperar mi dinero?
                 <span>+</span>
               </summary>
 
               <p>
-                VALTARA funciona como una plataforma de orientación y
+                AER funciona como una plataforma de orientación y
                 seguimiento. La recuperación de fondos depende de las
                 características y circunstancias de cada caso.
               </p>
@@ -1040,7 +1040,7 @@ export default function Home() {
           <div className={styles.finalCtaContent}>
 
             <span>
-              VALTARA
+              AER
             </span>
 
             <h2>
@@ -1077,7 +1077,7 @@ export default function Home() {
         <div className={styles.footerSpace}>
 
           <span>
-            VALTARA · Resguardo y Recuperación Patrimonial
+            AER · Asesoria Especializada en Recuperación 
           </span>
 
         </div>

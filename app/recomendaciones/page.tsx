@@ -479,7 +479,7 @@ export default function RecomendacionesPage() {
                 href="/contacto"
                 className={styles.primaryButton}
               >
-                Hablar con VALTARA
+                Hablar con AER Asesoría Especializada en Recuperación 
                 <span>→</span>
               </Link>
 
@@ -551,7 +551,7 @@ export default function RecomendacionesPage() {
 
         <div className={styles.footerSpace}>
           <span>
-            VALTARA · Resguardo y Recuperación Patrimonial
+            AER· Asesoría Especializada en Recuperación 
           </span>
         </div>
 

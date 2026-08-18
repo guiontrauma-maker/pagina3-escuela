@@ -622,7 +622,7 @@ export default function IdentificacionFraudePage() {
                   href="/contacto"
                   className={styles.primaryAction}
                 >
-                  Hablar con VALTARA
+                  Hablar con AER Asesoría Especializada en Recuperación 
                   <span>→</span>
                 </Link>
 
@@ -1107,7 +1107,7 @@ export default function IdentificacionFraudePage() {
             </strong>
 
             <p>
-              La herramienta de identificación de fraude de VALTARA
+              La herramienta de identificación de fraude de AER
               proporciona una evaluación orientativa basada en la
               información proporcionada por el usuario. El resultado
               no constituye una determinación legal, financiera ni
@@ -1130,7 +1130,7 @@ export default function IdentificacionFraudePage() {
           <div className={styles.finalContent}>
 
             <span>
-              VALTARA
+              AER
             </span>
 
             <h2>
@@ -1165,7 +1165,7 @@ export default function IdentificacionFraudePage() {
 
         <div className={styles.footerSpace}>
           <span>
-            VALTARA · Resguardo y Recuperación Patrimonial
+            AER · Asesoria Especializada en Recuperación 
           </span>
         </div>
 

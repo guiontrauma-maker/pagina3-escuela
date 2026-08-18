@@ -74,7 +74,7 @@ export default function ContactoPage() {
 
             <div className={styles.introLabel}>
               <span className={styles.introDot}></span>
-              ORIENTACIÓN VALTARA
+              ORIENTACIÓN AER
             </div>
 
             <h1>
@@ -652,8 +652,7 @@ export default function ContactoPage() {
           <div className={styles.closingContent}>
 
             <span>
-              VALTARA
-            </span>
+              AER           </span>
 
             <h2>
               Entender lo ocurrido

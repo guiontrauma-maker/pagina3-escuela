@@ -149,7 +149,7 @@ export default function ContactosPage() {
           <div className="admin-brand">
             <div className="admin-logo">V</div>
             <div className="admin-brand-text">
-              <strong>VALTARA</strong>
+              <strong>AER</strong>
               <span>Panel administrativo</span>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function ContactosPage() {
 
             <div>
               <strong>Sistema activo</strong>
-              <small>VALTARA operativo</small>
+              <small> AER operativo</small>
             </div>
           </div>
 
@@ -208,7 +208,7 @@ export default function ContactosPage() {
             <div className="admin-user-avatar">V</div>
 
             <div>
-              <strong>VALTARA</strong>
+              <strong>AER</strong>
               <span>Administrador</span>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function ContactosPage() {
 
               <p>
                 Información enviada desde el formulario de contacto de
-                VALTARA.
+                AER.
               </p>
             </div>
 

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VALTARA | Resguardo y Recuperación Patrimonial",
+  title: "AER | Asesoría Especializada en Recuperación",
   description:
     "Orientación para identificar riesgos, comprender situaciones de fraude y proteger tu patrimonio.",
 };

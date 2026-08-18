@@ -33,7 +33,7 @@ export default function QueHacerDespuesDeUnaEstafa() {
             </p>
 
             <div className={styles.articleMeta}>
-              <span>VALTARA</span>
+              <span>AER</span>
               <span>·</span>
               <span>Guía de orientación</span>
             </div>
@@ -239,7 +239,7 @@ export default function QueHacerDespuesDeUnaEstafa() {
             <div className={styles.finalNote}>
 
               <strong>
-                VALTARA
+                AER
               </strong>
 
               <p>
@@ -283,7 +283,7 @@ export default function QueHacerDespuesDeUnaEstafa() {
 
         <footer className={styles.footer}>
           <Link href="/">
-            ← Volver a VALTARA
+            ← Volver a AER
           </Link>
         </footer>
 

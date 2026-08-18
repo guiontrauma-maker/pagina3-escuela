@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 
 type Category =
   | "Todas"
-  | "VALTARA"
+  | "AER"
   | "Fraude"
   | "Orientación"
   | "Información"
@@ -22,20 +22,20 @@ type Faq = {
 
 const faqs: Faq[] = [
   {
-    category: "VALTARA",
-    question: "¿Qué es VALTARA?",
+    category: "AER",
+    question: "¿Qué es AER AsesoríaEspecializada en Recuperación?",
     answer:
-      "VALTARA es una plataforma de orientación enfocada en situaciones que pueden poner en riesgo el patrimonio. Su objetivo es ayudarte a organizar la información, comprender las señales de alerta y conocer posibles alternativas para actuar con mayor claridad.",
+      "AER es una plataforma de orientación enfocada en situaciones que pueden poner en riesgo el patrimonio. Su objetivo es ayudarte a organizar la información, comprender las señales de alerta y conocer posibles alternativas para actuar con mayor claridad.",
   },
   {
-    category: "VALTARA",
-    question: "¿VALTARA es una institución financiera?",
+    category: "AER",
+    question: "¿AER es una institución financiera?",
     answer:
-      "No. VALTARA no es un banco, casa de bolsa ni institución financiera. La plataforma está orientada a brindar información y acompañamiento inicial ante situaciones relacionadas con posibles fraudes o riesgos patrimoniales.",
+      "No. AER no es un banco, casa de bolsa ni institución financiera. La plataforma está orientada a brindar información y acompañamiento inicial ante situaciones relacionadas con posibles fraudes o riesgos patrimoniales.",
   },
   {
-    category: "VALTARA",
-    question: "¿VALTARA garantiza recuperar mi dinero?",
+    category: "AER",
+    question: "¿AER garantiza recuperar mi dinero?",
     answer:
       "No existe una garantía de recuperación. Las posibilidades dependen de las circunstancias particulares de cada caso, de la información disponible y de las acciones que puedan realizarse posteriormente.",
   },
@@ -65,7 +65,7 @@ const faqs: Faq[] = [
   },
   {
     category: "Orientación",
-    question: "¿Cómo comienza una orientación con VALTARA?",
+    question: "¿Cómo comienza una orientación con AER Asesoría Especializada en Recuperación ?",
     answer:
       "El proceso comienza con la recopilación de información general sobre la situación. A partir de ella se pueden identificar elementos relevantes, organizar los antecedentes y determinar qué aspectos requieren mayor atención.",
   },
@@ -167,7 +167,7 @@ const categories: { label: Category; description: string }[] = [
     description: "Consulta todas las preguntas disponibles.",
   },
   {
-    label: "VALTARA",
+    label: "AER",
     description: "Conoce la plataforma y su alcance.",
   },
   {
@@ -244,7 +244,7 @@ export default function PreguntasFrecuentes() {
 
               <div className={styles.introText}>
                 <p>
-                  Encuentra respuestas sobre VALTARA, situaciones de fraude,
+                  Encuentra respuestas sobre AER, situaciones de fraude,
                   seguridad de la información y el proceso de orientación.
                 </p>
 
@@ -521,7 +521,7 @@ export default function PreguntasFrecuentes() {
             </div>
 
             <Link href="/contacto" className={styles.contactButton}>
-              Hablar con VALTARA
+              Hablar con AER Asesoría Especializada en Recuperación
               <span>→</span>
             </Link>
           </div>
@@ -554,7 +554,7 @@ export default function PreguntasFrecuentes() {
             ===================================================== */}
 
         <section className={styles.finalSection}>
-          <span>VALTARA</span>
+          <span>AER</span>
 
           <h2>
             Información clara.

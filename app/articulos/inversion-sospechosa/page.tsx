@@ -33,7 +33,7 @@ export default function InversionSospechosa() {
             </p>
 
             <div className={styles.articleMeta}>
-              <span>VALTARA</span>
+              <span>AER</span>
               <span>·</span>
               <span>Guía de prevención</span>
             </div>
@@ -195,7 +195,7 @@ export default function InversionSospechosa() {
 
             <div className={styles.finalNote}>
               <strong>
-                VALTARA
+                AER
               </strong>
 
               <p>
@@ -239,7 +239,7 @@ export default function InversionSospechosa() {
 
         <footer className={styles.footer}>
           <Link href="/">
-            ← Volver a VALTARA
+            ← Volver a AER
           </Link>
         </footer>
 

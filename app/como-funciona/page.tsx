@@ -73,7 +73,7 @@ export default function ComoFuncionaPage() {
             </span>
 
             <span className={styles.heroIndex}>
-              VALTARA / 01
+              AER/ 01
             </span>
 
           </div>
@@ -96,7 +96,7 @@ export default function ComoFuncionaPage() {
               </p>
 
               <p>
-                En VALTARA trabajamos mediante un proceso estructurado que
+                En AER trabajamos mediante un proceso estructurado que
                 permite identificar señales, organizar información, analizar
                 el contexto y conocer las alternativas disponibles.
               </p>
@@ -156,7 +156,7 @@ export default function ComoFuncionaPage() {
                 href="/contacto"
                 className={styles.textLink}
               >
-                Hablar con VALTARA <span>→</span>
+                Hablar con AER <span>→</span>
               </Link>
 
             </div>
@@ -289,7 +289,7 @@ export default function ComoFuncionaPage() {
               <div className={styles.note}>
 
                 <span>
-                  VALTARA
+                 AER Asesoría Especializada en Recuperació<nav></nav>
                 </span>
 
                 <p>
@@ -401,7 +401,7 @@ export default function ComoFuncionaPage() {
         <div className={styles.footerSpace}>
 
           <span>
-            VALTARA · Resguardo y Recuperación Patrimonial
+            AER· Asesoría Especializada en Recuperación 
           </span>
 
         </div>

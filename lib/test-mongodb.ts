@@ -8,9 +8,9 @@ async function testMongoDB() {
                 ping: 1,
                     });
 
-                        console.log("✅ VALTARA: conexión con MongoDB exitosa");
+                        console.log("✅ AER: conexión con MongoDB exitosa");
                           } catch (error) {
-                              console.error("❌ VALTARA: error de conexión con MongoDB");
+                              console.error("❌ AER: error de conexión con MongoDB");
                                   console.error(error);
                                     }
                                     }
