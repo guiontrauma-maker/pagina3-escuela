@@ -49,8 +49,11 @@ export default function Navbar() {
           onClick={closeMenu}
         >
           <div className="valtara-brand__logo">
-            <span>V</span>
-          </div>
+  <img
+    src="/images/valtara-logo.png"
+    alt="Logo de AER"
+  />
+</div>
 
           <div className="valtara-brand__text">
             <div className="valtara-brand__name">
