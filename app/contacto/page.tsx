@@ -5,10 +5,10 @@ import Navbar from "@/components/layout/Navbar";
 import styles from "./page.module.css";
 
 const WHATSAPP_URL =
-  "https://wa.me/521XXXXXXXXXX?text=Hola%2C%20me%20gustaría%20recibir%20orientación%20sobre%20mi%20situación.";
+  "https://wa.me/5658165677?text=Hola%2C%20me%20gustaría%20recibir%20orientación%20sobre%20mi%20situación.";
 
 const EMAIL_URL =
-  "mailto:contacto@valtara.mx?subject=Solicitud%20de%20orientación";
+  "mailto:aer@asesoriaespecializada.com?subject=Solicitud%20de%20orientación";
 
 export default function ContactoPage() {
   const [submitted, setSubmitted] = useState(false);

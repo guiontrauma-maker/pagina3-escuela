@@ -628,7 +628,7 @@ export default function IdentificacionFraudePage() {
 
 
                 <a
-                  href="https://wa.me/5210000000000"
+                  href="https://wa.me/5658165677"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.secondaryAction}
@@ -639,7 +639,7 @@ export default function IdentificacionFraudePage() {
 
 
                 <a
-                  href="mailto:contacto@valtara.com"
+                  href="mailto:aer@asesoriaespecializada.com"
                   className={styles.secondaryAction}
                 >
                   <span>✉️</span>

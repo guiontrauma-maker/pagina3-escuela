@@ -5,10 +5,10 @@ import Navbar from "@/components/layout/Navbar";
 import styles from "./page.module.css";
 
 const WHATSAPP_URL =
-  "https://wa.me/521XXXXXXXXXX?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20orientaci%C3%B3n%20sobre%20una%20situaci%C3%B3n%20relacionada%20con%20mi%20patrimonio";
+  "https://wa.me/5658165677?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20orientaci%C3%B3n%20sobre%20una%20situaci%C3%B3n%20relacionada%20con%20mi%20patrimonio";
 
 const EMAIL_URL =
-  "mailto:contacto@valtara.mx?subject=Solicitud%20de%20asesor%C3%ADa";
+  "mailto:aer@asesoriaespecializada.com?subject=Solicitud%20de%20asesor%C3%ADa";
 
 
 /* =========================================================

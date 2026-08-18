@@ -1,7 +1,7 @@
 export const contactConfig = {
-  whatsappNumber: "521XXXXXXXXXX",
+  whatsappNumber: "5658165677",
   whatsappMessage:
     "Hola, me gustaría recibir orientación sobre una situación relacionada con mi patrimonio.",
 
-  email: "contacto@valtara.mx",
+  email: "aer@asesoriaespecializada.com",
 };
