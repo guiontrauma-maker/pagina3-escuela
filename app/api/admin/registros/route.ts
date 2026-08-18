@@ -51,7 +51,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    if (body.tipo !== "caso") {
+    if (body.tipo !== "casos") {
       return NextResponse.json(
         {
           success: false,
