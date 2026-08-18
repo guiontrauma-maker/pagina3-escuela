@@ -12,7 +12,7 @@ export interface ValtaraRecord {
           estado: RecordStatus;
           }
 
-          const DATABASE_NAME = process.env.MONGODB_DB || "valtara";
+          const DATABASE_NAME = process.env.MONGODB_DB || "aer";
           const COLLECTION_NAME = "registros";
 
           export async function getRecords() {
