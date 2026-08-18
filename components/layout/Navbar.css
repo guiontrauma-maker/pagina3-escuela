@@ -67,22 +67,22 @@
   align-items: center;
   justify-content: center;
 
+  overflow: hidden;
+
   border-radius: 12px;
 
-  background: #0d243b;
-
-  color: #ffffff;
+  background: transparent;
 
   box-shadow: 0 4px 12px rgba(13, 36, 59, 0.12);
 }
 
-.valtara-brand__logo span {
-  font-size: 20px;
-  line-height: 1;
+.valtara-brand__logo img {
+  width: 100%;
+  height: 100%;
 
-  font-weight: 800;
+  display: block;
 
-  letter-spacing: 0.02em;
+  object-fit: contain;
 }
 
 /* =========================================================
@@ -230,12 +230,12 @@
   }
 
   .valtara-navbar__navigation {
-    margin-left: 45px;
-    gap: 14px;
+    margin-left: 55px;
+    gap: 20px;
   }
 
   .valtara-navbar__link {
-    width: 90px;
+    width: 94px;
     font-size: 12px;
   }
 }
@@ -251,12 +251,12 @@
   }
 
   .valtara-navbar__navigation {
-    margin-left: 25px;
-    gap: 8px;
+    margin-left: 35px;
+    gap: 14px;
   }
 
   .valtara-navbar__link {
-    width: 78px;
+    width: 82px;
     font-size: 11px;
   }
 
@@ -268,6 +268,11 @@
   .valtara-brand__name {
     font-size: 19px;
   }
+
+  .valtara-brand__logo {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 /* =========================================================
@@ -275,7 +280,6 @@
 ========================================================= */
 
 @media (max-width: 760px) {
-
   .valtara-navbar__container {
     min-height: 76px;
 
@@ -307,10 +311,8 @@
     margin-top: 0;
 
     border-radius: 10px;
-  }
 
-  .valtara-brand__logo span {
-    font-size: 18px;
+    box-shadow: 0 3px 10px rgba(13, 36, 59, 0.1);
   }
 
   .valtara-brand__name {
@@ -503,7 +505,6 @@
 ========================================================= */
 
 @media (max-width: 420px) {
-
   .valtara-navbar__container {
     padding-left: 12px;
     padding-right: 12px;
@@ -516,10 +517,8 @@
   .valtara-brand__logo {
     width: 36px;
     height: 36px;
-  }
 
-  .valtara-brand__logo span {
-    font-size: 16px;
+    border-radius: 9px;
   }
 
   .valtara-brand__name {
