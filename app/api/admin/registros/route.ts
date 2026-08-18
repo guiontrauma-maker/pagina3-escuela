@@ -1,4 +1,3 @@
-
 import { NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 import clientPromise from "@/lib/mongodb";
@@ -15,9 +14,7 @@ export async function GET(request: Request) {
     const db = client.db(DATABASE_NAME);
 
     const filtro =
-      estado === "papelera"
-        ? { estado: "papelera" }
-        : { estado: "recibido" };
+      estado === "papelera" ? { estado: "papelera" } : { estado: "recibido" };
 
     const records = await db
       .collection(COLLECTION_NAME)
@@ -45,7 +42,7 @@ export async function GET(request: Request) {
         success: false,
         message: "No fue posible obtener los registros.",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -60,7 +57,7 @@ export async function POST(request: Request) {
           success: false,
           message: "Tipo de registro no válido.",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -68,15 +65,13 @@ export async function POST(request: Request) {
     const db = client.db(DATABASE_NAME);
 
     const registro = {
-      tipo: "caso",
+      tipo: "casos",
       datos: body.datos,
       recibidoEn: new Date(),
       estado: "recibido",
     };
 
-    const result = await db
-      .collection(COLLECTION_NAME)
-      .insertOne(registro);
+    const result = await db.collection(COLLECTION_NAME).insertOne(registro);
 
     return NextResponse.json({
       success: true,
@@ -91,7 +86,7 @@ export async function POST(request: Request) {
         success: false,
         message: "No fue posible registrar el caso.",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -108,7 +103,7 @@ export async function PATCH(request: Request) {
           success: false,
           message: "Faltan datos para actualizar el registro.",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -118,7 +113,7 @@ export async function PATCH(request: Request) {
           success: false,
           message: "El identificador del registro no es válido.",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -128,7 +123,7 @@ export async function PATCH(request: Request) {
           success: false,
           message: "Estado no válido.",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -143,7 +138,7 @@ export async function PATCH(request: Request) {
         $set: {
           estado,
         },
-      }
+      },
     );
 
     if (result.matchedCount === 0) {
@@ -152,7 +147,7 @@ export async function PATCH(request: Request) {
           success: false,
           message: "No se encontró el registro.",
         },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -171,8 +166,7 @@ export async function PATCH(request: Request) {
         success: false,
         message: "No fue posible actualizar el registro.",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
-
