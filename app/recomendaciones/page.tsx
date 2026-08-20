@@ -479,7 +479,7 @@ export default function RecomendacionesPage() {
                 href="/contacto"
                 className={styles.primaryButton}
               >
-                Hablar con AER Asesoría Especializada en Recuperación 
+                Hablar con Asesoría Especializada en Recuperación 
                 <span>→</span>
               </Link>
 

@@ -72,7 +72,7 @@ export default function ContactoPage() {
           <div className={styles.introInner}>
             <div className={styles.introLabel}>
               <span className={styles.introDot}></span>
-              ORIENTACIÓN AER
+              Asesoria Especializada en Recuperacion
             </div>
 
             <h1>
@@ -480,7 +480,7 @@ export default function ContactoPage() {
 
         <section className={styles.closingSection}>
           <div className={styles.closingContent}>
-            <span>AER </span>
+            <span>Asesoria Especializada en Recuperación</span>
 
             <h2>
               Entender lo ocurrido

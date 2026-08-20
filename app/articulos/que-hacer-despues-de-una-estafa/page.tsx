@@ -33,7 +33,7 @@ export default function QueHacerDespuesDeUnaEstafa() {
             </p>
 
             <div className={styles.articleMeta}>
-              <span>AER</span>
+              <span>Asesoria Especializada en Recuperacion </span>
               <span>·</span>
               <span>Guía de orientación</span>
             </div>
@@ -239,7 +239,7 @@ export default function QueHacerDespuesDeUnaEstafa() {
             <div className={styles.finalNote}>
 
               <strong>
-                AER
+                Asesoria Especializada en Recuperacion 
               </strong>
 
               <p>
@@ -283,7 +283,7 @@ export default function QueHacerDespuesDeUnaEstafa() {
 
         <footer className={styles.footer}>
           <Link href="/">
-            ← Volver a AER
+            ← Volver a Asesoria Especializada en Recuperacion 
           </Link>
         </footer>
 

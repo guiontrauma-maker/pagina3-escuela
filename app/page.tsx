@@ -208,7 +208,7 @@ const handleFormSubmit = async (
             </h1>
 
             <p className={styles.heroDescription}>
-              En AER te ayudamos a identificar señales de fraude,
+              En Asesoria Especializada en Recuperacion te ayudamos a identificar señales de fraude,
               comprender tu situación y conocer las alternativas disponibles
               para proteger tu patrimonio.
             </p>
@@ -291,9 +291,6 @@ const handleFormSubmit = async (
 
                 <div className={styles.panelHeaderContent}>
 
-                  <span className={styles.panelEyebrow}>
-                    AER
-                  </span>
 
                   <h2>
                     Tu patrimonio,
@@ -1277,12 +1274,12 @@ const handleFormSubmit = async (
                   setOpenFaq(openFaq === 0 ? null : 0);
                 }}
               >
-                ¿AER puede recuperar mi dinero?
+                ¿Asesoria Especializada en Recuperacion puede recuperar mi dinero?
                 <span>+</span>
               </summary>
 
               <p>
-                AER funciona como una plataforma de orientación y
+                AER|Asesoria Especializada en Recuperacion funciona como una plataforma de orientación y
                 seguimiento. La recuperación de fondos depende de las
                 características y circunstancias de cada caso.
               </p>
@@ -1366,7 +1363,7 @@ const handleFormSubmit = async (
           <div className={styles.finalCtaContent}>
 
             <span>
-              AER
+              Asesoria Especializada en Recuperacion
             </span>
 
             <h2>

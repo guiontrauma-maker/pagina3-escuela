@@ -73,7 +73,7 @@ export default function ComoFuncionaPage() {
             </span>
 
             <span className={styles.heroIndex}>
-              AER/ 01
+              Es importante entender
             </span>
 
           </div>
@@ -96,7 +96,7 @@ export default function ComoFuncionaPage() {
               </p>
 
               <p>
-                En AER trabajamos mediante un proceso estructurado que
+                En Asesoria Especializada en Recuperacion  trabajamos mediante un proceso estructurado que
                 permite identificar señales, organizar información, analizar
                 el contexto y conocer las alternativas disponibles.
               </p>
@@ -156,7 +156,7 @@ export default function ComoFuncionaPage() {
                 href="/contacto"
                 className={styles.textLink}
               >
-                Hablar con AER <span>→</span>
+                Hablar con Asesoria Especializada en Recuperacion <span>→</span>
               </Link>
 
             </div>
@@ -289,7 +289,7 @@ export default function ComoFuncionaPage() {
               <div className={styles.note}>
 
                 <span>
-                 AER Asesoría Especializada en Recuperació<nav></nav>
+                 Asesoría Especializada en Recuperació<nav></nav>
                 </span>
 
                 <p>

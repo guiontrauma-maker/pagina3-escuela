@@ -13,7 +13,7 @@ export default function ContactActions() {
         target="_blank"
         rel="noopener noreferrer"
         className={styles.whatsapp}
-        aria-label="Contactar a AER Asesoria Especializada en Recuperación por WhatsApp"
+        aria-label="Contactar a Asesoria Especializada en Recuperación por WhatsApp"
       >
         <span className={styles.icon}>◉</span>
 
@@ -26,7 +26,7 @@ export default function ContactActions() {
       <a
         href={`mailto:${contactConfig.email}`}
         className={styles.email}
-        aria-label="Enviar correo a AER Asesoría EspecializadaenRecuperación"
+        aria-label="Enviar correo a Asesoría EspecializadaenRecuperación"
       >
         <span className={styles.icon}>✉</span>
 

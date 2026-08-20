@@ -33,7 +33,7 @@ export default function SenalesAlertaTransferirDinero() {
             </p>
 
             <div className={styles.articleMeta}>
-              <span>AER</span>
+              <span>Asesoria Especializada en Recupercion</span>
               <span>·</span>
               <span>Guía de seguridad</span>
             </div>
@@ -202,7 +202,7 @@ export default function SenalesAlertaTransferirDinero() {
 
 
             <div className={styles.finalNote}>
-              <strong>AER</strong>
+              <strong>Asesoria Especializada en Recupercion</strong>
 
               <p>
                 Nuestro objetivo es ayudarte a comprender las señales
@@ -244,7 +244,7 @@ export default function SenalesAlertaTransferirDinero() {
 
         <footer className={styles.footer}>
           <Link href="/">
-            ← Volver a AER Asesoría Especializada en Recuperación 
+            ← Volver a Asesoría Especializada en Recuperación 
           </Link>
         </footer>
 
