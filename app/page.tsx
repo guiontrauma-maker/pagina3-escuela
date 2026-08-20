@@ -101,8 +101,85 @@ function PyramidIcon() {
    ========================================================= */
 
 export default function Home() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  countryCode: "+52",
+  phone: "",
+  currency: "MXN",
+  amount: "",
+  caseType: "",
+  description: "",
+  privacy: false,
+});
 
+const [formMessage, setFormMessage] = useState("");
+const [formLoading, setFormLoading] = useState(false);
+
+const handleFormChange = (
+  event: React.ChangeEvent<
+    HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+  >
+) => {
+  const { name, value, type } = event.target;
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]:
+      type === "checkbox"
+        ? (event.target as HTMLInputElement).checked
+        : value,
+  }));
+};
+
+const handleFormSubmit = async (
+  event: React.FormEvent<HTMLFormElement>
+) => {
+  event.preventDefault();
+
+  setFormLoading(true);
+  setFormMessage("");
+
+  try {
+    const response = await fetch("/api/contacto", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      setFormMessage(result.message || "No fue posible enviar la información.");
+      return;
+    }
+
+    setFormMessage(
+      "Tu información fue recibida correctamente. Nos pondremos en contacto contigo."
+    );
+
+    setFormData({
+      name: "",
+      email: "",
+      countryCode: "+52",
+      phone: "",
+      currency: "MXN",
+      amount: "",
+      caseType: "",
+      description: "",
+      privacy: false,
+    });
+  } catch {
+    setFormMessage(
+      "Ocurrió un error al enviar la información. Inténtalo nuevamente."
+    );
+  } finally {
+    setFormLoading(false);
+  }
+};
   return (
     <>
       <Navbar />
@@ -379,6 +456,255 @@ export default function Home() {
             <span>FCA</span>
 
           </div>
+
+        </section>
+
+        {/* =====================================================
+            FORMULARIO DE ORIENTACIÓN
+            ===================================================== */}
+
+        <section className={styles.homeFormSection}>
+
+          <div className={styles.homeFormHeader}>
+
+            <span>
+              ORIENTACIÓN INICIAL
+            </span>
+
+            <h2>
+              Cuéntanos brevemente
+              <br />
+              qué ocurrió.
+            </h2>
+
+            <p>
+              Proporciona algunos datos generales sobre tu situación
+              para que podamos comprender mejor tu caso.
+            </p>
+
+          </div>
+
+
+          <form
+            className={styles.homeForm}
+            onSubmit={handleFormSubmit}
+          >
+
+            <div className={styles.homeFormGrid}>
+
+              <div className={styles.homeFormField}>
+                <label htmlFor="home-name">
+                  Nombre completo
+                </label>
+
+                <input
+                  id="home-name"
+                  name="name"
+                  type="text"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  placeholder="Tu nombre"
+                  required
+                />
+              </div>
+
+
+              <div className={styles.homeFormField}>
+                <label htmlFor="home-email">
+                  Correo electrónico
+                </label>
+
+                <input
+                  id="home-email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
+
+
+              <div className={styles.homeFormField}>
+                <label htmlFor="home-countryCode">
+                  Código
+                </label>
+
+                <select
+                  id="home-countryCode"
+                  name="countryCode"
+                  value={formData.countryCode}
+                  onChange={handleFormChange}
+                  required
+                >
+                  <option value="+52">México (+52)</option>
+                  <option value="+1">Estados Unidos (+1)</option>
+                  <option value="+34">España (+34)</option>
+                  <option value="+57">Colombia (+57)</option>
+                  <option value="+54">Argentina (+54)</option>
+                  <option value="+56">Chile (+56)</option>
+                  <option value="+51">Perú (+51)</option>
+                </select>
+              </div>
+
+
+              <div className={styles.homeFormField}>
+                <label htmlFor="home-phone">
+                  Teléfono
+                </label>
+
+                <input
+                  id="home-phone"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleFormChange}
+                  placeholder="Número de teléfono"
+                  required
+                />
+              </div>
+
+
+              <div className={styles.homeFormField}>
+                <label htmlFor="home-currency">
+                  Moneda
+                </label>
+
+                <select
+                  id="home-currency"
+                  name="currency"
+                  value={formData.currency}
+                  onChange={handleFormChange}
+                  required
+                >
+                  <option value="MXN">MXN — Peso mexicano</option>
+                  <option value="USD">USD — Dólar estadounidense</option>
+                  <option value="EUR">EUR — Euro</option>
+                </select>
+              </div>
+
+
+              <div className={styles.homeFormField}>
+                <label htmlFor="home-amount">
+                  Monto aproximado
+                </label>
+
+                <input
+                  id="home-amount"
+                  name="amount"
+                  type="number"
+                  min="0"
+                  value={formData.amount}
+                  onChange={handleFormChange}
+                  placeholder="Monto aproximado"
+                  required
+                />
+              </div>
+
+
+              <div className={styles.homeFormField}>
+                <label htmlFor="home-caseType">
+                  Tipo de situación
+                </label>
+
+                <select
+                  id="home-caseType"
+                  name="caseType"
+                  value={formData.caseType}
+                  onChange={handleFormChange}
+                  required
+                >
+                  <option value="">
+                    Selecciona una opción
+                  </option>
+
+                  <option value="fraude-financiero">
+                    Fraude financiero
+                  </option>
+
+                  <option value="fraude-digital">
+                    Fraude digital
+                  </option>
+
+                  <option value="suplantacion">
+                    Suplantación de identidad
+                  </option>
+
+                  <option value="inversion">
+                    Inversión sospechosa
+                  </option>
+
+                  <option value="phishing">
+                    Phishing
+                  </option>
+
+                  <option value="inmobiliario">
+                    Fraude inmobiliario
+                  </option>
+
+                  <option value="otro">
+                    Otro
+                  </option>
+                </select>
+              </div>
+
+
+              <div className={styles.homeFormFieldFull}>
+                <label htmlFor="home-description">
+                  ¿Qué ocurrió?
+                </label>
+
+                <textarea
+                  id="home-description"
+                  name="description"
+                  value={formData.description}
+                  onChange={handleFormChange}
+                  placeholder="Cuéntanos brevemente qué sucedió..."
+                  rows={5}
+                  required
+                />
+              </div>
+
+            </div>
+
+
+            <label className={styles.homeFormPrivacy}>
+
+              <input
+                type="checkbox"
+                name="privacy"
+                checked={formData.privacy}
+                onChange={handleFormChange}
+                required
+              />
+
+              <span>
+                Acepto el tratamiento de mis datos para recibir
+                orientación sobre mi situación.
+              </span>
+
+            </label>
+
+
+            <button
+              type="submit"
+              className={styles.homeFormButton}
+              disabled={formLoading}
+            >
+              {formLoading
+                ? "Enviando..."
+                : "Solicitar orientación"}
+            </button>
+
+
+            {formMessage && (
+              <p className={styles.homeFormMessage}>
+                {formMessage}
+              </p>
+            )}
+
+          </form>
 
         </section>
 {/* =====================================================
