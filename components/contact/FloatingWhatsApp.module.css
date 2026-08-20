@@ -1,106 +1,58 @@
-/* =========================================================
-   VALTARA
-   WHATSAPP FLOTANTE
-   ========================================================= */
-
 .floating {
   position: fixed;
-
   right: 28px;
   bottom: 28px;
-
   z-index: 9999;
-
   width: 68px;
   height: 68px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
-  background: #0d243b;
-
+  background: #25d366;
   color: #ffffff;
-
   text-decoration: none;
-
   border: 3px solid rgba(255, 255, 255, 0.9);
-
   box-shadow:
     0 8px 25px rgba(13, 36, 59, 0.25),
-    0 0 0 4px rgba(37, 211, 102, 0.12);
-
+    0 0 0 4px rgba(37, 211, 102, 0.15);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
     background 180ms ease;
 }
 
-
-/* =========================================================
-   ICONO
-   ========================================================= */
-
 .icon {
   width: 39px;
   height: 39px;
-
   display: block;
-
   color: #ffffff;
-
   flex-shrink: 0;
 }
 
-
-/* =========================================================
-   HOVER
-   ========================================================= */
-
 .floating:hover {
   transform: translateY(-4px) scale(1.04);
-
   background: #20bd5a;
-
   box-shadow:
     0 12px 30px rgba(13, 36, 59, 0.3),
-    0 0 0 5px rgba(37, 211, 102, 0.14);
+    0 0 0 5px rgba(37, 211, 102, 0.18);
 }
-
-
-/* =========================================================
-   ACTIVE
-   ========================================================= */
 
 .floating:active {
   transform: scale(0.96);
 }
-
-
-/* =========================================================
-   ACCESIBILIDAD
-   ========================================================= */
 
 .floating:focus-visible {
   outline: 3px solid #a7cadf;
   outline-offset: 4px;
 }
 
-
-/* =========================================================
-   MÓVIL
-   ========================================================= */
-
 @media (max-width: 700px) {
   .floating {
     right: 18px;
     bottom: 18px;
-
     width: 60px;
     height: 60px;
-
     border-width: 2px;
   }
 
