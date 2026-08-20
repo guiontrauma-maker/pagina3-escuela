@@ -5,11 +5,8 @@
 
 .home {
   min-height: 100vh;
-
   overflow: hidden;
-
   background: #f5eeeb;
-
   color: #0d243b;
 }
 
@@ -20,15 +17,11 @@
 
 .hero {
   position: relative;
-
   min-height: 760px;
 
   display: grid;
-
   grid-template-columns: 0.95fr 1.05fr;
-
   align-items: center;
-
   gap: 70px;
 
   overflow: hidden;
@@ -76,11 +69,9 @@
 
 .heroContent {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
-
   max-width: 760px;
 
   margin: 0 auto;
@@ -88,19 +79,15 @@
 
 .badge {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
 
   color: #a7cadf;
 
-  font-size: 10px;
-
+  font-size: 12px;
   font-weight: 800;
 
   letter-spacing: 0.17em;
-
   text-transform: uppercase;
 }
 
@@ -121,7 +108,6 @@
   color: #ffffff;
 
   font-size: clamp(52px, 5.8vw, 82px);
-
   line-height: 0.96;
 
   letter-spacing: -0.055em;
@@ -135,15 +121,14 @@
   color: #f6e0b6;
 
   font-size: clamp(52px, 5.8vw, 82px) !important;
-
   line-height: 0.96 !important;
 
   letter-spacing: -0.055em !important;
 
   font-weight: 500;
-
   font-style: italic;
 }
+
 .heroDescription {
   max-width: 650px;
 
@@ -151,9 +136,8 @@
 
   color: rgba(245, 238, 235, 0.7);
 
-  font-size: 15px;
-
-  line-height: 1.85;
+  font-size: 17px;
+  line-height: 1.75;
 }
 
 
@@ -163,9 +147,7 @@
 
 .heroActions {
   display: flex;
-
   align-items: center;
-
   flex-wrap: wrap;
 
   gap: 12px;
@@ -178,9 +160,7 @@
   min-height: 55px;
 
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
   padding: 0 25px;
@@ -188,7 +168,6 @@
   border-radius: 10px;
 
   font-size: 12px;
-
   font-weight: 800;
 
   text-decoration: none;
@@ -201,7 +180,6 @@
 
 .primaryButton {
   background: #84b3ce;
-
   color: #0d243b;
 
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
@@ -209,7 +187,6 @@
 
 .primaryButton:hover {
   background: #a7cadf;
-
   transform: translateY(-2px);
 }
 
@@ -236,24 +213,21 @@
 
 .heroNote {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
 
   margin-top: 15px;
 
   color: rgba(245, 238, 235, 0.42);
 
-  font-size: 9px;
+  font-size: 14px;
 }
 
 .noteIcon {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -265,8 +239,8 @@
 }
 
 .noteIcon svg {
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
 
   fill: currentColor;
 }
@@ -278,13 +252,11 @@
 
 .trustBar {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 
   gap: 12px;
 
   margin-top: 70px;
-
   padding-top: 23px;
 
   border-top: 1px solid rgba(167, 202, 223, 0.14);
@@ -292,7 +264,6 @@
 
 .trustItem {
   display: flex;
-
   align-items: center;
 
   gap: 10px;
@@ -305,7 +276,6 @@
   height: 31px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -327,7 +297,6 @@
 
 .trustItem div {
   display: flex;
-
   flex-direction: column;
 
   gap: 3px;
@@ -335,14 +304,12 @@
 
 .trustItem strong {
   color: rgba(255, 255, 255, 0.82);
-
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .trustItem div > span {
   color: rgba(245, 238, 235, 0.35);
-
-  font-size: 8px;
+  font-size: 11px;
 }
 
 
@@ -352,11 +319,9 @@
 
 .panelWrapper {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
-
   max-width: 760px;
 
   margin: 0 auto;
@@ -397,9 +362,7 @@
 
 .panelHeader {
   display: flex;
-
   align-items: flex-start;
-
   justify-content: space-between;
 
   gap: 25px;
@@ -416,8 +379,7 @@
 
   color: #a7cadf;
 
-  font-size: 10px;
-
+  font-size: 12px;
   font-weight: 800;
 
   letter-spacing: 0.2em;
@@ -429,7 +391,6 @@
   color: #ffffff;
 
   font-size: clamp(25px, 2.4vw, 34px);
-
   line-height: 1.08;
 
   letter-spacing: -0.035em;
@@ -442,8 +403,7 @@
 
   color: rgba(245, 238, 235, 0.48);
 
-  font-size: 11px;
-
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -454,7 +414,6 @@
 
 .status {
   display: flex;
-
   align-items: center;
 
   gap: 8px;
@@ -471,12 +430,10 @@
 
   color: rgba(245, 238, 235, 0.7);
 
-  font-size: 8px;
-
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
 }
 
@@ -498,7 +455,6 @@
 
 .panelDivider {
   width: 100%;
-
   height: 1px;
 
   margin: 26px 0;
@@ -513,7 +469,6 @@
 
 .statsGrid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 
   gap: 12px;
@@ -538,8 +493,7 @@
 
   color: #84b3ce;
 
-  font-size: 9px;
-
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.12em;
@@ -551,7 +505,6 @@
   color: #ffffff;
 
   font-size: 39px;
-
   line-height: 1;
 
   font-weight: 800;
@@ -561,7 +514,6 @@
 
 .statPlus {
   color: #84b3ce;
-
   font-size: 20px;
 }
 
@@ -572,9 +524,8 @@
 
   color: rgba(245, 238, 235, 0.45);
 
-  font-size: 9px;
-
-  line-height: 1.45;
+  font-size: 12px;
+  line-height: 1.5;
 
   font-weight: 600;
 }
@@ -586,7 +537,6 @@
 
 .panelContact {
   display: grid;
-
   grid-template-columns: 1fr auto;
 
   align-items: center;
@@ -594,7 +544,6 @@
   gap: 30px;
 
   margin-top: 28px;
-
   padding-top: 25px;
 
   border-top: 1px solid rgba(167, 202, 223, 0.13);
@@ -607,8 +556,7 @@
 
   color: #84b3ce;
 
-  font-size: 9px;
-
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.16em;
@@ -620,7 +568,6 @@
   color: #ffffff;
 
   font-size: 18px;
-
   font-weight: 700;
 }
 
@@ -631,9 +578,8 @@
 
   color: rgba(245, 238, 235, 0.5);
 
-  font-size: 11px;
-
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 
@@ -643,7 +589,6 @@
 
 .contactOptions {
   display: flex;
-
   gap: 10px;
 }
 
@@ -652,7 +597,6 @@
   height: 62px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -685,7 +629,6 @@
   height: 27px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 }
@@ -718,7 +661,6 @@
   color: #8a9aa3;
 
   font-size: 9px;
-
   font-weight: 800;
 
   letter-spacing: 0.18em;
@@ -726,9 +668,7 @@
 
 .referenceList {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   flex-wrap: wrap;
@@ -740,7 +680,6 @@
   color: #34566d;
 
   font-size: 12px;
-
   font-weight: 800;
 
   letter-spacing: 0.08em;
@@ -754,6 +693,7 @@
 
   background: #84b3ce;
 }
+
 
 /* =========================================================
    IDENTIDAD / RECUPERACIÓN DE FONDOS
@@ -783,14 +723,8 @@
   gap: 80px;
 }
 
-
-/* =========================================================
-   CONTENIDO IZQUIERDO
-   ========================================================= */
-
 .identityContent {
   width: 100%;
-
   max-width: 650px;
 }
 
@@ -800,18 +734,12 @@
   color: #0d243b;
 
   font-size: clamp(38px, 4.3vw, 62px);
-
   line-height: 1.03;
 
   letter-spacing: -0.045em;
 
   font-weight: 800;
 }
-
-
-/* =========================================================
-   PROBLEMAS
-   ========================================================= */
 
 .identityProblem {
   display: grid;
@@ -831,17 +759,11 @@
   border-bottom: 1px solid rgba(13, 36, 59, 0.12);
 }
 
-
-/* =========================================================
-   ICONOS DE PROBLEMAS
-   ========================================================= */
-
 .identityProblemIcon {
   width: 42px;
   height: 42px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -863,11 +785,6 @@
   fill: currentColor;
 }
 
-
-/* =========================================================
-   TEXTO DE PROBLEMAS
-   ========================================================= */
-
 .identityProblemContent {
   min-width: 0;
 }
@@ -878,7 +795,6 @@
   color: #0d243b;
 
   font-size: 15px;
-
   line-height: 1.35;
 
   font-weight: 800;
@@ -890,22 +806,19 @@
   color: #657a88;
 
   font-size: 12px;
-
   line-height: 1.7;
 }
 
 
 /* =========================================================
-   ESPACIO PARA LA FOTO
+   FOTO
    ========================================================= */
 
 .identityImageWrapper {
   width: 100%;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 }
 
@@ -913,7 +826,6 @@
   position: relative;
 
   width: 100%;
-
   max-width: 520px;
 
   aspect-ratio: 4 / 5;
@@ -929,11 +841,6 @@
     0 5px 20px rgba(13, 36, 59, 0.05);
 }
 
-
-/* =========================================================
-   FOTO
-   ========================================================= */
-
 .identityImage {
   width: 100%;
   height: 100%;
@@ -941,116 +848,16 @@
   display: block;
 
   object-fit: cover;
-
   object-position: center;
 }
 
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 1000px) {
-
-  .identity {
-    padding: 100px 5vw 110px;
-  }
-
-  .identityInner {
-    grid-template-columns: 1fr;
-
-    gap: 60px;
-  }
-
-  .identityContent {
-    max-width: 850px;
-
-    margin: 0 auto;
-  }
-
-  .identityContent h2 {
-    max-width: 750px;
-  }
-
-  .identityImageWrapper {
-    width: min(650px, 100%);
-
-    margin: 0 auto;
-  }
-
-  .identityImageFrame {
-    max-width: 100%;
-  }
-
-}
-
-
-@media (max-width: 700px) {
-
-  .identity {
-    padding: 85px 20px 95px;
-  }
-
-  .identityInner {
-    gap: 45px;
-  }
-
-  .identityContent h2 {
-    margin-bottom: 35px;
-
-    font-size: clamp(34px, 10vw, 50px);
-
-    line-height: 1.05;
-  }
-
-  .identityProblem {
-    grid-template-columns: 40px 1fr;
-
-    gap: 14px;
-
-    padding: 20px 0;
-  }
-
-  .identityProblemIcon {
-    width: 38px;
-    height: 38px;
-
-    border-radius: 10px;
-  }
-
-  .identityProblemIcon svg {
-    width: 19px;
-    height: 19px;
-  }
-
-  .identityProblemContent h3 {
-    font-size: 14px;
-  }
-
-  .identityProblemContent p {
-    font-size: 11px;
-
-    line-height: 1.65;
-  }
-
-  .identityImageWrapper {
-    width: 100%;
-  }
-
-  .identityImageFrame {
-    aspect-ratio: 4 / 5;
-
-    border-radius: 20px;
-  }
-
-}
 /* =========================================================
    RISK
    ========================================================= */
 
 .riskSection {
   padding: 125px 7vw;
-
   background: #ffffff;
 }
 
@@ -1066,7 +873,6 @@
   color: #16587b;
 
   font-size: 10px;
-
   font-weight: 800;
 
   letter-spacing: 0.18em;
@@ -1078,7 +884,6 @@
   color: #0d243b;
 
   font-size: clamp(40px, 4.5vw, 60px);
-
   line-height: 1;
 
   letter-spacing: -0.04em;
@@ -1092,7 +897,6 @@
   color: #657a88;
 
   font-size: 14px;
-
   line-height: 1.8;
 }
 
@@ -1141,22 +945,14 @@
   color: #a7b4bb;
 
   font-size: 9px;
-
   font-weight: 800;
 }
-
-
-/* =========================================================
-   ICONOS DE IDENTIFICACIÓN
-   SVG MONOCROMÁTICOS
-   ========================================================= */
 
 .cardIcon {
   width: 45px;
   height: 45px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -1178,11 +974,6 @@
   fill: currentColor;
 }
 
-
-/* =========================================================
-   RISK CARD TEXT
-   ========================================================= */
-
 .riskCard h3 {
   margin: 0 0 11px;
 
@@ -1197,7 +988,6 @@
   color: #6d808b;
 
   font-size: 12px;
-
   line-height: 1.7;
 }
 
@@ -1224,7 +1014,6 @@
   color: #16587b;
 
   font-size: 10px;
-
   font-weight: 800;
 
   letter-spacing: 0.18em;
@@ -1236,7 +1025,6 @@
   color: #0d243b;
 
   font-size: clamp(40px, 4.5vw, 58px);
-
   line-height: 1;
 
   letter-spacing: -0.04em;
@@ -1248,7 +1036,6 @@
   color: #657a88;
 
   font-size: 14px;
-
   line-height: 1.8;
 }
 
@@ -1274,7 +1061,6 @@
   color: #84b3ce;
 
   font-size: 10px;
-
   font-weight: 800;
 }
 
@@ -1292,7 +1078,6 @@
   color: #6a7e8a;
 
   font-size: 12px;
-
   line-height: 1.7;
 }
 
@@ -1339,7 +1124,6 @@
   color: #84b3ce;
 
   font-size: 9px;
-
   font-weight: 800;
 
   letter-spacing: 0.17em;
@@ -1351,7 +1135,6 @@
   color: #ffffff;
 
   font-size: clamp(40px, 5vw, 62px);
-
   line-height: 1;
 
   letter-spacing: -0.045em;
@@ -1365,7 +1148,6 @@
   color: rgba(245, 238, 235, 0.58);
 
   font-size: 14px;
-
   line-height: 1.8;
 }
 
@@ -1386,7 +1168,6 @@
   color: #0d243b;
 
   font-size: 12px;
-
   font-weight: 800;
 
   text-decoration: none;
@@ -1421,7 +1202,6 @@
   color: #16587b;
 
   font-size: 10px;
-
   font-weight: 800;
 
   letter-spacing: 0.18em;
@@ -1433,7 +1213,6 @@
   color: #0d243b;
 
   font-size: clamp(37px, 4vw, 54px);
-
   line-height: 1;
 
   letter-spacing: -0.04em;
@@ -1445,7 +1224,6 @@
   color: #657a88;
 
   font-size: 14px;
-
   line-height: 1.8;
 }
 
@@ -1455,9 +1233,7 @@
   margin: 0 auto;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   flex-wrap: wrap;
@@ -1477,7 +1253,6 @@
   color: #38566a;
 
   font-size: 11px;
-
   font-weight: 700;
 }
 
@@ -1502,7 +1277,6 @@
   color: #16587b;
 
   font-size: 10px;
-
   font-weight: 800;
 
   letter-spacing: 0.18em;
@@ -1514,7 +1288,6 @@
   color: #0d243b;
 
   font-size: clamp(40px, 4.5vw, 58px);
-
   line-height: 1;
 
   letter-spacing: -0.04em;
@@ -1536,7 +1309,6 @@
   min-height: 310px;
 
   display: flex;
-
   flex-direction: column;
 
   padding: 30px;
@@ -1552,7 +1324,6 @@
   color: #84b3ce;
 
   font-size: 9px;
-
   font-weight: 800;
 
   letter-spacing: 0.15em;
@@ -1564,7 +1335,6 @@
   color: #0d243b;
 
   font-size: 19px;
-
   line-height: 1.25;
 }
 
@@ -1574,7 +1344,6 @@
   color: #6d808b;
 
   font-size: 12px;
-
   line-height: 1.7;
 }
 
@@ -1586,7 +1355,6 @@
   color: #16587b;
 
   font-size: 11px;
-
   font-weight: 800;
 
   text-decoration: none;
@@ -1615,7 +1383,6 @@
   color: #16587b;
 
   font-size: 10px;
-
   font-weight: 800;
 
   letter-spacing: 0.18em;
@@ -1627,7 +1394,6 @@
   color: #0d243b;
 
   font-size: clamp(40px, 4vw, 55px);
-
   line-height: 1;
 
   letter-spacing: -0.04em;
@@ -1635,7 +1401,6 @@
 
 .faqList {
   display: flex;
-
   flex-direction: column;
 }
 
@@ -1649,9 +1414,7 @@
 
 .faqList summary {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 20px;
@@ -1663,7 +1426,6 @@
   color: #0d243b;
 
   font-size: 20px;
-
   font-weight: 700;
 
   cursor: pointer;
@@ -1684,9 +1446,7 @@
   height: 24px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   flex-shrink: 0;
@@ -1694,7 +1454,6 @@
   color: #84b3ce;
 
   font-size: 20px;
-
   font-weight: 400;
 
   line-height: 1;
@@ -1710,7 +1469,6 @@
   content: "−";
 
   font-size: 20px;
-
   line-height: 1;
 
   color: #84b3ce;
@@ -1724,7 +1482,6 @@
   color: #718390;
 
   font-size: 12px;
-
   line-height: 1.7;
 }
 
@@ -1774,7 +1531,6 @@
 
 .finalCtaContent {
   position: relative;
-
   z-index: 2;
 }
 
@@ -1782,7 +1538,6 @@
   color: #a7cadf;
 
   font-size: 10px;
-
   font-weight: 800;
 
   letter-spacing: 0.2em;
@@ -1794,7 +1549,6 @@
   color: #ffffff;
 
   font-size: clamp(40px, 5vw, 65px);
-
   line-height: 1;
 
   letter-spacing: -0.04em;
@@ -1812,7 +1566,6 @@
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 54px;
@@ -1826,7 +1579,6 @@
   color: #0d243b;
 
   font-size: 13px;
-
   font-weight: 800;
 
   text-decoration: none;
@@ -1848,7 +1600,6 @@
   color: rgba(245, 238, 235, 0.4);
 
   font-size: 11px;
-
   font-style: italic;
 }
 
@@ -1861,9 +1612,7 @@
   min-height: 230px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   padding: 70px 20px;
@@ -1881,7 +1630,336 @@
 
 
 /* =========================================================
-   RESPONSIVE
+   FORMULARIO DE ORIENTACIÓN
+   ========================================================= */
+
+.homeFormSection {
+  width: 100%;
+
+  padding: 105px 6vw 115px;
+
+  background: #f4f1eb;
+}
+
+.homeFormHeader {
+  width: min(100%, 980px);
+
+  margin: 0 auto 42px;
+}
+
+.homeFormHeader > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #567c8d;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.homeFormHeader h2 {
+  margin: 0;
+
+  color: #2f4156;
+
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+}
+
+.homeFormHeader p {
+  max-width: 720px;
+
+  margin: 18px 0 0;
+
+  color: #667681;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CONTENEDOR DEL FORMULARIO
+   ========================================================= */
+
+.homeForm {
+  width: min(100%, 980px);
+
+  margin: 0 auto;
+
+  padding: 42px;
+
+  border: 1px solid rgba(47, 65, 86, 0.1);
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 24px 60px rgba(47, 65, 86, 0.09),
+    0 4px 15px rgba(47, 65, 86, 0.04);
+}
+
+
+/* =========================================================
+   GRID DEL FORMULARIO
+   ========================================================= */
+
+.homeFormGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px 22px;
+}
+
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+.homeFormField,
+.homeFormFieldFull {
+  width: 100%;
+
+  min-width: 0;
+}
+
+.homeFormFieldFull {
+  grid-column: 1 / -1;
+}
+
+.homeFormField label,
+.homeFormFieldFull label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #2f4156;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   INPUTS / SELECTS / TEXTAREA
+   ========================================================= */
+
+.homeFormField input,
+.homeFormField select,
+.homeFormFieldFull textarea {
+  display: block;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d5dde1;
+
+  border-radius: 12px;
+
+  background: #fbfcfc;
+
+  color: #2f4156;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.homeFormField input,
+.homeFormField select {
+  height: 56px;
+
+  padding: 0 16px;
+}
+
+.homeFormFieldFull textarea {
+  min-height: 150px;
+
+  padding: 16px;
+
+  line-height: 1.6;
+
+  resize: vertical;
+}
+
+.homeFormField input::placeholder,
+.homeFormFieldFull textarea::placeholder {
+  color: #9ba7ad;
+}
+
+.homeFormField input:hover,
+.homeFormField select:hover,
+.homeFormFieldFull textarea:hover {
+  border-color: #b8c7cf;
+
+  background: #ffffff;
+}
+
+.homeFormField input:focus,
+.homeFormField select:focus,
+.homeFormFieldFull textarea:focus {
+  border-color: #567c8d;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(86, 124, 141, 0.12);
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.homeFormField select {
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+
+/* =========================================================
+   PRIVACIDAD
+   ========================================================= */
+
+.homeFormPrivacy {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  margin-top: 27px;
+
+  color: #61707a;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  cursor: pointer;
+}
+
+.homeFormPrivacy input {
+  width: 18px;
+  height: 18px;
+
+  margin: 2px 0 0;
+
+  flex: 0 0 auto;
+
+  accent-color: #2f4156;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   BOTÓN DEL FORMULARIO
+   ========================================================= */
+
+.homeFormButton {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 58px;
+
+  margin-top: 27px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #0d243b;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.homeFormButton:hover {
+  background: #16587b;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 10px 24px rgba(13, 36, 59, 0.18);
+}
+
+.homeFormButton:active {
+  transform: translateY(0);
+}
+
+.homeFormButton:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   MENSAJE DEL FORMULARIO
+   ========================================================= */
+
+.homeFormMessage {
+  margin: 18px 0 0;
+
+  padding: 14px 16px;
+
+  border: 1px solid rgba(47, 65, 86, 0.08);
+
+  border-radius: 10px;
+
+  background: #f1f5f6;
+
+  color: #2f4156;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1250px
    ========================================================= */
 
 @media (max-width: 1250px) {
@@ -1892,7 +1970,6 @@
     gap: 40px;
 
     padding-left: 5vw;
-
     padding-right: 5vw;
   }
 
@@ -1903,6 +1980,10 @@
 }
 
 
+/* =========================================================
+   RESPONSIVE — 1000px
+   ========================================================= */
+
 @media (max-width: 1000px) {
 
   .hero {
@@ -1911,7 +1992,6 @@
     min-height: auto;
 
     padding-top: 90px;
-
     padding-bottom: 85px;
   }
 
@@ -1923,7 +2003,6 @@
 
   .heroDescription {
     margin-left: auto;
-
     margin-right: auto;
   }
 
@@ -1934,6 +2013,36 @@
 
   .panelWrapper {
     max-width: 850px;
+  }
+
+  .identity {
+    padding: 100px 5vw 110px;
+  }
+
+  .identityInner {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .identityContent {
+    max-width: 850px;
+
+    margin: 0 auto;
+  }
+
+  .identityContent h2 {
+    max-width: 750px;
+  }
+
+  .identityImageWrapper {
+    width: min(650px, 100%);
+
+    margin: 0 auto;
+  }
+
+  .identityImageFrame {
+    max-width: 100%;
   }
 
   .riskGrid {
@@ -1954,8 +2063,33 @@
     gap: 55px;
   }
 
+  .homeForm {
+    padding: 36px;
+  }
+
 }
 
+
+/* =========================================================
+   RESPONSIVE — 800px
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .homeFormSection {
+    padding: 80px 5vw 90px;
+  }
+
+  .homeForm {
+    padding: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700px
+   ========================================================= */
 
 @media (max-width: 700px) {
 
@@ -2043,15 +2177,59 @@
   }
 
   .identity {
-    padding: 105px 20px 110px;
+    padding: 85px 20px 95px;
   }
 
-  .identity h2 {
-    font-size: clamp(43px, 12vw, 60px);
+  .identityInner {
+    gap: 45px;
   }
 
-  .identity p {
+  .identityContent h2 {
+    margin-bottom: 35px;
+
+    font-size: clamp(34px, 10vw, 50px);
+
+    line-height: 1.05;
+  }
+
+  .identityProblem {
+    grid-template-columns: 40px 1fr;
+
+    gap: 14px;
+
+    padding: 20px 0;
+  }
+
+  .identityProblemIcon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+  }
+
+  .identityProblemIcon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .identityProblemContent h3 {
     font-size: 14px;
+  }
+
+  .identityProblemContent p {
+    font-size: 11px;
+
+    line-height: 1.65;
+  }
+
+  .identityImageWrapper {
+    width: 100%;
+  }
+
+  .identityImageFrame {
+    aspect-ratio: 4 / 5;
+
+    border-radius: 20px;
   }
 
   .riskSection,
@@ -2113,429 +2291,36 @@
 
   .floatingWhatsapp svg {
     width: 29px;
-
     height: 29px;
   }
 
-}
-/* =========================================================
-   AJUSTE DE LEGIBILIDAD — TEXTOS SECUNDARIOS DEL HERO
-   Solo aumenta textos pequeños.
-   NO modifica los títulos principales.
-   ========================================================= */
-
-.badge {
-  font-size: 12px;
-}
-
-.heroDescription {
-  font-size: 17px;
-  line-height: 1.75;
-}
-
-.heroNote {
-  font-size: 14px;
-}
-
-.noteIcon {
-  width: 18px;
-  height: 18px;
-}
-
-.noteIcon svg {
-  width: 10px;
-  height: 10px;
-}
-
-
-/* =========================================================
-   TRUST BAR
-   ========================================================= */
-
-.trustItem strong {
-  font-size: 12px;
-}
-
-.trustItem div > span {
-  font-size: 11px;
-}
-
-
-/* =========================================================
-   PANEL
-   ========================================================= */
-
-.panelEyebrow {
-  font-size: 12px;
-}
-
-.panelHeader p {
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.status {
-  font-size: 10px;
-}
-
-
-/* =========================================================
-   STATS
-   ========================================================= */
-
-.statIndex {
-  font-size: 11px;
-}
-
-.statLabel {
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-
-/* =========================================================
-   CONTACTO DEL PANEL
-   ========================================================= */
-
-.panelContactText > span {
-  font-size: 11px;
-}
-
-.panelContactText p {
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-
-  border: 1px solid #c8d9e6;
-  border-radius: 50%;
-
-  color: #16587b;
-
-  background: #ffffff;
-
-  font-size: 13px;
-  font-weight: 800;
-}
-
-/* =========================================================
-   FORMULARIO DE ORIENTACIÓN — AER
-   ========================================================= */
-
-.homeFormSection {
-  width: 100%;
-  padding: 110px 6%;
-  background: #f4f1eb;
-}
-
-.homeFormHeader {
-  width: min(100%, 980px);
-  margin: 0 auto 48px;
-}
-
-.homeFormHeader > span {
-  display: block;
-  margin-bottom: 14px;
-  color: #567c8d;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.homeFormHeader h2 {
-  margin: 0;
-  color: #2f4156;
-  font-size: clamp(2.4rem, 4vw, 4rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-}
-
-.homeFormHeader p {
-  max-width: 700px;
-  margin: 22px 0 0;
-  color: #667681;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   CONTENEDOR DEL FORMULARIO
-   ========================================================= */
-
-.homeForm {
-  width: min(100%, 980px);
-  margin: 0 auto;
-  padding: 42px;
-  background: #ffffff;
-  border: 1px solid rgba(47, 65, 86, 0.08);
-  border-radius: 20px;
-  box-shadow: 0 18px 50px rgba(47, 65, 86, 0.08);
-}
-
-
-/* =========================================================
-   GRID
-   ========================================================= */
-
-.homeFormGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px 22px;
-}
-
-
-/* =========================================================
-   CAMPOS
-   ========================================================= */
-
-.homeFormField,
-.homeFormFieldFull {
-  width: 100%;
-  min-width: 0;
-}
-
-.homeFormFieldFull {
-  grid-column: 1 / -1;
-}
-
-.homeFormField label,
-.homeFormFieldFull label {
-  display: block;
-  margin-bottom: 9px;
-  color: #2f4156;
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-
-/* =========================================================
-   INPUTS / SELECTS
-   ========================================================= */
-
-.homeFormField input,
-.homeFormField select,
-.homeFormFieldFull textarea {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-
-  border: 1px solid #d5dde1;
-  border-radius: 11px;
-
-  background: #fbfcfc;
-  color: #2f4156;
-
-  font-family: inherit;
-  font-size: 0.96rem;
-
-  outline: none;
-
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.homeFormField input,
-.homeFormField select {
-  height: 56px;
-  padding: 0 16px;
-}
-
-.homeFormFieldFull textarea {
-  min-height: 155px;
-  padding: 16px;
-
-  line-height: 1.55;
-  resize: vertical;
-}
-
-.homeFormField input::placeholder,
-.homeFormFieldFull textarea::placeholder {
-  color: #a0abb1;
-}
-
-.homeFormField input:hover,
-.homeFormField select:hover,
-.homeFormFieldFull textarea:hover {
-  border-color: #b8c7cf;
-  background: #ffffff;
-}
-
-.homeFormField input:focus,
-.homeFormField select:focus,
-.homeFormFieldFull textarea:focus {
-  border-color: #567c8d;
-  background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(86, 124, 141, 0.12);
-}
-
-
-/* =========================================================
-   SELECT
-   ========================================================= */
-
-.homeFormField select {
-  cursor: pointer;
-  appearance: auto;
-}
-
-
-/* =========================================================
-   PRIVACIDAD
-   ========================================================= */
-
-.homeFormPrivacy {
-  display: flex;
-  align-items: flex-start;
-  gap: 11px;
-
-  margin-top: 28px;
-
-  color: #61707a;
-  font-size: 0.88rem;
-  line-height: 1.5;
-
-  cursor: pointer;
-}
-
-.homeFormPrivacy input {
-  width: 18px;
-  height: 18px;
-
-  margin: 2px 0 0;
-
-  flex: 0 0 auto;
-
-  accent-color: #2f4156;
-  cursor: pointer;
-}
-
-
-/* =========================================================
-   BOTÓN
-   ========================================================= */
-
-.homeFormButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 58px;
-
-  margin-top: 28px;
-
-  border: none;
-  border-radius: 11px;
-
-  background: #2f4156;
-  color: #ffffff;
-
-  font-family: inherit;
-  font-size: 0.98rem;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.homeFormButton:hover {
-  background: #203449;
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(47, 65, 86, 0.18);
-}
-
-.homeFormButton:active {
-  transform: translateY(0);
-}
-
-.homeFormButton:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-
-/* =========================================================
-   MENSAJE
-   ========================================================= */
-
-.homeFormMessage {
-  margin: 18px 0 0;
-  padding: 14px 16px;
-
-  border-radius: 10px;
-
-  background: #f1f5f6;
-  color: #2f4156;
-
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-
-/* =========================================================
-   RESPONSIVE — TABLET
-   ========================================================= */
-
-@media (max-width: 800px) {
-
   .homeFormSection {
-    padding: 80px 5%;
-  }
-
-  .homeForm {
-    padding: 32px;
-  }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — MÓVIL
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-  .homeFormSection {
-    padding: 65px 18px;
+    padding: 65px 18px 80px;
   }
 
   .homeFormHeader {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 
   .homeFormHeader h2 {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
 
   .homeFormHeader p {
-    font-size: 0.95rem;
+    font-size: 14px;
+    line-height: 1.7;
   }
 
   .homeForm {
     padding: 24px 20px;
-    border-radius: 16px;
+
+    border-radius: 18px;
   }
 
   .homeFormGrid {
     grid-template-columns: 1fr;
-    gap: 20px;
+
+    gap: 19px;
   }
 
   .homeFormFieldFull {
@@ -2545,14 +2330,24 @@
   .homeFormField input,
   .homeFormField select {
     height: 54px;
+
+    font-size: 14px;
   }
 
   .homeFormFieldFull textarea {
     min-height: 140px;
+
+    font-size: 14px;
+  }
+
+  .homeFormPrivacy {
+    font-size: 13px;
   }
 
   .homeFormButton {
     height: 56px;
+
+    font-size: 14px;
   }
 
-}
+     }
