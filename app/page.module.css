@@ -2205,3 +2205,479 @@
   font-size: 14px;
   line-height: 1.7;
 }
+/* =========================================================
+   FORMULARIO DE ORIENTACIÓN — INICIO
+========================================================= */
+
+.homeFormSection {
+  width: 100%;
+  padding: 90px 48px 100px;
+  background: #f7f4ef;
+}
+
+.homeFormContainer {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* =========================================================
+   INFORMACIÓN DEL FORMULARIO
+========================================================= */
+
+.homeFormIntro {
+  padding-top: 10px;
+}
+
+.homeFormEyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #567c8d;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.homeFormIntro h2 {
+  margin: 0;
+
+  color: #0d243b;
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+.homeFormIntro p {
+  max-width: 470px;
+
+  margin: 24px 0 0;
+
+  color: #667685;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.homeFormNote {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 28px;
+
+  color: #567c8d;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.homeFormNote::before {
+  content: "✓";
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #c8d9e6;
+  border-radius: 50%;
+
+  color: #16587b;
+
+  background: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   CAJA DEL FORMULARIO
+========================================================= */
+
+.homeFormBox {
+  width: 100%;
+
+  padding: 34px;
+
+  background: #ffffff;
+
+  border: 1px solid #d8e3ea;
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 45px rgba(13, 36, 59, 0.08);
+}
+
+.homeFormBoxTitle {
+  margin: 0 0 25px;
+
+  color: #0d243b;
+
+  font-size: 21px;
+  line-height: 1.3;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   GRID DE CAMPOS
+========================================================= */
+
+.homeFormGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+.homeFormField {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.homeFormFieldFull {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.homeFormField label {
+  color: #2f4156;
+
+  font-size: 12px;
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.homeFormField input,
+.homeFormField select,
+.homeFormField textarea {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid #cfdde5;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #0d243b;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.homeFormField input,
+.homeFormField select {
+  min-height: 46px;
+}
+
+.homeFormField textarea {
+  min-height: 120px;
+
+  resize: vertical;
+}
+
+.homeFormField input::placeholder,
+.homeFormField textarea::placeholder {
+  color: #9aaab5;
+}
+
+.homeFormField input:focus,
+.homeFormField select:focus,
+.homeFormField textarea:focus {
+  border-color: #567c8d;
+
+  box-shadow:
+    0 0 0 3px rgba(86, 124, 141, 0.12);
+
+  background: #fcfdfe;
+}
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.homeFormCheckbox {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 3px;
+}
+
+.homeFormCheckbox input {
+  width: 17px;
+  height: 17px;
+
+  margin-top: 2px;
+
+  flex-shrink: 0;
+
+  accent-color: #16587b;
+
+  cursor: pointer;
+}
+
+.homeFormCheckbox label {
+  color: #667685;
+
+  font-size: 12px;
+  line-height: 1.6;
+
+  cursor: pointer;
+}
+
+.homeFormCheckbox label a {
+  color: #16587b;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.homeFormCheckbox label a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.homeFormButton {
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  min-height: 50px;
+
+  margin-top: 5px;
+
+  padding: 13px 22px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #0d243b;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.01em;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.homeFormButton:hover {
+  background: #16587b;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(13, 36, 59, 0.16);
+}
+
+.homeFormButton:active {
+  transform: translateY(0);
+}
+
+.homeFormButton:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* =========================================================
+   MENSAJES
+========================================================= */
+
+.homeFormSuccess {
+  margin-top: 15px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #c8d9e6;
+  border-radius: 9px;
+
+  background: #f2f8fa;
+
+  color: #16587b;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.homeFormError {
+  margin-top: 15px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #dfc7c7;
+  border-radius: 9px;
+
+  background: #fbf5f5;
+
+  color: #7b3d3d;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .homeFormSection {
+    padding: 75px 30px 85px;
+  }
+
+  .homeFormContainer {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .homeFormIntro {
+    max-width: 700px;
+  }
+
+  .homeFormIntro h2 {
+    font-size: 38px;
+  }
+
+  .homeFormIntro p {
+    max-width: 650px;
+  }
+}
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .homeFormSection {
+    padding: 60px 18px 70px;
+  }
+
+  .homeFormContainer {
+    gap: 32px;
+  }
+
+  .homeFormIntro h2 {
+    font-size: 32px;
+  }
+
+  .homeFormIntro p {
+    margin-top: 18px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .homeFormBox {
+    padding: 24px 18px;
+
+    border-radius: 17px;
+  }
+
+  .homeFormBoxTitle {
+    font-size: 19px;
+  }
+
+  .homeFormGrid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .homeFormFieldFull {
+    grid-column: auto;
+  }
+
+  .homeFormCheckbox {
+    grid-column: auto;
+  }
+
+  .homeFormButton {
+    grid-column: auto;
+  }
+}
+
+/* =========================================================
+   MÓVILES MUY PEQUEÑOS
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .homeFormSection {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .homeFormBox {
+    padding: 22px 15px;
+  }
+
+  .homeFormIntro h2 {
+    font-size: 29px;
+  }
+}
