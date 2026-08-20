@@ -1165,7 +1165,7 @@ export default function IdentificacionFraudePage() {
 
         <div className={styles.footerSpace}>
           <span>
-            AER · Asesoria Especializada en Recuperación 
+         Asesoria Especializada en Recuperación 
           </span>
         </div>
 

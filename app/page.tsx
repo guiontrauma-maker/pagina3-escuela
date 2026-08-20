@@ -1279,7 +1279,7 @@ const handleFormSubmit = async (
               </summary>
 
               <p>
-                AER|Asesoria Especializada en Recuperacion funciona como una plataforma de orientación y
+                Asesoria Especializada en Recuperacion funciona como una plataforma de orientación y
                 seguimiento. La recuperación de fondos depende de las
                 características y circunstancias de cada caso.
               </p>
@@ -1400,7 +1400,7 @@ const handleFormSubmit = async (
         <div className={styles.footerSpace}>
 
           <span>
-            AER · Asesoria Especializada en Recuperación 
+             Asesoria Especializada en Recuperación 
           </span>
 
         </div>

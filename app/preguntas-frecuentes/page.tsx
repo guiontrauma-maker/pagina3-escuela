@@ -29,7 +29,7 @@ const faqs: Faq[] = [
   },
   {
     category: "Asesoria Especializada en Recuperacion",
-    question: "¿AER|asesoria especializada en recuperacion es una institución financiera?",
+    question: "¿Asesoria especializada en recuperacion es una institución financiera?",
     answer:
       "No. Asesoria Especializada en Recuperacion no es un banco, casa de bolsa ni institución financiera. La plataforma está orientada a brindar información y acompañamiento inicial ante situaciones relacionadas con posibles fraudes o riesgos patrimoniales.",
   },

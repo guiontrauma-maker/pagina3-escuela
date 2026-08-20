@@ -551,7 +551,7 @@ export default function RecomendacionesPage() {
 
         <div className={styles.footerSpace}>
           <span>
-            AER· Asesoría Especializada en Recuperación 
+           Asesoría Especializada en Recuperación 
           </span>
         </div>
 
