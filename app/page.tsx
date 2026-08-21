@@ -744,7 +744,7 @@ const handleFormSubmit = async (
           <p>
             Las plataformas fraudulentas de trading prometen grandes
             rendimientos, pero una vez que los inversores depositan su
-            dinero, pueden desaparecer. Nuestros abogados expertos
+            dinero, pueden desaparecer. Nuestros asesores expertos
             utilizan información y herramientas de investigación para
             rastrear estas operaciones y analizar las posibilidades
             de recuperación.
