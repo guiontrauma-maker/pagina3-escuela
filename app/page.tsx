@@ -719,7 +719,7 @@ const handleFormSubmit = async (
     <div className={styles.identityContent}>
 
       <h2>
-        Recupera tu dinero perdido con la ayuda de nuestros abogados expertos
+        Recupera tu dinero perdido con la ayuda de nuestros asesores expertos
       </h2>
 
 
