@@ -136,7 +136,7 @@ export default function CasosPage() {
             <div className="admin-logo">V</div>
 
             <div className="admin-brand-text">
-              <strong>AER</strong>
+              <strong>Althea</strong>
               <span>Panel administrativo</span>
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function CasosPage() {
 
             <div>
               <strong>Sistema activo</strong>
-              <small>AER operativo</small>
+              <small>Althea operativo</small>
             </div>
           </div>
 
@@ -190,7 +190,7 @@ export default function CasosPage() {
       <section className="admin-main">
         <header className="admin-topbar">
           <span className="admin-breadcrumb">
-            AER  / ADMINISTRACIÓN / CASOS REALES
+            Althea  / ADMINISTRACIÓN / CASOS REALES
           </span>
 
           <div className="admin-user">
@@ -212,7 +212,7 @@ export default function CasosPage() {
 
               <p>
                 Consulta y administra la información enviada mediante el
-                formulario de Casos reales de AER.
+                formulario de Casos reales de Althea.
               </p>
             </div>
 

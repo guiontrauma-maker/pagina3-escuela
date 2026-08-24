@@ -479,7 +479,7 @@ export default function RecomendacionesPage() {
                 href="/contacto"
                 className={styles.primaryButton}
               >
-                Hablar con Asesoría Especializada en Recuperación 
+                Hablar con Althea 
                 <span>→</span>
               </Link>
 
@@ -551,7 +551,7 @@ export default function RecomendacionesPage() {
 
         <div className={styles.footerSpace}>
           <span>
-           Asesoría Especializada en Recuperación 
+           Althea
           </span>
         </div>
 

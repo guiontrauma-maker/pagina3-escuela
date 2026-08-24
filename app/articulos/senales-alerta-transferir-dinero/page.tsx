@@ -33,7 +33,7 @@ export default function SenalesAlertaTransferirDinero() {
             </p>
 
             <div className={styles.articleMeta}>
-              <span>Asesoria Especializada en Recupercion</span>
+              <span>Althea</span>
               <span>·</span>
               <span>Guía de seguridad</span>
             </div>
@@ -202,7 +202,7 @@ export default function SenalesAlertaTransferirDinero() {
 
 
             <div className={styles.finalNote}>
-              <strong>Asesoria Especializada en Recupercion</strong>
+              <strong>Althea</strong>
 
               <p>
                 Nuestro objetivo es ayudarte a comprender las señales
@@ -244,7 +244,7 @@ export default function SenalesAlertaTransferirDinero() {
 
         <footer className={styles.footer}>
           <Link href="/">
-            ← Volver a Asesoría Especializada en Recuperación 
+            ← Volver a Althea
           </Link>
         </footer>
 

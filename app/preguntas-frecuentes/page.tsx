@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 
 type Category =
   | "Todas"
-  | "Asesoria Especializada en Recuperacion"
+  | "Althea"
   | "Fraude"
   | "Orientación"
   | "Información"
@@ -22,20 +22,20 @@ type Faq = {
 
 const faqs: Faq[] = [
   {
-    category: "Asesoria Especializada en Recuperacion",
-    question: "¿Qué es AER|AsesoríaEspecializada en Recuperación?",
+    category: "Althea",
+    question: "¿Qué es Althea?",
     answer:
-      "Asesoria Espeializada en Recuperacion es una plataforma de orientación enfocada en situaciones que pueden poner en riesgo el patrimonio. Su objetivo es ayudarte a organizar la información, comprender las señales de alerta y conocer posibles alternativas para actuar con mayor claridad.",
+      "Althea es una plataforma de orientación enfocada en situaciones que pueden poner en riesgo el patrimonio. Su objetivo es ayudarte a organizar la información, comprender las señales de alerta y conocer posibles alternativas para actuar con mayor claridad.",
   },
   {
-    category: "Asesoria Especializada en Recuperacion",
-    question: "¿Asesoria especializada en recuperacion es una institución financiera?",
+    category: "Althea",
+    question: "¿Althea es una institución financiera?",
     answer:
-      "No. Asesoria Especializada en Recuperacion no es un banco, casa de bolsa ni institución financiera. La plataforma está orientada a brindar información y acompañamiento inicial ante situaciones relacionadas con posibles fraudes o riesgos patrimoniales.",
+      "No. Althea no es un banco, casa de bolsa ni institución financiera. La plataforma está orientada a brindar información y acompañamiento inicial ante situaciones relacionadas con posibles fraudes o riesgos patrimoniales.",
   },
   {
-    category: "Asesoria Especializada en Recuperacion",
-    question: "¿Asesoria Especializada en Recuperacion garantiza recuperar mi dinero?",
+    category: "Althea",
+    question: "¿Althea garantiza recuperar mi dinero?",
     answer:
       "No existe una garantía de recuperación. Las posibilidades dependen de las circunstancias particulares de cada caso, de la información disponible y de las acciones que puedan realizarse posteriormente.",
   },
@@ -65,7 +65,7 @@ const faqs: Faq[] = [
   },
   {
     category: "Orientación",
-    question: "¿Cómo comienza una orientación con Asesoría Especializada en Recuperación ?",
+    question: "¿Cómo comienza una orientación con Althea ?",
     answer:
       "El proceso comienza con la recopilación de información general sobre la situación. A partir de ella se pueden identificar elementos relevantes, organizar los antecedentes y determinar qué aspectos requieren mayor atención.",
   },
@@ -167,7 +167,7 @@ const categories: { label: Category; description: string }[] = [
     description: "Consulta todas las preguntas disponibles.",
   },
   {
-    label: "Asesoria Especializada en Recuperacion",
+    label: "Althea",
     description: "Conoce la plataforma y su alcance.",
   },
   {
@@ -244,7 +244,7 @@ export default function PreguntasFrecuentes() {
 
               <div className={styles.introText}>
                 <p>
-                  Encuentra respuestas sobre Asesoria Especializada en Recuperacion, situaciones de fraude,
+                  Encuentra respuestas sobre Althea, situaciones de fraude,
                   seguridad de la información y el proceso de orientación.
                 </p>
 
@@ -521,7 +521,7 @@ export default function PreguntasFrecuentes() {
             </div>
 
             <Link href="/contacto" className={styles.contactButton}>
-              Hablar con Asesoría Especializada en Recuperación
+              Hablar con Althea
               <span>→</span>
             </Link>
           </div>
@@ -554,7 +554,7 @@ export default function PreguntasFrecuentes() {
             ===================================================== */}
 
         <section className={styles.finalSection}>
-          <span>Asesoria Especializada en Recuperacion</span>
+          <span>Althea</span>
 
           <h2>
             Información clara.

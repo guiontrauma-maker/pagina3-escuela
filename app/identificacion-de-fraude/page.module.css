@@ -1932,12 +1932,10 @@
 
 .serviceContent {
   min-height: 475px;
-
   display: flex;
-
   flex-direction: column;
-
   padding: 34px 31px 30px;
+  box-sizing: border-box;
 }
 
 .serviceCategory {
@@ -2126,4 +2124,8 @@
     font-size: 14px;
   }
 
+}
+.serviceCard:nth-child(2) .serviceContent,
+.serviceCard:nth-child(3) .serviceContent {
+  min-height: 540px;
 }

@@ -33,7 +33,7 @@ export default function QueHacerDespuesDeUnaEstafa() {
             </p>
 
             <div className={styles.articleMeta}>
-              <span>Asesoria Especializada en Recuperacion </span>
+              <span>Althea </span>
               <span>·</span>
               <span>Guía de orientación</span>
             </div>
@@ -239,7 +239,7 @@ export default function QueHacerDespuesDeUnaEstafa() {
             <div className={styles.finalNote}>
 
               <strong>
-                Asesoria Especializada en Recuperacion 
+                Althea
               </strong>
 
               <p>
@@ -283,7 +283,7 @@ export default function QueHacerDespuesDeUnaEstafa() {
 
         <footer className={styles.footer}>
           <Link href="/">
-            ← Volver a Asesoria Especializada en Recuperacion 
+            ← Volver a Althea
           </Link>
         </footer>
 

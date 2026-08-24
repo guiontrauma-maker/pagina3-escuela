@@ -12,7 +12,7 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       className={styles.floating}
-      aria-label="Contactar a AER asesoria especializada por WhatsApp"
+      aria-label="Contactar a Althea por WhatsApp"
     >
       <svg
         className={styles.icon}

@@ -622,7 +622,7 @@ export default function IdentificacionFraudePage() {
                   href="/contacto"
                   className={styles.primaryAction}
                 >
-                  Hablar con Asesoría Especializada en Recuperación 
+                  Hablar con Althea
                   <span>→</span>
                 </Link>
 
@@ -1107,7 +1107,7 @@ export default function IdentificacionFraudePage() {
             </strong>
 
             <p>
-              La herramienta de identificación de fraude de Asesoria Especializada en Recuperacion
+              La herramienta de identificación de fraude de Althea
               proporciona una evaluación orientativa basada en la
               información proporcionada por el usuario. El resultado
               no constituye una determinación legal, financiera ni
@@ -1130,7 +1130,7 @@ export default function IdentificacionFraudePage() {
           <div className={styles.finalContent}>
 
             <span>
-              Asesoria Especializada en Recuperacion 
+              Althea
             </span>
 
             <h2>
@@ -1165,7 +1165,7 @@ export default function IdentificacionFraudePage() {
 
         <div className={styles.footerSpace}>
           <span>
-         Asesoria Especializada en Recuperación 
+         Althea
           </span>
         </div>
 

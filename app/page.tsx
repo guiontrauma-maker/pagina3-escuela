@@ -10,7 +10,6 @@ const WHATSAPP_URL =
 const EMAIL_URL =
   "mailto:aer@asesoriaespecializada.com?subject=Solicitud%20de%20asesor%C3%ADa";
 
-
 /* =========================================================
    ICONOS
    ========================================================= */
@@ -18,9 +17,7 @@ const EMAIL_URL =
 function WhatsAppIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.7 6L.2 24l6.3-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.2 21.7h-.1c-1.8 0-3.5-.5-5-1.3l-.4-.2-3.7 1 1-3.6-.2-.4a9.7 9.7 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9-.1 5.3-4.5 9.7-9.7 9.7Zm5.4-7.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5s0-.4-.1-.6c-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.4Z"
-      />
+      <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.7 6L.2 24l6.3-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.2 21.7h-.1c-1.8 0-3.5-.5-5-1.3l-.4-.2-3.7 1 1-3.6-.2-.4a9.7 9.7 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9-.1 5.3-4.5 9.7-9.7 9.7Zm5.4-7.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5s0-.4-.1-.6c-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.4Z" />
     </svg>
   );
 }
@@ -40,7 +37,6 @@ function CheckIcon() {
     </svg>
   );
 }
-
 
 /* =========================================================
    ICONOS DE RIESGO
@@ -95,110 +91,106 @@ function PyramidIcon() {
   );
 }
 
-
 /* =========================================================
    HOME
    ========================================================= */
 
 export default function Home() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
-const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  countryCode: "+52",
-  phone: "",
-  currency: "MXN",
-  amount: "",
-  caseType: "",
-  description: "",
-  privacy: false,
-});
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    countryCode: "+52",
+    phone: "",
+    currency: "MXN",
+    amount: "",
+    caseType: "",
+    description: "",
+    privacy: false,
+  });
 
-const [formMessage, setFormMessage] = useState("");
-const [formLoading, setFormLoading] = useState(false);
+  const [formMessage, setFormMessage] = useState("");
+  const [formLoading, setFormLoading] = useState(false);
 
-const handleFormChange = (
-  event: React.ChangeEvent<
-    HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-  >
-) => {
-  const { name, value, type } = event.target;
+  const handleFormChange = (
+    event: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
+  ) => {
+    const { name, value, type } = event.target;
 
-  setFormData((prev) => ({
-    ...prev,
-    [name]:
-      type === "checkbox"
-        ? (event.target as HTMLInputElement).checked
-        : value,
-  }));
-};
+    setFormData((prev) => ({
+      ...prev,
+      [name]:
+        type === "checkbox"
+          ? (event.target as HTMLInputElement).checked
+          : value,
+    }));
+  };
 
-const handleFormSubmit = async (
-  event: React.FormEvent<HTMLFormElement>
-) => {
-  event.preventDefault();
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-  setFormLoading(true);
-  setFormMessage("");
+    setFormLoading(true);
+    setFormMessage("");
 
-  try {
-    const response = await fetch("/api/contacto", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch("/api/contacto", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (!response.ok) {
-      setFormMessage(result.message || "No fue posible enviar la información.");
-      return;
+      if (!response.ok) {
+        setFormMessage(
+          result.message || "No fue posible enviar la información.",
+        );
+        return;
+      }
+
+      setFormMessage(
+        "Tu información fue recibida correctamente. Nos pondremos en contacto contigo.",
+      );
+
+      setFormData({
+        name: "",
+        email: "",
+        countryCode: "+52",
+        phone: "",
+        currency: "MXN",
+        amount: "",
+        caseType: "",
+        description: "",
+        privacy: false,
+      });
+    } catch {
+      setFormMessage(
+        "Ocurrió un error al enviar la información. Inténtalo nuevamente.",
+      );
+    } finally {
+      setFormLoading(false);
     }
-
-    setFormMessage(
-      "Tu información fue recibida correctamente. Nos pondremos en contacto contigo."
-    );
-
-    setFormData({
-      name: "",
-      email: "",
-      countryCode: "+52",
-      phone: "",
-      currency: "MXN",
-      amount: "",
-      caseType: "",
-      description: "",
-      privacy: false,
-    });
-  } catch {
-    setFormMessage(
-      "Ocurrió un error al enviar la información. Inténtalo nuevamente."
-    );
-  } finally {
-    setFormLoading(false);
-  }
-};
+  };
   return (
     <>
       <Navbar />
 
       <main className={styles.home}>
-
         {/* =====================================================
             HERO
             ===================================================== */}
 
         <section className={styles.hero} id="inicio">
-
           <div className={styles.heroGlow}></div>
 
           <div className={styles.heroContent}>
-
             <div className={styles.badge}>
               <span className={styles.badgeDot}></span>
-             Asesoría Especializada en Recuperación 
+              Althea
             </div>
 
             <h1 className={styles.heroTitle}>
@@ -208,39 +200,25 @@ const handleFormSubmit = async (
             </h1>
 
             <p className={styles.heroDescription}>
-              En Asesoria Especializada en Recuperacion te ayudamos a identificar señales de fraude,
-              comprender tu situación y conocer las alternativas disponibles
-              para proteger tu patrimonio.
+              te ayudamos a
+              identificar señales de fraude, comprender tu situación y conocer
+              las alternativas disponibles para proteger tu patrimonio.
             </p>
 
             <div className={styles.heroActions}>
-
-              <a
-                href="/identificacion-de-fraude"
-                className={styles.primaryButton}
-              >
-                Identificar un posible fraude
+              <a href="#solicitar-evaluacion" className={styles.primaryButton}>
+                Solicitar Evaluación Gratuita
               </a>
-
-              <a
-                href="#como-funciona"
-                className={styles.secondaryButton}
-              >
-                Conoce cómo funciona
-              </a>
-
             </div>
 
             <div className={styles.heroNote}>
               <span className={styles.noteIcon}>
                 <CheckIcon />
               </span>
-
               Orientación inicial · Información confidencial
             </div>
 
             <div className={styles.trustBar}>
-
               <div className={styles.trustItem}>
                 <span className={styles.trustIcon}>
                   <span></span>
@@ -273,25 +251,17 @@ const handleFormSubmit = async (
                   <span>Sin compromiso</span>
                 </div>
               </div>
-
             </div>
-
           </div>
-
 
           {/* ===================================================
               PANEL
               =================================================== */}
 
           <div className={styles.panelWrapper}>
-
             <div className={styles.operationalPanel}>
-
               <div className={styles.panelHeader}>
-
                 <div className={styles.panelHeaderContent}>
-
-
                   <h2>
                     Tu patrimonio,
                     <br />
@@ -299,33 +269,24 @@ const handleFormSubmit = async (
                   </h2>
 
                   <p>
-                    Indicadores generales para ayudarte a comprender
-                    posibles situaciones de riesgo patrimonial.
+                    Indicadores generales para ayudarte a comprender posibles
+                    situaciones de riesgo patrimonial.
                   </p>
-
                 </div>
 
                 <div className={styles.status}>
                   <span></span>
                   Plataforma activa
                 </div>
-
               </div>
-
 
               <div className={styles.panelDivider}></div>
 
-
               <div className={styles.statsGrid}>
-
                 <div className={styles.statCard}>
-                  <span className={styles.statIndex}>
-                    Los
-                  </span>
+                  <span className={styles.statIndex}>Los</span>
 
-                  <strong className={styles.statNumber}>
-                    10
-                  </strong>
+                  <strong className={styles.statNumber}>10</strong>
 
                   <span className={styles.statLabel}>
                     Tipos de fraudes
@@ -334,15 +295,10 @@ const handleFormSubmit = async (
                   </span>
                 </div>
 
-
                 <div className={styles.statCard}>
-                  <span className={styles.statIndex}>
-                    Nuestros
-                  </span>
+                  <span className={styles.statIndex}>Nuestros</span>
 
-                  <strong className={styles.statNumber}>
-                    18
-                  </strong>
+                  <strong className={styles.statNumber}>18</strong>
 
                   <span className={styles.statLabel}>
                     Indicadores
@@ -351,11 +307,8 @@ const handleFormSubmit = async (
                   </span>
                 </div>
 
-
                 <div className={styles.statCard}>
-                  <span className={styles.statIndex}>
-                    Brindamos atencion
-                  </span>
+                  <span className={styles.statIndex}>Brindamos atencion</span>
 
                   <strong className={styles.statNumber}>
                     24<span className={styles.statPlus}>h</span>
@@ -367,32 +320,21 @@ const handleFormSubmit = async (
                     de la semana
                   </span>
                 </div>
-
               </div>
 
-
               <div className={styles.panelContact}>
-
                 <div className={styles.panelContactText}>
+                  <span>ORIENTACIÓN DIRECTA</span>
 
-                  <span>
-                    ORIENTACIÓN DIRECTA
-                  </span>
-
-                  <h3>
-                    ¿Necesitas asesoría?
-                  </h3>
+                  <h3>¿Necesitas asesoría?</h3>
 
                   <p>
-                    Comunícate con nosotros y recibe orientación
-                    sobre tu situación.
+                    Comunícate con nosotros y recibe orientación sobre tu
+                    situación.
                   </p>
-
                 </div>
 
-
                 <div className={styles.contactOptions}>
-
                   <a
                     href={WHATSAPP_URL}
                     target="_blank"
@@ -406,7 +348,6 @@ const handleFormSubmit = async (
                     </span>
                   </a>
 
-
                   <a
                     href={EMAIL_URL}
                     className={styles.contactOption}
@@ -417,30 +358,20 @@ const handleFormSubmit = async (
                       <EmailIcon />
                     </span>
                   </a>
-
                 </div>
-
               </div>
-
             </div>
-
           </div>
-
         </section>
-
 
         {/* =====================================================
             REFERENTES
             ===================================================== */}
 
         <section className={styles.references}>
-
-          <p>
-            REFERENTES Y MARCOS REGULATORIOS
-          </p>
+          <p>REFERENTES Y MARCOS REGULATORIOS</p>
 
           <div className={styles.referenceList}>
-
             <span>CONDUSEF</span>
             <i></i>
 
@@ -451,22 +382,16 @@ const handleFormSubmit = async (
             <i></i>
 
             <span>FCA</span>
-
           </div>
-
         </section>
 
         {/* =====================================================
             FORMULARIO DE ORIENTACIÓN
             ===================================================== */}
 
-        <section className={styles.homeFormSection}>
-
+        <section className={styles.homeFormSection} id="solicitar-evaluacion">
           <div className={styles.homeFormHeader}>
-
-            <span>
-              ORIENTACIÓN INICIAL
-            </span>
+            <span>ORIENTACIÓN INICIAL</span>
 
             <h2>
               Cuéntanos brevemente
@@ -475,24 +400,15 @@ const handleFormSubmit = async (
             </h2>
 
             <p>
-              Proporciona algunos datos generales sobre tu situación
-              para que podamos comprender mejor tu caso.
+              Proporciona algunos datos generales sobre tu situación para que
+              podamos comprender mejor tu caso.
             </p>
-
           </div>
 
-
-          <form
-            className={styles.homeForm}
-            onSubmit={handleFormSubmit}
-          >
-
+          <form className={styles.homeForm} onSubmit={handleFormSubmit}>
             <div className={styles.homeFormGrid}>
-
               <div className={styles.homeFormField}>
-                <label htmlFor="home-name">
-                  Nombre completo
-                </label>
+                <label htmlFor="home-name">Nombre completo</label>
 
                 <input
                   id="home-name"
@@ -505,11 +421,8 @@ const handleFormSubmit = async (
                 />
               </div>
 
-
               <div className={styles.homeFormField}>
-                <label htmlFor="home-email">
-                  Correo electrónico
-                </label>
+                <label htmlFor="home-email">Correo electrónico</label>
 
                 <input
                   id="home-email"
@@ -522,11 +435,8 @@ const handleFormSubmit = async (
                 />
               </div>
 
-
               <div className={styles.homeFormField}>
-                <label htmlFor="home-countryCode">
-                  Código
-                </label>
+                <label htmlFor="home-countryCode">Código</label>
 
                 <select
                   id="home-countryCode"
@@ -535,21 +445,18 @@ const handleFormSubmit = async (
                   onChange={handleFormChange}
                   required
                 >
-                  <option value="+52">México (+52)</option>
-                  <option value="+1">Estados Unidos (+1)</option>
-                  <option value="+34">España (+34)</option>
-                  <option value="+57">Colombia (+57)</option>
-                  <option value="+54">Argentina (+54)</option>
-                  <option value="+56">Chile (+56)</option>
-                  <option value="+51">Perú (+51)</option>
+                  <option value="+52">🇲🇽 México (+52)</option>
+                  <option value="+1">🇺🇸 Estados Unidos (+1)</option>
+                  <option value="+34">🇪🇸 España (+34)</option>
+                  <option value="+57">🇨🇴 Colombia (+57)</option>
+                  <option value="+54">🇦🇷 Argentina (+54)</option>
+                  <option value="+56">🇨🇱 Chile (+56)</option>
+                  <option value="+51">🇵🇪 Perú (+51)</option>
                 </select>
               </div>
 
-
               <div className={styles.homeFormField}>
-                <label htmlFor="home-phone">
-                  Teléfono
-                </label>
+                <label htmlFor="home-phone">Teléfono</label>
 
                 <input
                   id="home-phone"
@@ -562,48 +469,40 @@ const handleFormSubmit = async (
                 />
               </div>
 
+              <div className={styles.homeFormFieldFull}>
+                <label>Monto aproximado</label>
 
-              <div className={styles.homeFormField}>
-                <label htmlFor="home-currency">
-                  Moneda
-                </label>
+                <div className={styles.amountGroup}>
+                  <select
+                    id="home-currency"
+                    name="currency"
+                    value={formData.currency}
+                    onChange={handleFormChange}
+                    required
+                    className={styles.currencySelect}
+                    aria-label="Moneda"
+                  >
+                    <option value="MXN">🇲🇽 MXN</option>
+                    <option value="USD">🇺🇸 USD</option>
+                    <option value="EUR">🇪🇺 EUR</option>
+                  </select>
 
-                <select
-                  id="home-currency"
-                  name="currency"
-                  value={formData.currency}
-                  onChange={handleFormChange}
-                  required
-                >
-                  <option value="MXN">MXN — Peso mexicano</option>
-                  <option value="USD">USD — Dólar estadounidense</option>
-                  <option value="EUR">EUR — Euro</option>
-                </select>
+                  <input
+                    id="home-amount"
+                    name="amount"
+                    type="number"
+                    min="0"
+                    value={formData.amount}
+                    onChange={handleFormChange}
+                    placeholder="Monto aproximado"
+                    required
+                    className={styles.amountInput}
+                  />
+                </div>
               </div>
 
-
               <div className={styles.homeFormField}>
-                <label htmlFor="home-amount">
-                  Monto aproximado
-                </label>
-
-                <input
-                  id="home-amount"
-                  name="amount"
-                  type="number"
-                  min="0"
-                  value={formData.amount}
-                  onChange={handleFormChange}
-                  placeholder="Monto aproximado"
-                  required
-                />
-              </div>
-
-
-              <div className={styles.homeFormField}>
-                <label htmlFor="home-caseType">
-                  Tipo de situación
-                </label>
+                <label htmlFor="home-caseType">Tipo de situación</label>
 
                 <select
                   id="home-caseType"
@@ -612,45 +511,28 @@ const handleFormSubmit = async (
                   onChange={handleFormChange}
                   required
                 >
-                  <option value="">
-                    Selecciona una opción
-                  </option>
+                  <option value="">Selecciona una opción</option>
 
-                  <option value="fraude-financiero">
-                    Fraude financiero
-                  </option>
+                  <option value="fraude-financiero">Fraude financiero</option>
 
-                  <option value="fraude-digital">
-                    Fraude digital
-                  </option>
+                  <option value="fraude-digital">Fraude digital</option>
 
                   <option value="suplantacion">
                     Suplantación de identidad
                   </option>
 
-                  <option value="inversion">
-                    Inversión sospechosa
-                  </option>
+                  <option value="inversion">Inversión sospechosa</option>
 
-                  <option value="phishing">
-                    Phishing
-                  </option>
+                  <option value="phishing">Phishing</option>
 
-                  <option value="inmobiliario">
-                    Fraude inmobiliario
-                  </option>
+                  <option value="inmobiliario">Fraude inmobiliario</option>
 
-                  <option value="otro">
-                    Otro
-                  </option>
+                  <option value="otro">Otro</option>
                 </select>
               </div>
 
-
               <div className={styles.homeFormFieldFull}>
-                <label htmlFor="home-description">
-                  ¿Qué ocurrió?
-                </label>
+                <label htmlFor="home-description">¿Qué ocurrió?</label>
 
                 <textarea
                   id="home-description"
@@ -662,12 +544,9 @@ const handleFormSubmit = async (
                   required
                 />
               </div>
-
             </div>
 
-
             <label className={styles.homeFormPrivacy}>
-
               <input
                 type="checkbox"
                 name="privacy"
@@ -677,183 +556,136 @@ const handleFormSubmit = async (
               />
 
               <span>
-                Acepto el tratamiento de mis datos para recibir
-                orientación sobre mi situación.
+                Acepto el tratamiento de mis datos para recibir orientación
+                sobre mi situación.
               </span>
-
             </label>
-
 
             <button
               type="submit"
               className={styles.homeFormButton}
               disabled={formLoading}
             >
-              {formLoading
-                ? "Enviando..."
-                : "Solicitar orientación"}
+              {formLoading ? "Enviando..." : "Solicitar orientación"}
             </button>
 
-
             {formMessage && (
-              <p className={styles.homeFormMessage}>
-                {formMessage}
-              </p>
+              <p className={styles.homeFormMessage}>{formMessage}</p>
             )}
-
           </form>
-
         </section>
-{/* =====================================================
+        {/* =====================================================
     IDENTIDAD / RECUPERACIÓN DE FONDOS
     ===================================================== */}
 
-<section className={styles.identity}>
-
-  <div className={styles.identityInner}>
-
-    {/* =================================================
+        <section className={styles.identity}>
+          <div className={styles.identityInner}>
+            {/* =================================================
         CONTENIDO IZQUIERDO
         ================================================= */}
 
-    <div className={styles.identityContent}>
+            <div className={styles.identityContent}>
+              <h2>
+                Recupera tu dinero perdido con la ayuda de nuestros asesores
+                expertos
+              </h2>
 
-      <h2>
-        Recupera tu dinero perdido con la ayuda de nuestros asesores expertos
-      </h2>
-
-
-      {/* =================================================
+              {/* =================================================
           PROBLEMA 01
           ================================================= */}
 
-      <div className={styles.identityProblem}>
+              <div className={styles.identityProblem}>
+                <div className={styles.identityProblemIcon}>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v10h16V7H4Zm2 2h5v2H6V9Zm0 3h8v2H6v-2Zm10-3h2v5h-2V9Z" />
+                  </svg>
+                </div>
 
-        <div className={styles.identityProblemIcon}>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v10h16V7H4Zm2 2h5v2H6V9Zm0 3h8v2H6v-2Zm10-3h2v5h-2V9Z" />
-          </svg>
-        </div>
+                <div className={styles.identityProblemContent}>
+                  <h3>Problema – Estafas en plataformas de trading</h3>
 
-        <div className={styles.identityProblemContent}>
+                  <p>
+                    Las plataformas fraudulentas de trading prometen grandes
+                    rendimientos, pero una vez que los inversores depositan su
+                    dinero, pueden desaparecer. Nuestros asesores expertos
+                    utilizan información y herramientas de investigación para
+                    rastrear estas operaciones y analizar las posibilidades de
+                    recuperación.
+                  </p>
+                </div>
+              </div>
 
-          <h3>
-            Problema – Estafas en plataformas de trading
-          </h3>
-
-          <p>
-            Las plataformas fraudulentas de trading prometen grandes
-            rendimientos, pero una vez que los inversores depositan su
-            dinero, pueden desaparecer. Nuestros asesores expertos
-            utilizan información y herramientas de investigación para
-            rastrear estas operaciones y analizar las posibilidades
-            de recuperación.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      {/* =================================================
+              {/* =================================================
           PROBLEMA 02
           ================================================= */}
 
-      <div className={styles.identityProblem}>
+              <div className={styles.identityProblem}>
+                <div className={styles.identityProblemIcon}>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3 3 7l9 4 9-4-9-4Zm-6.5 6.8V16L12 19l6.5-3V9.8L12 12.7 5.5 9.8ZM4 17v2l8 3 8-3v-2l-8 3-8-3Z" />
+                  </svg>
+                </div>
 
-        <div className={styles.identityProblemIcon}>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3 3 7l9 4 9-4-9-4Zm-6.5 6.8V16L12 19l6.5-3V9.8L12 12.7 5.5 9.8ZM4 17v2l8 3 8-3v-2l-8 3-8-3Z" />
-          </svg>
-        </div>
+                <div className={styles.identityProblemContent}>
+                  <h3>Problema – Manipulación de precios en plataformas</h3>
 
-        <div className={styles.identityProblemContent}>
+                  <p>
+                    La manipulación de precios y la falta de transparencia son
+                    prácticas que pueden presentarse en plataformas o brokers no
+                    regulados. Analizamos la información disponible para
+                    identificar posibles irregularidades y determinar las
+                    alternativas correspondientes.
+                  </p>
+                </div>
+              </div>
 
-          <h3>
-            Problema – Manipulación de precios en plataformas
-          </h3>
-
-          <p>
-            La manipulación de precios y la falta de transparencia son
-            prácticas que pueden presentarse en plataformas o brokers
-            no regulados. Analizamos la información disponible para
-            identificar posibles irregularidades y determinar las
-            alternativas correspondientes.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      {/* =================================================
+              {/* =================================================
           PROBLEMA 03
           ================================================= */}
 
-      <div className={styles.identityProblem}>
+              <div className={styles.identityProblem}>
+                <div className={styles.identityProblemIcon}>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2 4 5v6c0 5.2 3.4 9.9 8 11 4.6-1.1 8-5.8 8-11V5l-8-3Zm0 2.2 6 2.25V11c0 4-2.45 7.65-6 8.75C8.45 18.65 6 15 6 11V6.45l6-2.25Zm-1 4.3v5.2h2V8.5h-2Zm0 6.5v2h2v-2h-2Z" />
+                  </svg>
+                </div>
 
-        <div className={styles.identityProblemIcon}>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 2 4 5v6c0 5.2 3.4 9.9 8 11 4.6-1.1 8-5.8 8-11V5l-8-3Zm0 2.2 6 2.25V11c0 4-2.45 7.65-6 8.75C8.45 18.65 6 15 6 11V6.45l6-2.25Zm-1 4.3v5.2h2V8.5h-2Zm0 6.5v2h2v-2h-2Z" />
-          </svg>
-        </div>
+                <div className={styles.identityProblemContent}>
+                  <h3>Problema – Phishing y robo de fondos en inversiones</h3>
 
-        <div className={styles.identityProblemContent}>
+                  <p>
+                    Si tus fondos fueron comprometidos mediante phishing,
+                    suplantación, accesos no autorizados u otras formas de
+                    fraude digital, nuestro equipo puede ayudarte a organizar la
+                    información y analizar las operaciones relacionadas.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-          <h3>
-            Problema – Phishing y robo de fondos en inversiones
-          </h3>
-
-          <p>
-            Si tus fondos fueron comprometidos mediante phishing,
-            suplantación, accesos no autorizados u otras formas de
-            fraude digital, nuestro equipo puede ayudarte a organizar
-            la información y analizar las operaciones relacionadas.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    {/* =================================================
+            {/* =================================================
         ESPACIO PARA LA FOTO
         ================================================= */}
 
-    <div className={styles.identityImageWrapper}>
-
-      <div className={styles.identityImageFrame}>
-
-        <img
-          src="/images/abogado-trading.jpg"
-          alt="Abogado especialista en recuperación de fondos de trading"
-          className={styles.identityImage}
-        />
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+            <div className={styles.identityImageWrapper}>
+              <div className={styles.identityImageFrame}>
+                <img
+                  src="/images/abogado-trading.jpg"
+                  alt="Abogado especialista en recuperación de fondos de trading"
+                  className={styles.identityImage}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* =====================================================
             RIESGO
             ===================================================== */}
 
-        <section
-          className={styles.riskSection}
-          id="fraude"
-        >
-
+        <section className={styles.riskSection} id="fraude">
           <div className={styles.sectionIntro}>
-
-            <span>
-              IDENTIFICACIÓN
-            </span>
+            <span>IDENTIFICACIÓN</span>
 
             <h2>
               ¿Tu patrimonio
@@ -865,12 +697,9 @@ const handleFormSubmit = async (
               Conocer las señales de alerta puede ayudarte a reconocer
               situaciones sospechosas antes de tomar una decisión.
             </p>
-
           </div>
 
-
           <div className={styles.riskGrid}>
-
             <article className={styles.riskCard}>
               <span className={styles.cardNumber}>01</span>
 
@@ -878,16 +707,13 @@ const handleFormSubmit = async (
                 <MoneyIcon />
               </div>
 
-              <h3>
-                Fraude financiero
-              </h3>
+              <h3>Fraude financiero</h3>
 
               <p>
-                Operaciones, servicios o propuestas que presentan
-                señales de irregularidad.
+                Operaciones, servicios o propuestas que presentan señales de
+                irregularidad.
               </p>
             </article>
-
 
             <article className={styles.riskCard}>
               <span className={styles.cardNumber}>02</span>
@@ -896,16 +722,13 @@ const handleFormSubmit = async (
                 <DigitalIcon />
               </div>
 
-              <h3>
-                Fraude digital
-              </h3>
+              <h3>Fraude digital</h3>
 
               <p>
-                Engaños realizados mediante plataformas digitales,
-                sitios web o comunicaciones electrónicas.
+                Engaños realizados mediante plataformas digitales, sitios web o
+                comunicaciones electrónicas.
               </p>
             </article>
-
 
             <article className={styles.riskCard}>
               <span className={styles.cardNumber}>03</span>
@@ -914,16 +737,13 @@ const handleFormSubmit = async (
                 <IdentityIcon />
               </div>
 
-              <h3>
-                Suplantación
-              </h3>
+              <h3>Suplantación</h3>
 
               <p>
-                Uso indebido de identidades, instituciones o
-                información personal para generar confianza.
+                Uso indebido de identidades, instituciones o información
+                personal para generar confianza.
               </p>
             </article>
-
 
             <article className={styles.riskCard}>
               <span className={styles.cardNumber}>04</span>
@@ -932,16 +752,13 @@ const handleFormSubmit = async (
                 <InvestmentIcon />
               </div>
 
-              <h3>
-                Inversiones sospechosas
-              </h3>
+              <h3>Inversiones sospechosas</h3>
 
               <p>
-                Promesas de ganancias extraordinarias o condiciones
-                que requieren especial atención.
+                Promesas de ganancias extraordinarias o condiciones que
+                requieren especial atención.
               </p>
             </article>
-
 
             <article className={styles.riskCard}>
               <span className={styles.cardNumber}>05</span>
@@ -950,16 +767,13 @@ const handleFormSubmit = async (
                 <PhishingIcon />
               </div>
 
-              <h3>
-                Phishing y engaños
-              </h3>
+              <h3>Phishing y engaños</h3>
 
               <p>
-                Mensajes o comunicaciones diseñadas para obtener
-                información o provocar transferencias.
+                Mensajes o comunicaciones diseñadas para obtener información o
+                provocar transferencias.
               </p>
             </article>
-
 
             <article className={styles.riskCard}>
               <span className={styles.cardNumber}>06</span>
@@ -968,123 +782,88 @@ const handleFormSubmit = async (
                 <PyramidIcon />
               </div>
 
-              <h3>
-                Esquemas piramidales
-              </h3>
+              <h3>Esquemas piramidales</h3>
 
               <p>
-                Modelos que dependen principalmente de incorporar
-                nuevos participantes para sostener sus operaciones.
+                Modelos que dependen principalmente de incorporar nuevos
+                participantes para sostener sus operaciones.
               </p>
             </article>
-
           </div>
-
         </section>
-
 
         {/* =====================================================
             COMO FUNCIONA
             ===================================================== */}
 
-        <section
-          className={styles.processSection}
-          id="como-funciona"
-        >
-
+        <section className={styles.processSection} id="como-funciona">
           <div className={styles.processHeading}>
+            <span>NUESTRO PROCESO</span>
 
-            <span>
-              NUESTRO PROCESO
-            </span>
-
-            <h2>
-              Cómo te ayudamos
-            </h2>
+            <h2>Cómo te ayudamos</h2>
 
             <p>
-              Convertimos información compleja en un proceso más claro,
-              ordenado y fácil de comprender.
+              Convertimos información compleja en un proceso más claro, ordenado
+              y fácil de comprender.
             </p>
-
           </div>
 
-
           <div className={styles.processGrid}>
-
             <article className={styles.processItem}>
               <span>01</span>
 
-              <h3>
-                Identificamos
-              </h3>
+              <h3>Identificamos</h3>
 
               <p>
-                Analizamos las señales y características principales
-                de la situación que estás enfrentando.
+                Analizamos las señales y características principales de la
+                situación que estás enfrentando.
               </p>
             </article>
-
 
             <article className={styles.processItem}>
               <span>02</span>
 
-              <h3>
-                Organizamos
-              </h3>
+              <h3>Organizamos</h3>
 
               <p>
-                Reunimos la información relevante para comprender
-                mejor el contexto del caso.
+                Reunimos la información relevante para comprender mejor el
+                contexto del caso.
               </p>
             </article>
-
 
             <article className={styles.processItem}>
               <span>03</span>
 
-              <h3>
-                Orientamos
-              </h3>
+              <h3>Orientamos</h3>
 
               <p>
-                Presentamos alternativas y próximos pasos de forma
-                clara y comprensible.
+                Presentamos alternativas y próximos pasos de forma clara y
+                comprensible.
               </p>
             </article>
-
 
             <article className={styles.processItem}>
               <span>04</span>
 
-              <h3>
-                Damos seguimiento
-              </h3>
+              <h3>Damos seguimiento</h3>
 
               <p>
-                Facilitamos el seguimiento de la información y evolución
-                del proceso.
+                Facilitamos el seguimiento de la información y evolución del
+                proceso.
               </p>
             </article>
-
           </div>
-
         </section>
-
 
         {/* =====================================================
             MENSAJE HUMANO
             ===================================================== */}
 
         <section className={styles.messageSection}>
-
           <div className={styles.messageBox}>
-
             <div className={styles.messageAccent}></div>
 
-            <span>
-              UNA SITUACIÓN DIFÍCIL NO TIENE QUE SER CONFUSA
-            </span>
+            <span>UNA SITUACIÓN DIFÍCIL NO TIENE QUE SER CONFUSA</span>
 
             <h2>
               No estás frente
@@ -1094,48 +873,33 @@ const handleFormSubmit = async (
 
             <p>
               Cuando ocurre un fraude, tomar decisiones puede resultar
-              complicado. Nuestro objetivo es ayudarte a entender la
-              situación y recuperar el control mediante información clara.
+              complicado. Nuestro objetivo es ayudarte a entender la situación y
+              recuperar el control mediante información clara.
             </p>
 
-            <a
-              href="/contacto"
-              className={styles.lightButton}
-            >
+            <a href="/contacto" className={styles.lightButton}>
               Comenzar una evaluación
             </a>
-
           </div>
-
         </section>
-
 
         {/* =====================================================
             TIPOS DE CASOS
             ===================================================== */}
 
         <section className={styles.casesSection}>
-
           <div className={styles.sectionIntroCentered}>
+            <span>CASOS</span>
 
-            <span>
-              CASOS
-            </span>
-
-            <h2>
-              Situaciones que podemos ayudarte a identificar
-            </h2>
+            <h2>Situaciones que podemos ayudarte a identificar</h2>
 
             <p>
-              Algunos de los escenarios más comunes relacionados con
-              riesgos patrimoniales y financieros.
+              Algunos de los escenarios más comunes relacionados con riesgos
+              patrimoniales y financieros.
             </p>
-
           </div>
 
-
           <div className={styles.caseTags}>
-
             <span>Fraude bancario</span>
             <span>Inversiones fraudulentas</span>
             <span>Criptomonedas</span>
@@ -1144,151 +908,107 @@ const handleFormSubmit = async (
             <span>Esquemas piramidales</span>
             <span>Fraudes inmobiliarios</span>
             <span>Comercio electrónico</span>
-
           </div>
-
         </section>
-
 
         {/* =====================================================
             CENTRO DE CONOCIMIENTO
             ===================================================== */}
 
         <section className={styles.knowledgeSection}>
-
           <div className={styles.knowledgeHeading}>
-
-            <span>
-              CENTRO DE CONOCIMIENTO
-            </span>
+            <span>CENTRO DE CONOCIMIENTO</span>
 
             <h2>
               Información para tomar
               <br />
               mejores decisiones.
             </h2>
-
           </div>
 
-
           <div className={styles.articleGrid}>
-
             <article className={styles.articleCard}>
+              <span>PREVENCIÓN</span>
 
-              <span>
-                PREVENCIÓN
-              </span>
-
-              <h3>
-                ¿Cómo identificar una inversión sospechosa?
-              </h3>
+              <h3>¿Cómo identificar una inversión sospechosa?</h3>
 
               <p>
-                Conoce algunas señales que pueden ayudarte a detectar
-                propuestas de inversión que requieren mayor atención.
+                Conoce algunas señales que pueden ayudarte a detectar propuestas
+                de inversión que requieren mayor atención.
               </p>
 
-              <a href="/articulos/inversion-sospechosa">
-                Leer artículo →
-              </a>
-
+              <a href="/articulos/inversion-sospechosa">Leer artículo →</a>
             </article>
 
-
             <article className={styles.articleCard}>
+              <span>SEGURIDAD</span>
 
-              <span>
-                SEGURIDAD
-              </span>
-
-              <h3>
-                5 señales de alerta antes de transferir dinero
-              </h3>
+              <h3>5 señales de alerta antes de transferir dinero</h3>
 
               <p>
-                Antes de realizar una operación, existen ciertos
-                indicadores que conviene revisar.
+                Antes de realizar una operación, existen ciertos indicadores que
+                conviene revisar.
               </p>
 
               <a href="/articulos/senales-alerta-transferir-dinero">
                 Leer artículo →
               </a>
-
             </article>
 
-
             <article className={styles.articleCard}>
+              <span>ORIENTACIÓN</span>
 
-              <span>
-                ORIENTACIÓN
-              </span>
-
-              <h3>
-                ¿Qué hacer después de una posible estafa?
-              </h3>
+              <h3>¿Qué hacer después de una posible estafa?</h3>
 
               <p>
-                Una guía inicial para organizar la información y
-                comprender los siguientes pasos.
+                Una guía inicial para organizar la información y comprender los
+                siguientes pasos.
               </p>
 
               <a href="/articulos/que-hacer-despues-de-una-estafa">
                 Leer artículo →
               </a>
-
             </article>
-
           </div>
-
         </section>
-
 
         {/* =====================================================
             PREGUNTAS FRECUENTES
             ===================================================== */}
 
         <section className={styles.faqSection}>
-
           <div className={styles.faqHeading}>
-
-            <span>
-              PREGUNTAS FRECUENTES
-            </span>
+            <span>PREGUNTAS FRECUENTES</span>
 
             <h2>
               Respuestas claras
               <br />
               para tus dudas.
             </h2>
-
           </div>
 
-
           <div className={styles.faqList}>
-
             <details open={openFaq === 0}>
-
               <summary
                 onClick={(event) => {
                   event.preventDefault();
                   setOpenFaq(openFaq === 0 ? null : 0);
                 }}
               >
-                ¿Asesoria Especializada en Recuperacion puede recuperar mi dinero?
+                ¿Althea puede recuperar mi
+                dinero?
                 <span>+</span>
               </summary>
 
               <p>
-                Asesoria Especializada en Recuperacion funciona como una plataforma de orientación y
-                seguimiento. La recuperación de fondos depende de las
-                características y circunstancias de cada caso.
+                Althea funciona como una
+                plataforma de orientación y seguimiento. La recuperación de
+                fondos depende de las características y circunstancias de cada
+                caso.
               </p>
-
             </details>
 
-
             <details open={openFaq === 1}>
-
               <summary
                 onClick={(event) => {
                   event.preventDefault();
@@ -1300,16 +1020,12 @@ const handleFormSubmit = async (
               </summary>
 
               <p>
-                Inicialmente puedes proporcionar información general
-                sobre la situación para identificar posibles señales
-                de riesgo.
+                Inicialmente puedes proporcionar información general sobre la
+                situación para identificar posibles señales de riesgo.
               </p>
-
             </details>
 
-
             <details open={openFaq === 2}>
-
               <summary
                 onClick={(event) => {
                   event.preventDefault();
@@ -1321,15 +1037,12 @@ const handleFormSubmit = async (
               </summary>
 
               <p>
-                La plataforma está diseñada bajo un enfoque de
-                confidencialidad y protección de la información.
+                La plataforma está diseñada bajo un enfoque de confidencialidad
+                y protección de la información.
               </p>
-
             </details>
 
-
             <details open={openFaq === 3}>
-
               <summary
                 onClick={(event) => {
                   event.preventDefault();
@@ -1344,27 +1057,19 @@ const handleFormSubmit = async (
                 Evita compartir información adicional o realizar nuevas
                 transferencias hasta comprender mejor la situación.
               </p>
-
             </details>
-
           </div>
-
         </section>
-
 
         {/* =====================================================
             CTA FINAL
             ===================================================== */}
 
         <section className={styles.finalCta}>
-
           <div className={styles.finalCtaGlow}></div>
 
           <div className={styles.finalCtaContent}>
-
-            <span>
-              Asesoria Especializada en Recuperacion
-            </span>
+            <span>Althea</span>
 
             <h2>
               Tu patrimonio merece
@@ -1373,38 +1078,27 @@ const handleFormSubmit = async (
             </h2>
 
             <p>
-              Identifica las señales. Comprende tu situación.
-              Decide con información.
+              Identifica las señales. Comprende tu situación. Decide con
+              información.
             </p>
 
-            <a
-              href="/identificacion-de-fraude"
-              className={styles.finalButton}
-            >
+            <a href="/identificacion-de-fraude" className={styles.finalButton}>
               Iniciar evaluación
             </a>
 
             <div className={styles.finalMotto}>
               Tu patrimonio, nuestra prioridad.
             </div>
-
           </div>
-
         </section>
-
 
         {/* =====================================================
             FOOTER SPACE
             ===================================================== */}
 
         <div className={styles.footerSpace}>
-
-          <span>
-             Asesoria Especializada en Recuperación 
-          </span>
-
+          <span>Althea</span>
         </div>
-
       </main>
     </>
   );

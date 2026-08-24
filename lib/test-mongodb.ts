@@ -8,9 +8,9 @@ async function testMongoDB() {
                 ping: 1,
                     });
 
-                        console.log("✅ AER: conexión con MongoDB exitosa");
+                        console.log("✅ Althea: conexión con MongoDB exitosa");
                           } catch (error) {
-                              console.error("❌ AER: error de conexión con MongoDB");
+                              console.error("❌ Althea: error de conexión con MongoDB");
                                   console.error(error);
                                     }
                                     }

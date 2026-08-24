@@ -836,7 +836,7 @@ export default function CasosReales() {
                 />
 
                 <span>
-                  Autorizo a Asesoria Especializada en Recuperacion a utilizar mis datos para
+                  Autorizo a Althea a utilizar mis datos para
                   comunicarse conmigo respecto a la información enviada.
                 </span>
               </label>
@@ -979,7 +979,7 @@ export default function CasosReales() {
         <section className={styles.finalSection}>
 
           <div>
-            <span>Asesoria Especializada en Recupercion</span>
+            <span>Althea</span>
 
             <h2>
               Tu experiencia

@@ -51,7 +51,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    if (body.tipo !== "casos") {
+    if (body.tipo !== "caso") {
       return NextResponse.json(
         {
           success: false,
@@ -65,7 +65,7 @@ export async function POST(request: Request) {
     const db = client.db(DATABASE_NAME);
 
     const registro = {
-      tipo: "casos",
+      tipo: "caso",
       datos: body.datos,
       recibidoEn: new Date(),
       estado: "recibido",

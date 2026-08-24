@@ -189,7 +189,7 @@ export default function PapeleraPage() {
             <div className="admin-logo">V</div>
 
             <div className="admin-brand-text">
-              <strong>AER</strong>
+              <strong>Althea</strong>
               <span>Panel administrativo</span>
             </div>
           </div>
@@ -230,7 +230,7 @@ export default function PapeleraPage() {
 
             <div>
               <strong>Sistema activo</strong>
-              <small>aer operativo</small>
+              <small>Althea operativo</small>
             </div>
           </div>
 
@@ -248,7 +248,7 @@ export default function PapeleraPage() {
             <div className="admin-user-avatar">V</div>
 
             <div>
-              <strong>aer</strong>
+              <strong>Althea</strong>
               <span>Administrador</span>
             </div>
           </div>

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Asesoría Especializada en Recuperación",
+  title: "Althea",
   description:
     "Orientación para identificar riesgos, comprender situaciones de fraude y proteger tu patrimonio.",
   icons: {

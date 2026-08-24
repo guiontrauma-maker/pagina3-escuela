@@ -51,18 +51,16 @@ export default function Navbar() {
           <div className="valtara-brand__logo">
   <img
     src="/images/valtara-logo.png"
-    alt="Logo de AER"
+    alt="Logo de Althea"
   />
 </div>
 
           <div className="valtara-brand__text">
             <div className="valtara-brand__name">
-              Asesoria Especializada
+              Althea 
             </div>
 
-            <div className="valtara-brand__descriptor">
-              en Recuperacion
-            </div>
+      
           </div>
         </Link>
 

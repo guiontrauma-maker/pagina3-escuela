@@ -33,7 +33,7 @@ export default function InversionSospechosa() {
             </p>
 
             <div className={styles.articleMeta}>
-              <span>Asesoria Especializada en Recuperacion </span>
+              <span>Althea </span>
               <span>·</span>
               <span>Guía de prevención</span>
             </div>
@@ -195,7 +195,7 @@ export default function InversionSospechosa() {
 
             <div className={styles.finalNote}>
               <strong>
-                Asesoria Especcializada en Recuperacion
+                Althea
               </strong>
 
               <p>
@@ -239,7 +239,7 @@ export default function InversionSospechosa() {
 
         <footer className={styles.footer}>
           <Link href="/">
-            ← Volver a Asesoria Especializada en Recuperacion
+            ← Volver a Althea
           </Link>
         </footer>
 
