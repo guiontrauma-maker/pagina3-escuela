@@ -51,13 +51,13 @@ export default function Navbar() {
           <div className="valtara-brand__logo">
   <img
     src="/images/valtara-logo.png"
-    alt="Logo de Althea"
+    alt="Logo de VALTARA"
   />
 </div>
 
           <div className="valtara-brand__text">
             <div className="valtara-brand__name">
-              Althea 
+              VALTARA 
             </div>
 
       

@@ -96,7 +96,7 @@ export default function ComoFuncionaPage() {
               </p>
 
               <p>
-                En Althea trabajamos mediante un proceso estructurado que
+                En VALTARA trabajamos mediante un proceso estructurado que
                 permite identificar señales, organizar información, analizar
                 el contexto y conocer las alternativas disponibles.
               </p>
@@ -156,7 +156,7 @@ export default function ComoFuncionaPage() {
                 href="/contacto"
                 className={styles.textLink}
               >
-                Hablar con Althea <span>→</span>
+                Hablar con VALTARA <span>→</span>
               </Link>
 
             </div>
@@ -289,7 +289,7 @@ export default function ComoFuncionaPage() {
               <div className={styles.note}>
 
                 <span>
-                 Althea<nav></nav>
+                 VALTARA<nav></nav>
                 </span>
 
                 <p>

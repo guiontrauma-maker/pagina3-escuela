@@ -33,7 +33,7 @@ export default function SenalesAlertaTransferirDinero() {
             </p>
 
             <div className={styles.articleMeta}>
-              <span>Althea</span>
+              <span>VALTARA</span>
               <span>·</span>
               <span>Guía de seguridad</span>
             </div>
@@ -202,7 +202,7 @@ export default function SenalesAlertaTransferirDinero() {
 
 
             <div className={styles.finalNote}>
-              <strong>Althea</strong>
+              <strong>VALTARA</strong>
 
               <p>
                 Nuestro objetivo es ayudarte a comprender las señales
@@ -244,7 +244,7 @@ export default function SenalesAlertaTransferirDinero() {
 
         <footer className={styles.footer}>
           <Link href="/">
-            ← Volver a Althea
+            ← Volver a VALTARA
           </Link>
         </footer>
 

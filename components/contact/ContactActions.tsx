@@ -13,7 +13,7 @@ export default function ContactActions() {
         target="_blank"
         rel="noopener noreferrer"
         className={styles.whatsapp}
-        aria-label="Contactar a Althea por WhatsApp"
+        aria-label="Contactar a VALTARA por WhatsApp"
       >
         <span className={styles.icon}>◉</span>
 

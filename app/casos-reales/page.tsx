@@ -836,7 +836,7 @@ export default function CasosReales() {
                 />
 
                 <span>
-                  Autorizo a Althea a utilizar mis datos para
+                  Autorizo a VALTARA a utilizar mis datos para
                   comunicarse conmigo respecto a la información enviada.
                 </span>
               </label>
@@ -979,7 +979,7 @@ export default function CasosReales() {
         <section className={styles.finalSection}>
 
           <div>
-            <span>Althea</span>
+            <span>VALTARA</span>
 
             <h2>
               Tu experiencia

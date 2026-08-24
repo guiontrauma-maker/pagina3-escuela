@@ -136,7 +136,7 @@ export default function CasosPage() {
             <div className="admin-logo">V</div>
 
             <div className="admin-brand-text">
-              <strong>Althea</strong>
+              <strong>VALTARA</strong>
               <span>Panel administrativo</span>
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function CasosPage() {
 
             <div>
               <strong>Sistema activo</strong>
-              <small>Althea operativo</small>
+              <small>VALTARA operativo</small>
             </div>
           </div>
 
@@ -190,7 +190,7 @@ export default function CasosPage() {
       <section className="admin-main">
         <header className="admin-topbar">
           <span className="admin-breadcrumb">
-            Althea  / ADMINISTRACIÓN / CASOS REALES
+            VALTARA  / ADMINISTRACIÓN / CASOS REALES
           </span>
 
           <div className="admin-user">
@@ -212,7 +212,7 @@ export default function CasosPage() {
 
               <p>
                 Consulta y administra la información enviada mediante el
-                formulario de Casos reales de Althea.
+                formulario de Casos reales de VALTARA.
               </p>
             </div>
 

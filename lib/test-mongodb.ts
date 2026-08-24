@@ -8,9 +8,9 @@ async function testMongoDB() {
                 ping: 1,
                     });
 
-                        console.log("✅ Althea: conexión con MongoDB exitosa");
+                        console.log("✅ VALTARA: conexión con MongoDB exitosa");
                           } catch (error) {
-                              console.error("❌ Althea: error de conexión con MongoDB");
+                              console.error("❌ VALTARA: error de conexión con MongoDB");
                                   console.error(error);
                                     }
                                     }

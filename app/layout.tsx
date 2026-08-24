@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Althea",
+  title: "VALTARA",
   description:
     "Orientación para identificar riesgos, comprender situaciones de fraude y proteger tu patrimonio.",
   icons: {

@@ -479,7 +479,7 @@ export default function RecomendacionesPage() {
                 href="/contacto"
                 className={styles.primaryButton}
               >
-                Hablar con Althea 
+                Hablar con VALTARA 
                 <span>→</span>
               </Link>
 
@@ -551,7 +551,7 @@ export default function RecomendacionesPage() {
 
         <div className={styles.footerSpace}>
           <span>
-           Althea
+           VALTARA
           </span>
         </div>
 

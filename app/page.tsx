@@ -190,7 +190,7 @@ export default function Home() {
           <div className={styles.heroContent}>
             <div className={styles.badge}>
               <span className={styles.badgeDot}></span>
-              Althea
+              VALTARA
             </div>
 
             <h1 className={styles.heroTitle}>
@@ -995,13 +995,13 @@ export default function Home() {
                   setOpenFaq(openFaq === 0 ? null : 0);
                 }}
               >
-                ¿Althea puede recuperar mi
+                ¿VALTARA puede recuperar mi
                 dinero?
                 <span>+</span>
               </summary>
 
               <p>
-                Althea funciona como una
+                VALTARA funciona como una
                 plataforma de orientación y seguimiento. La recuperación de
                 fondos depende de las características y circunstancias de cada
                 caso.
@@ -1069,7 +1069,7 @@ export default function Home() {
           <div className={styles.finalCtaGlow}></div>
 
           <div className={styles.finalCtaContent}>
-            <span>Althea</span>
+            <span>VALTARA</span>
 
             <h2>
               Tu patrimonio merece
@@ -1097,7 +1097,7 @@ export default function Home() {
             ===================================================== */}
 
         <div className={styles.footerSpace}>
-          <span>Althea</span>
+          <span>VALTARA</span>
         </div>
       </main>
     </>

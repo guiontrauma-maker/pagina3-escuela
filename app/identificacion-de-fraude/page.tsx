@@ -622,7 +622,7 @@ export default function IdentificacionFraudePage() {
                   href="/contacto"
                   className={styles.primaryAction}
                 >
-                  Hablar con Althea
+                  Hablar con VALTARA
                   <span>→</span>
                 </Link>
 
@@ -1107,7 +1107,7 @@ export default function IdentificacionFraudePage() {
             </strong>
 
             <p>
-              La herramienta de identificación de fraude de Althea
+              La herramienta de identificación de fraude de VALTARA
               proporciona una evaluación orientativa basada en la
               información proporcionada por el usuario. El resultado
               no constituye una determinación legal, financiera ni
@@ -1130,7 +1130,7 @@ export default function IdentificacionFraudePage() {
           <div className={styles.finalContent}>
 
             <span>
-              Althea
+              VALTARA
             </span>
 
             <h2>
@@ -1165,7 +1165,7 @@ export default function IdentificacionFraudePage() {
 
         <div className={styles.footerSpace}>
           <span>
-         Althea
+         VALTARA
           </span>
         </div>
 
