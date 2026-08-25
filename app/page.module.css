@@ -592,19 +592,17 @@
    CONTACT OPTIONS
    ========================================================= */
 
-.contactOptions {
-  display: flex;
-
-  gap: 10px;
-}
-
 .contactOption {
-  width: 62px;
+  min-width: 62px;
   height: 62px;
+
+  padding: 0 18px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  gap: 10px;
 
   border: 1px solid rgba(167, 202, 223, 0.22);
 
@@ -612,7 +610,7 @@
 
   background: rgba(13, 36, 59, 0.3);
 
-  color: #a7cadf;
+  color: #ffffff;
 
   text-decoration: none;
 
@@ -625,9 +623,21 @@
 .contactOption:hover {
   transform: translateY(-3px);
 
-  border-color: #84b3ce;
+  border-color: #00ff00;
 
-  background: rgba(132, 179, 206, 0.13);
+  background: #00ff00;
+}
+
+.whatsappOption {
+  background: #25d366;
+  border-color: #25d366;
+  color: #ffffff;
+}
+
+.whatsappOption:hover {
+  background: #20ba5a;
+  border-color: #20ba5a;
+  color: #ffffff;
 }
 
 .contactIcon {

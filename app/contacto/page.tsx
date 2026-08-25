@@ -2,10 +2,12 @@
 
 import { FormEvent, useState } from "react";
 import Navbar from "@/components/layout/Navbar";
+import { contactConfig } from "@/components/contact/contactConfig";
 import styles from "./page.module.css";
 
-const WHATSAPP_URL =
-  "https://wa.me/5658165677?text=Hola%2C%20me%20gustaría%20recibir%20orientación%20sobre%20mi%20situación.";
+const WHATSAPP_URL = `https://wa.me/${
+  contactConfig.whatsappNumber
+}?text=${encodeURIComponent(contactConfig.whatsappMessage)}`;
 
 const EMAIL_URL =
   "mailto:aer@asesoriaespecializada.com?subject=Solicitud%20de%20orientación";
@@ -92,8 +94,8 @@ export default function ContactoPage() {
             <span>01</span>
 
             <p>
-              La información inicial nos ayuda a comprender el contexto antes de
-              determinar cuáles podrían ser los siguientes pasos.
+              La información inicial nos ayuda a comprender el contexto antes
+              de determinar cuáles podrían ser los siguientes pasos.
             </p>
           </div>
         </section>
@@ -304,7 +306,7 @@ export default function ContactoPage() {
                 <div className={styles.securityNote}>
                   <span className={styles.lockIcon}>
                     <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Zm-7-2a2 2 0 0 1 4 0v2h-4V6Zm7 14H7V10h10v10Zm-5-3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+                      <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 4 0v2h-4V6Zm7 14H7V10h10v10Zm-5-3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
                     </svg>
                   </span>
 
@@ -397,8 +399,8 @@ export default function ContactoPage() {
                 <span>¿PREFIERES CONTACTARNOS DIRECTAMENTE?</span>
 
                 <p>
-                  También puedes solicitar orientación mediante nuestros canales
-                  de contacto.
+                  También puedes solicitar orientación mediante nuestros
+                  canales de contacto.
                 </p>
 
                 <div className={styles.directLinks}>
@@ -467,7 +469,8 @@ export default function ContactoPage() {
 
                 <p>
                   La información sobre fechas, comunicaciones, operaciones y
-                  acontecimientos puede ser más útil que compartir credenciales.
+                  acontecimientos puede ser más útil que compartir
+                  credenciales.
                 </p>
               </div>
             </div>

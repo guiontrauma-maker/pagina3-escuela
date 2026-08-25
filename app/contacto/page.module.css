@@ -726,7 +726,11 @@
 
   font-size: 14px;
 }
-
+.directLinks a:first-child {
+  background: #25D366;
+  border-color: #25D366;
+  color: #ffffff;
+}
 
 /* =========================================================
    PROTECTION

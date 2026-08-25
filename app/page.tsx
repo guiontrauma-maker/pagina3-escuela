@@ -3,9 +3,12 @@
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import styles from "./page.module.css";
+import { contactConfig } from "@/components/contact/contactConfig";
 
-const WHATSAPP_URL =
-  "https://wa.me/5658165677?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20orientaci%C3%B3n%20sobre%20una%20situaci%C3%B3n%20relacionada%20con%20mi%20patrimonio";
+const WHATSAPP_URL = `https://wa.me/${contactConfig.whatsappNumber}?text=${encodeURIComponent(
+  contactConfig.whatsappMessage
+)}`;
+
 
 const EMAIL_URL =
   "mailto:aer@asesoriaespecializada.com?subject=Solicitud%20de%20asesor%C3%ADa";
@@ -215,7 +218,7 @@ export default function Home() {
               <span className={styles.noteIcon}>
                 <CheckIcon />
               </span>
-              Orientación inicial · Información confidencial
+              Respuesta inmediata en horario laboral gratuita 
             </div>
 
             <div className={styles.trustBar}>
@@ -336,28 +339,31 @@ export default function Home() {
 
                 <div className={styles.contactOptions}>
                   <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.contactOption}
-                    aria-label="Pedir asesoría por WhatsApp"
-                    title="Pedir asesoría por WhatsApp"
-                  >
-                    <span className={styles.contactIcon}>
-                      <WhatsAppIcon />
-                    </span>
-                  </a>
+  href={WHATSAPP_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`${styles.contactOption} ${styles.whatsappOption}`}
+  aria-label="Hablar ahora por WhatsApp"
+  title="Hablar ahora por WhatsApp"
+>
+  <span className={styles.contactIcon}>
+    <WhatsAppIcon />
+  </span>
 
-                  <a
-                    href={EMAIL_URL}
-                    className={styles.contactOption}
-                    aria-label="Pedir asesoría por correo electrónico"
-                    title="Pedir asesoría por correo electrónico"
-                  >
-                    <span className={styles.contactIcon}>
-                      <EmailIcon />
-                    </span>
-                  </a>
+  <span className={styles.contactText}>Hablar ahora</span>
+</a>
+
+  <a
+  href={EMAIL_URL}
+  className={`${styles.contactOption} ${styles.emailOption}`}
+  aria-label="Contactar por correo electrónico"
+  title="Contactar por correo electrónico"
+>
+  <span className={styles.contactIcon}>
+    <EmailIcon />
+  </span>
+
+</a>
                 </div>
               </div>
             </div>
