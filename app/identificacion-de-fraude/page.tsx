@@ -628,7 +628,7 @@ export default function IdentificacionFraudePage() {
 
 
                 <a
-                  href="https://wa.me/5658165677"
+                  href="https://wa.me/5568835314"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.secondaryAction}
