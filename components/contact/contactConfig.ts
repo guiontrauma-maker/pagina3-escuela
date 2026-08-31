@@ -1,5 +1,5 @@
 export const contactConfig = {
-  whatsappNumber: "5568835314",
+  whatsappNumber: "5568863505",
 
   whatsappMessage:
     "Hola, quiero un analisis gratuito de mi  caso.",
