@@ -1,5 +1,5 @@
 /* =========================================================
-   VALTARA
+   AER
    CASOS REALES
    ========================================================= */
 
@@ -210,7 +210,6 @@
 .signalsIntro span,
 .testimonialsHeader span,
 .participateContent > span,
-.formHeader > span,
 .faqIntro > span {
   color: #16587b;
 
@@ -649,7 +648,7 @@
 
 
 /* =========================================================
-   PARTICIPATE
+   PARTICIPATE / WHATSAPP
    ========================================================= */
 
 .participateSection {
@@ -663,6 +662,10 @@
   margin: 0 auto;
 
   text-align: center;
+}
+
+.participateContent > span {
+  display: block;
 }
 
 .participateContent h2 {
@@ -687,261 +690,79 @@
   line-height: 1.8;
 }
 
-.participateLink {
-  display: inline-flex;
-
-  align-items: center;
-  gap: 10px;
-
-  margin-top: 20px;
-
-  color: #16587b;
-
-  font-size: 11px;
-  font-weight: 800;
-
-  text-decoration: none;
-}
-
-.participateLink svg {
-  width: 16px;
-  height: 16px;
-
-  fill: currentColor;
-}
-
 
 /* =========================================================
-   FORM
+   WHATSAPP BUTTON
    ========================================================= */
 
-.formSection {
-  padding: 120px 7vw;
+.whatsappButton {
+  min-width: 330px;
+  min-height: 68px;
 
-  background: #f8f6f4;
-}
-
-.formHeader {
-  width: min(760px, 100%);
-  margin: 0 auto 55px;
-
-  text-align: center;
-}
-
-.formHeader h2 {
-  margin: 18px 0;
-
-  color: #0d243b;
-
-  font-size: clamp(43px, 5vw, 65px);
-
-  line-height: 0.98;
-  letter-spacing: -0.05em;
-}
-
-.formHeader p {
-  margin: 0;
-
-  color: #657a88;
-
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.caseForm {
-  width: min(900px, 100%);
-  margin: 0 auto;
-
-  padding: 45px;
-
-  border: 1px solid rgba(13, 36, 59, 0.09);
-  border-radius: 22px;
-
-  background: #ffffff;
-
-  box-shadow: 0 25px 60px rgba(13, 36, 59, 0.06);
-}
-
-.formRow {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 18px;
-
-  margin-bottom: 20px;
-}
-
-.caseForm label {
-  display: flex;
-  flex-direction: column;
-
-  gap: 8px;
-
-  color: #304b5d;
-
-  font-size: 10px;
-  font-weight: 800;
-}
-
-.caseForm input,
-.caseForm select,
-.caseForm textarea {
-  width: 100%;
-
-  box-sizing: border-box;
-
-  padding: 14px 15px;
-
-  border: 1px solid rgba(13, 36, 59, 0.13);
-  border-radius: 9px;
-
-  outline: none;
-
-  background: #f8f6f4;
-
-  color: #0d243b;
-
-  font-family: inherit;
-
-  font-size: 12px;
-
-  transition:
-    border-color 180ms ease,
-    background 180ms ease;
-}
-
-.caseForm input:focus,
-.caseForm select:focus,
-.caseForm textarea:focus {
-  border-color: #84b3ce;
-
-  background: #ffffff;
-}
-
-.caseForm textarea {
-  resize: vertical;
-
-  min-height: 155px;
-
-  line-height: 1.6;
-}
-
-.fullField {
-  margin-bottom: 25px;
-}
-
-.permissions {
-  display: flex;
-  flex-direction: column;
-
-  gap: 14px;
-
-  padding: 22px 0;
-
-  border-top: 1px solid rgba(13, 36, 59, 0.08);
-  border-bottom: 1px solid rgba(13, 36, 59, 0.08);
-}
-
-.checkboxLabel {
-  display: grid !important;
-
-  grid-template-columns: 18px 1fr;
-
-  align-items: start;
-
-  gap: 10px !important;
-
-  color: #718390 !important;
-
-  font-size: 9px !important;
-  line-height: 1.6;
-
-  font-weight: 500 !important;
-}
-
-.checkboxLabel input {
-  width: 15px;
-  height: 15px;
-
-  margin-top: 1px;
-
-  accent-color: #16587b;
-}
-
-.submitButton {
-  width: 100%;
-
-  min-height: 54px;
-
-  display: flex;
+  display: inline-flex;
 
   align-items: center;
   justify-content: center;
 
-  gap: 10px;
+  gap: 14px;
 
-  margin-top: 25px;
+  margin-top: 28px;
 
-  border: none;
-  border-radius: 9px;
+  padding: 0 32px;
 
-  background: #0d243b;
+  border: 1px solid rgba(37, 211, 102, 0.55);
+  border-radius: 14px;
+
+  background: #25d366;
 
   color: #ffffff;
 
-  font-family: inherit;
-
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
 
-  cursor: pointer;
+  text-decoration: none;
+
+  box-shadow:
+    0 18px 40px rgba(37, 211, 102, 0.20),
+    0 5px 15px rgba(13, 36, 59, 0.08);
 
   transition:
+    transform 180ms ease,
     background 180ms ease,
-    transform 180ms ease;
+    box-shadow 180ms ease;
 }
 
-.submitButton:hover {
-  background: #16587b;
+.whatsappButton:hover {
+  background: #20bd5a;
 
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 22px 48px rgba(37, 211, 102, 0.28),
+    0 8px 18px rgba(13, 36, 59, 0.10);
 }
 
-.submitButton svg {
-  width: 16px;
-  height: 16px;
-
-  fill: currentColor;
+.whatsappButton:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.28);
+  outline-offset: 4px;
 }
 
-.formPrivacy {
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: 10px;
-
-  margin-top: 20px;
-
-  color: #8a969d;
-}
-
-.formPrivacy svg {
-  width: 16px;
-  height: 16px;
+.whatsappIcon {
+  width: 26px;
+  height: 26px;
 
   flex-shrink: 0;
 
-  margin-top: 1px;
-
   fill: currentColor;
 }
 
-.formPrivacy p {
-  margin: 0;
+.whatsappArrow {
+  width: 18px;
+  height: 18px;
 
-  font-size: 8px;
-  line-height: 1.6;
+  flex-shrink: 0;
+
+  fill: currentColor;
 }
 
 
@@ -1270,8 +1091,7 @@
   .shortCasesSection,
   .signalsSection,
   .testimonialsSection,
-  .participateSection,
-  .formSection {
+  .participateSection {
     padding: 85px 20px;
   }
 
@@ -1322,15 +1142,6 @@
     grid-template-columns: 35px 1fr;
   }
 
-  .caseForm {
-    padding: 25px 20px;
-    border-radius: 16px;
-  }
-
-  .formRow {
-    grid-template-columns: 1fr;
-  }
-
   .faqSection {
     width: calc(100% - 40px);
 
@@ -1343,6 +1154,17 @@
 
   .finalSection {
     padding: 90px 20px;
+  }
+
+  .whatsappButton {
+    width: 100%;
+    min-width: 0;
+
+    min-height: 64px;
+
+    padding: 0 20px;
+
+    font-size: 13px;
   }
 
 }
