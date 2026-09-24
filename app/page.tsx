@@ -9,9 +9,6 @@ const WHATSAPP_URL = `https://wa.me/${contactConfig.whatsappNumber}?text=${encod
   contactConfig.whatsappMessage
 )}`;
 
-const EMAIL_URL =
-  "mailto:aer@asesoriaespecializada.com?subject=Solicitud%20de%20asesor%C3%ADa";
-
 /* =========================================================
    ICONOS
    ========================================================= */
@@ -20,14 +17,6 @@ function WhatsAppIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.7 6L.2 24l6.3-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.2 21.7h-.1c-1.8 0-3.5-.5-5-1.3l-.4-.2-3.7 1 1-3.6-.2-.4a9.7 9.7 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9-.1 5.3-4.5 9.7-9.7 9.7Zm5.4-7.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.6-2-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5s0-.4-.1-.6c-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.4Z" />
-    </svg>
-  );
-}
-
-function EmailIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3 4h18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.5l9 6.2 9-6.2V6H3Zm18 12V9l-8.4 5.8a1 1 0 0 1-1.2 0L3 9v9h18Z" />
     </svg>
   );
 }
@@ -42,12 +31,13 @@ function CheckIcon() {
 
 /* =========================================================
    ICONOS DE RIESGO
+   Todos son SVG monocromáticos
    ========================================================= */
 
 function MoneyIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2C7.58 2 4 4.24 4 7v10c0 2.76 3.58 5 8 5s8-2.24 8-5V7c0-2.76-3.58-5-8-5Zm0 2c3.31 0 6 1.35 6 3s-2.69 3-6 3-6-1.35-6-3 2.69-3 6-3Zm0 16c-3.31 0-6-1.35-6-3v-2.04C7.41 16.24 9.55 17 12 17s4.59-.76 6-2.04V17c0 1.65-2.69 3-6 3Zm0-5c-3.31 0-6-1.35-6-3V9.96C7.41 11.24 9.55 12 12 12s4.59-.76 6-2.04V12c0 1.65-2.69 3-6 3Z" />
+      <path d="M12 2C7.58 2 4 4.24 4 7v10c0 2.76 3.58 5 8 5s8-2.24 8-5V7c0-2.76-3.58-5-8-5Zm0 2c3.31 0 6 1.35 6 3s-2.69 3-6 3-6-1.35-6-3 2.69-3 6-3Zm0 16c-3.31 0-6-1.35-6-3v-2.04C7.41 16.24 9.55 17 12 17s4.59-.76 6-2.04V17c0 1.65-2.69 3-6 3Zm0-5c-3.31 0-6-1.35-6-3V9.96C7.41 11.24 9.55 12 12 12s4.59- .76 6-2.04V12c0 1.65-2.69 3-6 3Z" />
     </svg>
   );
 }
@@ -93,22 +83,95 @@ function PyramidIcon() {
 }
 
 /* =========================================================
-   INICIO
+   HOME
    ========================================================= */
 
 export default function Home() {
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <>
       <Navbar />
 
-      <main>
-        {/* ===================================================
-            PANEL PRINCIPAL
-            =================================================== */}
+      <main className={styles.home}>
+        {/* =====================================================
+            HERO
+            ===================================================== */}
 
-        <section>
+        <section className={styles.hero} id="inicio">
+          <div className={styles.heroGlow}></div>
+
+          <div className={styles.heroContent}>
+            <div className={styles.badge}>
+              <span className={styles.badgeDot}></span>
+              VALTARA
+            </div>
+
+            <h1 className={styles.heroTitle}>
+              Protegemos lo que
+              <br />
+              <span>más importa.</span>
+            </h1>
+
+            <p className={styles.heroDescription}>
+              te ayudamos a identificar señales de fraude, comprender tu
+              situación y conocer las alternativas disponibles para proteger
+              tu patrimonio.
+            </p>
+
+            <div className={styles.heroActions}>
+              <a href="#solicitar-evaluacion" className={styles.primaryButton}>
+                Solicitar Evaluación Gratuita
+              </a>
+            </div>
+
+            <div className={styles.heroNote}>
+              <span className={styles.noteIcon}>
+                <CheckIcon />
+              </span>
+              Respuesta inmediata en horario laboral gratuita
+            </div>
+
+            <div className={styles.trustBar}>
+              <div className={styles.trustItem}>
+                <span className={styles.trustIcon}>
+                  <span></span>
+                </span>
+
+                <div>
+                  <strong>Información protegida</strong>
+                  <span>Tratamiento confidencial</span>
+                </div>
+              </div>
+
+              <div className={styles.trustItem}>
+                <span className={styles.trustIcon}>
+                  <span></span>
+                </span>
+
+                <div>
+                  <strong>Atención clara</strong>
+                  <span>Proceso paso a paso</span>
+                </div>
+              </div>
+
+              <div className={styles.trustItem}>
+                <span className={styles.trustIcon}>
+                  <span></span>
+                </span>
+
+                <div>
+                  <strong>Análisis inicial</strong>
+                  <span>Sin compromiso</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ===================================================
+              PANEL
+              =================================================== */}
+
           <div className={styles.panelWrapper}>
             <div className={styles.operationalPanel}>
               <div className={styles.panelHeader}>
@@ -127,45 +190,97 @@ export default function Home() {
 
                 <div className={styles.status}>
                   <span></span>
-                  Respuesta agil
+                  Plataforma activa
                 </div>
               </div>
 
               <div className={styles.panelDivider}></div>
 
+              {/* =================================================
+                  INDICADORES
+                  ================================================= */}
+
               <div className={styles.statsGrid}>
                 <div className={styles.statCard}>
-                  <span className={styles.statIndex}>✓</span>
+                  <span className={styles.statIndex}>Casos</span>
+
+                  <strong className={styles.statNumber}>+12,000</strong>
+
+                  <span className={styles.statLabel}>
+                    Casos
+                    <br />
+                    atendidos
+                  </span>
+                </div>
+
+                <div className={styles.statCard}>
+                  <span className={styles.statIndex}>Protección</span>
+
+                  <strong className={styles.statNumber}>100%</strong>
+
+                  <span className={styles.statLabel}>
+                    Información
+                    <br />
+                    protegida
+                  </span>
+                </div>
+
+                <div className={styles.statCard}>
+                  <span className={styles.statIndex}>Resultados</span>
 
                   <strong className={styles.statNumber}>98%</strong>
 
                   <span className={styles.statLabel}>
-                    casos resueltos
+                    Casos
                     <br />
+                    resueltos
                   </span>
                 </div>
 
                 <div className={styles.statCard}>
-                  <span className={styles.statIndex}>Nuestros</span>
-
-                  <strong className={styles.statNumber}>365 d</strong>
-
-                  <span className={styles.statLabel}>
-                    Disponible todo el año
-                    <br />
-                  </span>
-                </div>
-
-                <div className={styles.statCard}>
-                  <span className={styles.statIndex}>Denuncias</span>
+                  <span className={styles.statIndex}>Atención</span>
 
                   <strong className={styles.statNumber}>
-                    +10,000<span className={styles.statPlus}>h</span>
+                    24<span className={styles.statPlus}>h</span>
                   </strong>
 
-                  <span className={styles.statLabel}>atendidas</span>
+                  <span className={styles.statLabel}>
+                    Respuesta
+                    <br />
+                    ágil
+                  </span>
+                </div>
+
+                <div className={styles.statCard}>
+                  <span className={styles.statIndex}>Disponibilidad</span>
+
+                  <strong className={styles.statNumber}>
+                    365<span className={styles.statPlus}>d</span>
+                  </strong>
+
+                  <span className={styles.statLabel}>
+                    Disponible
+                    <br />
+                    todo el año
+                  </span>
+                </div>
+
+                <div className={styles.statCard}>
+                  <span className={styles.statIndex}>Análisis</span>
+
+                  <strong className={styles.statNumber}>18</strong>
+
+                  <span className={styles.statLabel}>
+                    Indicadores
+                    <br />
+                    de riesgo
+                  </span>
                 </div>
               </div>
+
+              {/* =================================================
+                  ORIENTACIÓN DIRECTA
+                  ================================================= */}
 
               <div className={styles.panelContact}>
                 <div className={styles.panelContactText}>
@@ -193,17 +308,6 @@ export default function Home() {
                     </span>
 
                     <span className={styles.contactText}>Hablar ahora</span>
-                  </a>
-
-                  <a
-                    href={EMAIL_URL}
-                    className={`${styles.contactOption} ${styles.emailOption}`}
-                    aria-label="Contactar por correo electrónico"
-                    title="Contactar por correo electrónico"
-                  >
-                    <span className={styles.contactIcon}>
-                      <EmailIcon />
-                    </span>
                   </a>
                 </div>
               </div>
@@ -277,8 +381,8 @@ export default function Home() {
                   <p>
                     Si tus fondos fueron comprometidos mediante phishing,
                     suplantación, accesos no autorizados u otras formas de
-                    fraude digital, nuestro equipo puede ayudarte a organizar
-                    la información y analizar las operaciones relacionadas.
+                    fraude digital, nuestro equipo puede ayudarte a organizar la
+                    información y analizar las operaciones relacionadas.
                   </p>
                 </div>
               </div>
@@ -297,7 +401,7 @@ export default function Home() {
         </section>
 
         {/* =====================================================
-            RIESGO
+            TIPOS DE FRAUDES MÁS COMUNES
             ===================================================== */}
 
         <section className={styles.riskSection} id="fraude">
@@ -305,14 +409,14 @@ export default function Home() {
             <span>IDENTIFICACIÓN</span>
 
             <h2>
-              ¿Tu patrimonio
+              Los tipos de
               <br />
-              está en riesgo?
+              fraudes más comunes
             </h2>
 
             <p>
-              Conocer las señales de alerta puede ayudarte a reconocer
-              situaciones sospechosas antes de tomar una decisión.
+              Conoce algunos de los tipos de fraude más frecuentes y las
+              principales señales que pueden ayudarte a identificarlos.
             </p>
           </div>
 
@@ -563,8 +667,8 @@ export default function Home() {
               <h3>5 señales de alerta antes de transferir dinero</h3>
 
               <p>
-                Antes de realizar una operación, existen ciertos indicadores
-                que conviene revisar.
+                Antes de realizar una operación, existen ciertos indicadores que
+                conviene revisar.
               </p>
 
               <a href="/articulos/senales-alerta-transferir-dinero">
