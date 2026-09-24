@@ -1,13 +1,12 @@
-
 /* =========================================================
-   AER
-   ASESORÍA ESPECIALIZADA EN RECUPERACIÓN
+   VALTARA
    HOME
    ========================================================= */
 
 .home {
   min-height: 100vh;
   overflow: hidden;
+
   background: #f5eeeb;
   color: #0d243b;
 }
@@ -19,32 +18,86 @@
 
 .hero {
   position: relative;
-  min-height: 760px;
+
+  min-height: 820px;
 
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: minmax(0, 0.92fr) minmax(520px, 1.08fr);
+
   align-items: center;
+
   gap: 70px;
 
   overflow: hidden;
 
-  padding: 105px 7vw 90px;
+  padding: 110px 6vw 100px;
 
   background:
-    radial-gradient(
-      circle at 78% 25%,
-      rgba(132, 179, 206, 0.22),
-      transparent 32%
-    ),
     linear-gradient(
-      135deg,
-      #0d243b 0%,
-      #123c59 52%,
-      #16587b 100%
+      105deg,
+      rgba(7, 25, 42, 0.94) 0%,
+      rgba(13, 36, 59, 0.86) 42%,
+      rgba(13, 36, 59, 0.68) 100%
     );
 
   color: #ffffff;
 }
+
+
+/* =========================================================
+   FONDO ANIMADO DEL HERO
+   ========================================================= */
+
+.heroBackground {
+  position: absolute;
+
+  inset: -8%;
+
+  z-index: 0;
+
+  background-image:
+    linear-gradient(
+      110deg,
+      rgba(8, 28, 46, 0.92),
+      rgba(13, 55, 82, 0.68),
+      rgba(8, 31, 49, 0.78)
+    ),
+    url("/images/hero-fondo.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  transform: scale(1.04);
+
+  animation: heroBackgroundMove 18s ease-in-out infinite alternate;
+
+  pointer-events: none;
+}
+
+@keyframes heroBackgroundMove {
+  0% {
+    transform: scale(1.04) translate3d(0, 0, 0);
+    background-position: 48% 50%;
+  }
+
+  50% {
+    transform: scale(1.09) translate3d(-1.2%, -0.7%, 0);
+    background-position: 54% 48%;
+  }
+
+  100% {
+    transform: scale(1.05) translate3d(1.2%, 0.8%, 0);
+    background-position: 46% 52%;
+  }
+}
+
+
+/* =========================================================
+   BRILLO DEL HERO
+   ========================================================= */
 
 .heroGlow {
   position: absolute;
@@ -55,41 +108,49 @@
   right: -280px;
   top: -310px;
 
+  z-index: 1;
+
   border-radius: 50%;
 
-  background: rgba(167, 202, 223, 0.09);
+  background: rgba(167, 202, 223, 0.11);
 
-  filter: blur(25px);
+  filter: blur(35px);
 
   pointer-events: none;
 }
 
 
 /* =========================================================
-   HERO CONTENT
+   CONTENIDO IZQUIERDO DEL HERO
    ========================================================= */
 
 .heroContent {
   position: relative;
-  z-index: 2;
+
+  z-index: 3;
 
   width: 100%;
-  max-width: 760px;
+
+  max-width: 680px;
 
   margin: 0 auto;
 }
 
 .badge {
   display: inline-flex;
+
   align-items: center;
+
   gap: 10px;
 
   color: #a7cadf;
 
   font-size: 12px;
+
   font-weight: 800;
 
   letter-spacing: 0.17em;
+
   text-transform: uppercase;
 }
 
@@ -102,15 +163,24 @@
   border-radius: 50%;
 
   background: #84b3ce;
+
+  box-shadow:
+    0 0 0 5px rgba(132, 179, 206, 0.08);
 }
 
+
+/* =========================================================
+   TITULO HERO
+   ========================================================= */
+
 .heroTitle {
-  margin: 28px 0 25px;
+  margin: 30px 0 27px;
 
   color: #ffffff;
 
-  font-size: clamp(52px, 5.8vw, 82px);
-  line-height: 0.96;
+  font-size: clamp(54px, 5.4vw, 82px);
+
+  line-height: 0.95;
 
   letter-spacing: -0.055em;
 
@@ -122,114 +192,147 @@
 
   color: #f6e0b6;
 
-  font-size: clamp(52px, 5.8vw, 82px) !important;
-  line-height: 0.96 !important;
+  font-size: clamp(54px, 5.4vw, 82px) !important;
+
+  line-height: 0.95 !important;
 
   letter-spacing: -0.055em !important;
 
   font-weight: 500;
+
   font-style: italic;
 }
 
+
+/* =========================================================
+   DESCRIPCIÓN
+   ========================================================= */
+
 .heroDescription {
-  max-width: 650px;
+  max-width: 630px;
 
   margin: 0;
 
-  color: rgba(245, 238, 235, 0.7);
+  color: rgba(245, 238, 235, 0.76);
 
   font-size: 17px;
+
   line-height: 1.75;
 }
 
 
 /* =========================================================
-   HERO ACTIONS
+   BOTÓN HERO
    ========================================================= */
 
 .heroActions {
   display: flex;
+
   align-items: center;
+
   flex-wrap: wrap;
 
   gap: 12px;
 
-  margin-top: 30px;
+  margin-top: 34px;
 }
 
-.primaryButton,
-.secondaryButton {
-  min-height: 55px;
+.primaryButton {
+  min-height: 58px;
 
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
-  padding: 0 25px;
+  gap: 12px;
 
-  border-radius: 10px;
+  padding: 0 28px;
 
-  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 11px;
+
+  background: #84b3ce;
+
+  color: #0d243b;
+
+  font-size: 13px;
+
   font-weight: 800;
 
   text-decoration: none;
 
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.2);
+
   transition:
     transform 180ms ease,
     background 180ms ease,
-    border-color 180ms ease;
-}
-
-.primaryButton {
-  background: #84b3ce;
-  color: #0d243b;
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+    box-shadow 180ms ease;
 }
 
 .primaryButton:hover {
   background: #a7cadf;
-  transform: translateY(-2px);
-}
 
-.secondaryButton {
-  border: 1px solid rgba(167, 202, 223, 0.32);
+  transform: translateY(-3px);
 
-  background: rgba(255, 255, 255, 0.025);
-
-  color: #ffffff;
-}
-
-.secondaryButton:hover {
-  border-color: rgba(167, 202, 223, 0.65);
-
-  background: rgba(255, 255, 255, 0.07);
-
-  transform: translateY(-2px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.25);
 }
 
 
 /* =========================================================
-   HERO NOTE
+   WHATSAPP HERO
+   ========================================================= */
+
+.whatsappHeroButton {
+  min-width: 285px;
+}
+
+.whatsappHeroIcon {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsappHeroIcon svg {
+  width: 100%;
+  height: 100%;
+
+  fill: currentColor;
+}
+
+
+/* =========================================================
+   NOTA HERO
    ========================================================= */
 
 .heroNote {
   display: flex;
+
   align-items: center;
+
   gap: 8px;
 
-  margin-top: 15px;
+  margin-top: 17px;
 
-  color: rgba(245, 238, 235, 0.42);
+  color: rgba(245, 238, 235, 0.48);
 
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .noteIcon {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -241,376 +344,283 @@
 }
 
 .noteIcon svg {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
 
   fill: currentColor;
 }
 
 
 /* =========================================================
-   TRUST BAR
-   ========================================================= */
-
-.trustBar {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 12px;
-
-  margin-top: 70px;
-  padding-top: 23px;
-
-  border-top: 1px solid rgba(167, 202, 223, 0.14);
-}
-
-.trustItem {
-  display: flex;
-  align-items: center;
-
-  gap: 10px;
-
-  min-width: 0;
-}
-
-.trustIcon {
-  width: 31px;
-  height: 31px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-
-  border: 1px solid rgba(167, 202, 223, 0.2);
-
-  border-radius: 9px;
-}
-
-.trustIcon span {
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: #84b3ce;
-}
-
-.trustItem div {
-  display: flex;
-  flex-direction: column;
-
-  gap: 3px;
-}
-
-.trustItem strong {
-  color: rgba(255, 255, 255, 0.82);
-
-  font-size: 12px;
-}
-
-.trustItem div > span {
-  color: rgba(245, 238, 235, 0.35);
-
-  font-size: 11px;
-}
-
-
-/* =========================================================
-   PANEL WRAPPER
+   PANEL DERECHO
    ========================================================= */
 
 .panelWrapper {
   position: relative;
-  z-index: 2;
+
+  z-index: 3;
 
   width: 100%;
-  max-width: 760px;
+
+  max-width: 700px;
 
   margin: 0 auto;
 }
 
-
-/* =========================================================
-   PANEL
-   ========================================================= */
-
 .operationalPanel {
   width: 100%;
 
-  padding: 32px;
+  padding: 28px;
 
-  border: 1px solid rgba(167, 202, 223, 0.27);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
   border-radius: 28px;
 
   background:
     linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.13),
-      rgba(255, 255, 255, 0.045)
+      rgba(18, 48, 70, 0.88),
+      rgba(8, 27, 43, 0.78)
     );
 
   box-shadow:
-    0 30px 70px rgba(0, 0, 0, 0.18),
+    0 35px 80px rgba(0, 0, 0, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px);
 }
 
 
 /* =========================================================
-   PANEL HEADER
-   ========================================================= */
-
-.panelHeader {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  gap: 25px;
-}
-
-.panelHeaderContent {
-  min-width: 0;
-}
-
-.panelEyebrow {
-  display: block;
-
-  margin-bottom: 12px;
-
-  color: #a7cadf;
-
-  font-size: 12px;
-  font-weight: 800;
-
-  letter-spacing: 0.2em;
-}
-
-.panelHeader h2 {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size: clamp(25px, 2.4vw, 34px);
-  line-height: 1.08;
-
-  letter-spacing: -0.035em;
-}
-
-.panelHeader p {
-  max-width: 510px;
-
-  margin: 14px 0 0;
-
-  color: rgba(245, 238, 235, 0.48);
-
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   STATUS
-   ========================================================= */
-
-.status {
-  display: flex;
-  align-items: center;
-
-  gap: 8px;
-
-  flex-shrink: 0;
-
-  padding: 8px 11px;
-
-  border: 1px solid rgba(132, 179, 206, 0.2);
-
-  border-radius: 999px;
-
-  background: rgba(13, 36, 59, 0.2);
-
-  color: rgba(245, 238, 235, 0.7);
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.status span {
-  width: 6px;
-  height: 6px;
-
-  border-radius: 50%;
-
-  background: #84b3ce;
-
-  box-shadow: 0 0 0 4px rgba(132, 179, 206, 0.08);
-}
-
-
-/* =========================================================
-   PANEL DIVIDER
-   ========================================================= */
-
-.panelDivider {
-  width: 100%;
-  height: 1px;
-
-  margin: 26px 0;
-
-  background: rgba(167, 202, 223, 0.13);
-}
-
-
-/* =========================================================
-   STATS
+   GRID DE INDICADORES
    ========================================================= */
 
 .statsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
 
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 13px;
 }
+
+
+/* =========================================================
+   TARJETAS DE INDICADORES
+   ========================================================= */
 
 .statCard {
-  min-height: 145px;
+  min-height: 155px;
 
-  padding: 18px;
+  display: flex;
 
-  border: 1px solid rgba(167, 202, 223, 0.09);
+  flex-direction: column;
 
-  border-radius: 16px;
+  justify-content: center;
 
-  background: rgba(13, 36, 59, 0.25);
+  padding: 24px;
+
+  border: 1px solid rgba(167, 202, 223, 0.13);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(86, 124, 141, 0.25),
+      rgba(13, 36, 59, 0.48)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
 }
 
-.statIndex {
+.statCard:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(167, 202, 223, 0.28);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(86, 124, 141, 0.32),
+      rgba(13, 36, 59, 0.52)
+    );
+}
+
+
+/* =========================================================
+   NUMEROS GRANDES
+   ========================================================= */
+
+.statNumber {
   display: block;
 
-  margin-bottom: 8px;
+  margin: 0;
 
-  color: #84b3ce;
+  color: #ffffff;
+
+  font-size: clamp(38px, 3.5vw, 52px);
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.05em;
+}
+
+
+/* =========================================================
+   TITULOS DE INDICADORES
+   ========================================================= */
+
+.statTitle {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   ETIQUETAS
+   ========================================================= */
+
+.statLabel {
+  display: block;
+
+  margin-top: 12px;
+
+  color: rgba(245, 238, 235, 0.72);
 
   font-size: 11px;
+
+  line-height: 1.5;
+
   font-weight: 800;
 
   letter-spacing: 0.12em;
 }
 
-.statNumber {
+.statDescription {
   display: block;
 
-  color: #ffffff;
+  color: rgba(245, 238, 235, 0.58);
 
-  font-size: 39px;
-  line-height: 1;
+  font-size: 12px;
 
-  font-weight: 800;
-
-  letter-spacing: -0.04em;
+  line-height: 1.65;
 }
 
 .statPlus {
-  color: #84b3ce;
+  color: #a7cadf;
 
-  font-size: 20px;
-}
-
-.statLabel {
-  display: block;
-
-  margin-top: 13px;
-
-  color: rgba(245, 238, 235, 0.45);
-
-  font-size: 12px;
-  line-height: 1.5;
-
-  font-weight: 600;
+  font-size: 25px;
 }
 
 
 /* =========================================================
-   PANEL CONTACT
+   ORIENTACIÓN DIRECTA
    ========================================================= */
 
 .panelContact {
   display: grid;
-  grid-template-columns: 1fr auto;
+
+  grid-template-columns: minmax(0, 1fr) auto;
 
   align-items: center;
 
-  gap: 30px;
+  gap: 25px;
 
-  margin-top: 28px;
-  padding-top: 25px;
+  margin-top: 16px;
 
-  border-top: 1px solid rgba(167, 202, 223, 0.13);
+  padding: 22px 4px 2px;
+
+  border-top: 1px solid rgba(167, 202, 223, 0.14);
 }
 
 .panelContactText > span {
   display: block;
 
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
   color: #84b3ce;
 
-  font-size: 11px;
+  font-size: 10px;
+
   font-weight: 800;
 
   letter-spacing: 0.16em;
 }
 
 .panelContactText h3 {
-  margin: 0 0 7px;
+  margin: 0 0 6px;
 
   color: #ffffff;
 
   font-size: 18px;
+
   font-weight: 700;
 }
 
 .panelContactText p {
-  max-width: 360px;
+  max-width: 390px;
 
   margin: 0;
 
-  color: rgba(245, 238, 235, 0.5);
+  color: rgba(245, 238, 235, 0.52);
 
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+
+  line-height: 1.6;
 }
 
 
 /* =========================================================
-   CONTACT OPTIONS
+   WHATSAPP PANEL
    ========================================================= */
 
+.contactOptions {
+  display: flex;
+
+  gap: 10px;
+}
+
 .contactOption {
-  min-width: 62px;
-  height: 62px;
+  min-width: 135px;
+
+  min-height: 52px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
 
   padding: 0 18px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid rgba(167, 202, 223, 0.2);
 
-  gap: 10px;
+  border-radius: 11px;
 
-  border: 1px solid rgba(167, 202, 223, 0.22);
+  background: rgba(13, 36, 59, 0.45);
 
-  border-radius: 16px;
-
-  background: rgba(13, 36, 59, 0.3);
-
-  color: #ffffff;
+  color: #a7cadf;
 
   text-decoration: none;
 
@@ -621,30 +631,19 @@
 }
 
 .contactOption:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 
-  border-color: #00ff00;
+  border-color: #84b3ce;
 
-  background: #00ff00;
-}
-
-.whatsappOption {
-  background: #25d366;
-  border-color: #25d366;
-  color: #ffffff;
-}
-
-.whatsappOption:hover {
-  background: #20ba5a;
-  border-color: #20ba5a;
-  color: #ffffff;
+  background: rgba(132, 179, 206, 0.13);
 }
 
 .contactIcon {
-  width: 27px;
-  height: 27px;
+  width: 22px;
+  height: 22px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 }
@@ -656,539 +655,213 @@
   fill: currentColor;
 }
 
+.contactText {
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
 
 /* =========================================================
-   REFERENCES
+   RIESGO / TIPOS DE FRAUDES
    ========================================================= */
 
-.references {
-  padding: 45px 25px 48px;
-
-  border-bottom: 1px solid rgba(13, 36, 59, 0.08);
+.riskSection {
+  padding: 125px 7vw;
 
   background: #ffffff;
+}
+
+.sectionIntro {
+  width: min(700px, 100%);
+
+  margin: 0 auto 60px;
 
   text-align: center;
 }
 
-.references > p {
-  margin: 0 0 24px;
+.sectionIntro h2 {
+  margin: 0 0 18px;
 
-  color: #8a9aa3;
+  color: #0d243b;
 
-  font-size: 9px;
-  font-weight: 800;
+  font-size: clamp(40px, 4.5vw, 60px);
 
-  letter-spacing: 0.18em;
+  line-height: 1;
+
+  letter-spacing: -0.04em;
 }
 
-.referenceList {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 24px;
-}
-
-.referenceList span {
-  color: #34566d;
-
-  font-size: 12px;
-  font-weight: 800;
-
-  letter-spacing: 0.08em;
-}
-
-.referenceList i {
-  width: 4px;
-  height: 4px;
-
-  border-radius: 50%;
-
-  background: #84b3ce;
-}
-
-
-/* =========================================================
-   FORMULARIO DE ORIENTACIÓN
-   ========================================================= */
-
-.homeFormSection {
-  position: relative;
-
-  width: min(1180px, calc(100% - 40px));
-
-  margin: 90px auto;
-
-  padding: 72px 70px 78px;
-
-  border: 1px solid rgba(47, 65, 86, 0.08);
-
-  border-radius: 28px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #ffffff 0%,
-      #f8fafc 55%,
-      #f2f6f8 100%
-    );
-
-  box-shadow:
-    0 24px 60px rgba(47, 65, 86, 0.08),
-    0 4px 18px rgba(47, 65, 86, 0.04);
-
-  overflow: hidden;
-}
-
-.homeFormSection::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: 4%;
-  right: 4%;
-
-  height: 3px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #2f4156,
-      #567c8d,
-      #a6bcc9
-    );
-
-  border-radius: 0 0 10px 10px;
-}
-
-
-/* =========================================================
-   HEADER DEL FORMULARIO
-   ========================================================= */
-
-.homeFormHeader {
-  max-width: 720px;
-
-  margin: 0 auto 48px;
-
-  text-align: center;
-}
-
-.homeFormHeader > span {
-  display: inline-block;
-
-  margin-bottom: 14px;
-
-  color: #567c8d;
-
-  font-size: 0.72rem;
-  font-weight: 800;
-
-  letter-spacing: 0.18em;
-
-  text-transform: uppercase;
-}
-
-.homeFormHeader h2 {
-  margin: 0;
-
-  color: #2f4156;
-
-  font-size: clamp(2rem, 3.2vw, 3rem);
-
-  line-height: 1.12;
-
-  letter-spacing: -0.03em;
-
-  font-weight: 800;
-}
-
-.homeFormHeader p {
+.sectionIntro p {
   max-width: 620px;
-
-  margin: 20px auto 0;
-
-  color: #718096;
-
-  font-size: 1rem;
-
-  line-height: 1.75;
-}
-
-
-/* =========================================================
-   CONTENEDOR INTERNO
-   ========================================================= */
-
-.homeForm {
-  max-width: 980px;
 
   margin: 0 auto;
 
-  padding: 42px;
-
-  border: 1px solid rgba(47, 65, 86, 0.08);
-
-  border-radius: 22px;
-
-  background: rgba(255, 255, 255, 0.88);
-
-  box-shadow:
-    0 18px 45px rgba(47, 65, 86, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-
-/* =========================================================
-   GRID
-   ========================================================= */
-
-.homeFormGrid {
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 26px 24px;
-}
-
-
-/* =========================================================
-   CAMPOS
-   ========================================================= */
-
-.homeFormField,
-.homeFormFieldFull {
-  width: 100%;
-
-  min-width: 0;
-}
-
-.homeFormFieldFull {
-  grid-column: 1 / -1;
-}
-
-.homeFormField label,
-.homeFormFieldFull label {
-  display: block;
-
-  margin-bottom: 10px;
-
-  color: #2f4156;
+  color: #657a88;
 
   font-size: 14px;
 
-  font-weight: 750;
-
-  line-height: 1.35;
+  line-height: 1.8;
 }
 
 
 /* =========================================================
-   INPUTS / SELECTS / TEXTAREA
+   GRID DE 6 FRAUDES
    ========================================================= */
 
-.homeFormField input,
-.homeFormField select,
-.homeFormFieldFull textarea {
-  display: block;
+.riskGrid {
+  width: min(1120px, 100%);
 
-  width: 100%;
+  margin: 0 auto;
 
-  box-sizing: border-box;
-
-  border: 1px solid #d3dde2;
-
-  border-radius: 13px;
-
-  background: #f9fbfc;
-
-  color: #2f4156;
-
-  font-family: inherit;
-
-  font-size: 15px;
-
-  outline: none;
-
-  transition:
-    border-color 180ms ease,
-    background 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
-}
-
-.homeFormField input,
-.homeFormField select {
-  height: 58px;
-
-  padding: 0 17px;
-}
-
-.homeFormFieldFull textarea {
-  min-height: 155px;
-
-  padding: 16px 17px;
-
-  line-height: 1.65;
-
-  resize: vertical;
-}
-
-.homeFormField input::placeholder,
-.homeFormFieldFull textarea::placeholder {
-  color: #9ba7ad;
-}
-
-.homeFormField input:hover,
-.homeFormField select:hover,
-.homeFormFieldFull textarea:hover {
-  border-color: #b5c6cf;
-
-  background: #ffffff;
-}
-
-.homeFormField input:focus,
-.homeFormField select:focus,
-.homeFormFieldFull textarea:focus {
-  border-color: #567c8d;
-
-  background: #ffffff;
-
-  box-shadow:
-    0 0 0 4px rgba(86, 124, 141, 0.1);
-}
-
-
-/* =========================================================
-   SELECTS
-   ========================================================= */
-
-.homeFormField select {
-  cursor: pointer;
-
-  appearance: auto;
-}
-
-.homeFormField select option {
-  color: #2f4156;
-
-  background: #ffffff;
-}
-
-
-/* =========================================================
-   MONTO
-   ========================================================= */
-
-.amountGroup {
   display: grid;
 
-  grid-template-columns: 145px minmax(0, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
-  gap: 10px;
-
-  width: 100%;
-}
-
-.currencySelect,
-.amountInput {
-  width: 100%;
-
-  box-sizing: border-box;
-
-  height: 58px;
-
-  border: 1px solid #d3dde2;
-
-  border-radius: 13px;
-
-  background: #f9fbfc;
-
-  color: #2f4156;
-
-  font-family: inherit;
-
-  font-size: 15px;
-
-  outline: none;
-
-  transition:
-    border-color 180ms ease,
-    background 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.currencySelect {
-  padding: 0 13px;
-
-  cursor: pointer;
-}
-
-.amountInput {
-  padding: 0 17px;
-}
-
-.currencySelect:hover,
-.amountInput:hover {
-  border-color: #b5c6cf;
-
-  background: #ffffff;
-}
-
-.currencySelect:focus,
-.amountInput:focus {
-  border-color: #567c8d;
-
-  background: #ffffff;
-
-  box-shadow:
-    0 0 0 4px rgba(86, 124, 141, 0.1);
+  gap: 15px;
 }
 
 
 /* =========================================================
-   PRIVACIDAD
+   TARJETAS DE FRAUDE
    ========================================================= */
 
-.homeFormPrivacy {
+.riskCard {
+  min-height: 320px;
+
   display: flex;
 
-  align-items: flex-start;
+  flex-direction: column;
 
-  gap: 11px;
+  padding: 30px;
 
-  margin-top: 28px;
+  border: 1px solid rgba(13, 36, 59, 0.1);
 
-  color: #61707a;
+  border-radius: 18px;
 
-  font-size: 13px;
+  background: #f8f6f4;
 
-  line-height: 1.6;
-
-  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
 }
 
-.homeFormPrivacy input {
-  width: 18px;
-  height: 18px;
+.riskCard:hover {
+  transform: translateY(-5px);
 
-  margin: 2px 0 0;
+  border-color: rgba(22, 88, 123, 0.18);
 
-  flex: 0 0 auto;
-
-  accent-color: #2f4156;
-
-  cursor: pointer;
-}
-
-.homeFormPrivacy span {
-  max-width: 780px;
+  box-shadow:
+    0 20px 45px rgba(13, 36, 59, 0.09);
 }
 
 
 /* =========================================================
-   BOTÓN
+   DESTACADAS
    ========================================================= */
 
-.homeFormButton {
+.featuredRiskCard {
+  background:
+    linear-gradient(
+      145deg,
+      #eef5f8,
+      #f8f6f4
+    );
+
+  border-color: rgba(22, 88, 123, 0.14);
+}
+
+
+/* =========================================================
+   ICONOS DE FRAUDE
+   ========================================================= */
+
+.cardIcon {
+  width: 47px;
+  height: 47px;
+
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  width: 100%;
+  margin-bottom: 24px;
 
-  height: 59px;
+  border-radius: 12px;
 
-  margin-top: 28px;
+  background: rgba(22, 88, 123, 0.08);
 
-  border: none;
-
-  border-radius: 13px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #2f4156,
-      #16587b
-    );
-
-  color: #ffffff;
-
-  font-family: inherit;
-
-  font-size: 15px;
-
-  font-weight: 800;
-
-  letter-spacing: 0.01em;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 12px 25px rgba(47, 65, 86, 0.15);
-
-  transition:
-    background 180ms ease,
-    transform 180ms ease,
-    box-shadow 180ms ease;
+  color: #16587b;
 }
 
-.homeFormButton:hover {
-  background:
-    linear-gradient(
-      135deg,
-      #24364b,
-      #123f5b
-    );
+.cardIcon svg {
+  width: 25px;
+  height: 25px;
 
-  transform: translateY(-2px);
+  display: block;
 
-  box-shadow:
-    0 16px 30px rgba(47, 65, 86, 0.2);
-}
-
-.homeFormButton:active {
-  transform: translateY(0);
-}
-
-.homeFormButton:disabled {
-  opacity: 0.6;
-
-  cursor: not-allowed;
-
-  transform: none;
-
-  box-shadow: none;
+  fill: currentColor;
 }
 
 
 /* =========================================================
-   MENSAJE
+   TITULOS DE FRAUDE
    ========================================================= */
 
-.homeFormMessage {
-  margin: 18px 0 0;
+.riskCard h3 {
+  margin: 0 0 11px;
 
-  padding: 14px 16px;
+  color: #0d243b;
 
-  border: 1px solid rgba(47, 65, 86, 0.08);
+  font-size: 18px;
 
-  border-radius: 11px;
+  line-height: 1.25;
+}
 
-  background: #f1f5f6;
+.riskCard p {
+  margin: 0;
 
-  color: #2f4156;
+  color: #6d808b;
 
-  font-size: 14px;
+  font-size: 12px;
 
-  line-height: 1.5;
+  line-height: 1.7;
+}
 
-  text-align: center;
+
+/* =========================================================
+   DENUNCIAR
+   ========================================================= */
+
+.reportLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  margin-top: auto;
+
+  padding-top: 24px;
+
+  color: #16587b;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.reportLink:hover {
+  color: #0d243b;
+
+  transform: translateX(3px);
 }
 
 
@@ -1313,7 +986,7 @@
 
 
 /* =========================================================
-   FOTO
+   FOTO IDENTIDAD
    ========================================================= */
 
 .identityImageWrapper {
@@ -1354,154 +1027,6 @@
   object-fit: cover;
 
   object-position: center;
-}
-
-
-/* =========================================================
-   RIESGO
-   ========================================================= */
-
-.riskSection {
-  padding: 125px 7vw;
-
-  background: #ffffff;
-}
-
-.sectionIntro {
-  width: min(700px, 100%);
-
-  margin: 0 auto 60px;
-
-  text-align: center;
-}
-
-.sectionIntro > span {
-  color: #16587b;
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 0.18em;
-}
-
-.sectionIntro h2 {
-  margin: 17px 0;
-
-  color: #0d243b;
-
-  font-size: clamp(40px, 4.5vw, 60px);
-
-  line-height: 1;
-
-  letter-spacing: -0.04em;
-}
-
-.sectionIntro p {
-  max-width: 620px;
-
-  margin: 0 auto;
-
-  color: #657a88;
-
-  font-size: 14px;
-
-  line-height: 1.8;
-}
-
-.riskGrid {
-  width: min(1120px, 100%);
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 15px;
-}
-
-.riskCard {
-  position: relative;
-
-  min-height: 285px;
-
-  padding: 30px;
-
-  border: 1px solid rgba(13, 36, 59, 0.1);
-
-  border-radius: 18px;
-
-  background: #f8f6f4;
-
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.riskCard:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 20px 45px rgba(13, 36, 59, 0.08);
-}
-
-.cardNumber {
-  position: absolute;
-
-  top: 25px;
-  right: 25px;
-
-  color: #a7b4bb;
-
-  font-size: 9px;
-
-  font-weight: 800;
-}
-
-.cardIcon {
-  width: 45px;
-  height: 45px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 25px;
-
-  border-radius: 11px;
-
-  background: rgba(22, 88, 123, 0.08);
-
-  color: #16587b;
-}
-
-.cardIcon svg {
-  width: 24px;
-  height: 24px;
-
-  display: block;
-
-  fill: currentColor;
-}
-
-.riskCard h3 {
-  margin: 0 0 11px;
-
-  color: #0d243b;
-
-  font-size: 18px;
-}
-
-.riskCard p {
-  margin: 0;
-
-  color: #6d808b;
-
-  font-size: 12px;
-
-  line-height: 1.7;
 }
 
 
@@ -1601,7 +1126,7 @@
 
 
 /* =========================================================
-   MENSAJE
+   MENSAJE HUMANO
    ========================================================= */
 
 .messageSection {
@@ -1672,21 +1197,26 @@
   line-height: 1.8;
 }
 
+
+/* =========================================================
+   BOTÓN WHATSAPP VERDE
+   ========================================================= */
+
 .lightButton {
   display: inline-flex;
 
   align-items: center;
   justify-content: center;
 
-  min-height: 50px;
+  gap: 10px;
+
+  min-height: 52px;
 
   padding: 0 23px;
 
-  border-radius: 9px;
+  border-radius: 10px;
 
-  background: #f6e0b6;
-
-  color: #0d243b;
+  color: #ffffff;
 
   font-size: 12px;
 
@@ -1694,93 +1224,39 @@
 
   text-decoration: none;
 
-  transition: transform 180ms ease;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.lightButton:hover {
-  transform: translateY(-2px);
+.messageWhatsAppButton {
+  background: #25d366;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 25px rgba(37, 211, 102, 0.18);
 }
 
+.messageWhatsAppButton:hover {
+  background: #20bd5b;
 
-/* =========================================================
-   CASOS
-   ========================================================= */
+  color: #ffffff;
 
-.casesSection {
-  padding: 125px 7vw;
+  transform: translateY(-3px);
 
-  background: #f5eeeb;
+  box-shadow:
+    0 16px 30px rgba(37, 211, 102, 0.25);
 }
 
-.sectionIntroCentered {
-  width: min(750px, 100%);
-
-  margin: 0 auto 50px;
-
-  text-align: center;
+.messageWhatsAppButton .contactIcon {
+  width: 20px;
+  height: 20px;
 }
 
-.sectionIntroCentered > span {
-  color: #16587b;
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 0.18em;
-}
-
-.sectionIntroCentered h2 {
-  margin: 17px 0;
-
-  color: #0d243b;
-
-  font-size: clamp(37px, 4vw, 54px);
-
-  line-height: 1;
-
-  letter-spacing: -0.04em;
-}
-
-.sectionIntroCentered p {
-  margin: 0;
-
-  color: #657a88;
-
-  font-size: 14px;
-
-  line-height: 1.8;
-}
-
-.caseTags {
-  width: min(950px, 100%);
-
-  margin: 0 auto;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 10px;
-}
-
-.caseTags span {
-  padding: 12px 17px;
-
-  border: 1px solid rgba(13, 36, 59, 0.1);
-
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.65);
-
-  color: #38566a;
-
-  font-size: 11px;
-
-  font-weight: 700;
+.messageWhatsAppButton .contactIcon svg {
+  fill: currentColor;
 }
 
 
@@ -1953,6 +1429,7 @@
   display: flex;
 
   align-items: center;
+
   justify-content: space-between;
 
   gap: 20px;
@@ -2151,67 +1628,101 @@
 
 
 /* =========================================================
-   FOOTER SPACE
-   ========================================================= */
-
-.footerSpace {
-  min-height: 230px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 70px 20px;
-
-  background: #f5eeeb;
-
-  color: rgba(13, 36, 59, 0.3);
-
-  font-size: 10px;
-
-  letter-spacing: 0.08em;
-
-  text-align: center;
-}
-
-
-/* =========================================================
    RESPONSIVE — 1250px
    ========================================================= */
 
 @media (max-width: 1250px) {
   .hero {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 0.9fr) minmax(470px, 1.1fr);
 
-    gap: 40px;
+    gap: 45px;
 
     padding-left: 5vw;
     padding-right: 5vw;
   }
 
   .heroTitle {
-    font-size: clamp(48px, 5.4vw, 70px);
+    font-size: clamp(48px, 5.3vw, 72px);
+  }
+
+  .heroTitle span {
+    font-size: clamp(48px, 5.3vw, 72px) !important;
+  }
+
+  .operationalPanel {
+    padding: 24px;
   }
 }
 
 
 /* =========================================================
-   RESPONSIVE — 1000px
+   RESPONSIVE — 1050px
    ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .heroTitle {
+    font-size: clamp(45px, 5.2vw, 65px);
+  }
+
+  .heroTitle span {
+    font-size: clamp(45px, 5.2vw, 65px) !important;
+  }
+
+  .heroDescription {
+    font-size: 15px;
+  }
+
+  .operationalPanel {
+    padding: 20px;
+  }
+
+  .statsGrid {
+    gap: 10px;
+  }
+
+  .statCard {
+    min-height: 145px;
+
+    padding: 19px;
+  }
+
+  .statNumber {
+    font-size: 38px;
+  }
+
+  .statTitle {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
 
     min-height: auto;
 
+    gap: 55px;
+
     padding-top: 90px;
-    padding-bottom: 85px;
+    padding-bottom: 90px;
   }
 
   .heroContent {
-    max-width: 850px;
+    max-width: 780px;
 
     margin: 0 auto;
 
@@ -2223,13 +1734,16 @@
     margin-right: auto;
   }
 
-  .heroActions,
+  .heroActions {
+    justify-content: center;
+  }
+
   .heroNote {
     justify-content: center;
   }
 
   .panelWrapper {
-    max-width: 850px;
+    max-width: 780px;
   }
 
   .identity {
@@ -2246,10 +1760,6 @@
     max-width: 850px;
 
     margin: 0 auto;
-  }
-
-  .identityContent h2 {
-    max-width: 750px;
   }
 
   .identityImageWrapper {
@@ -2279,67 +1789,6 @@
 
     gap: 55px;
   }
-
-  .homeFormSection {
-    width: min(94%, 1180px);
-
-    padding: 65px 45px 70px;
-  }
-
-  .homeForm {
-    padding: 36px;
-  }
-}
-
-
-/* =========================================================
-   RESPONSIVE — 800px
-   ========================================================= */
-
-@media (max-width: 800px) {
-  .homeFormSection {
-    width: calc(100% - 30px);
-
-    margin: 60px auto;
-
-    padding: 55px 20px 60px;
-
-    border-radius: 23px;
-  }
-
-  .homeFormHeader {
-    margin-bottom: 32px;
-  }
-
-  .homeFormHeader h2 {
-    font-size: 38px;
-  }
-
-  .homeFormHeader p {
-    font-size: 14px;
-
-    line-height: 1.7;
-  }
-
-  .homeForm {
-    padding: 30px 24px;
-
-    border-radius: 18px;
-  }
-
-  .homeFormGrid {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-  }
-
-  .homeFormFieldFull {
-    grid-column: auto;
-  }
-
-  .amountGroup {
-    grid-template-columns: 125px minmax(0, 1fr);
-  }
 }
 
 
@@ -2349,9 +1798,9 @@
 
 @media (max-width: 700px) {
   .hero {
-    padding: 75px 20px;
+    padding: 75px 20px 80px;
 
-    gap: 55px;
+    gap: 45px;
   }
 
   .heroTitle {
@@ -2372,45 +1821,52 @@
     align-items: stretch;
   }
 
-  .primaryButton,
-  .secondaryButton {
+  .primaryButton {
     width: 100%;
   }
 
-  .trustBar {
-    grid-template-columns: 1fr;
+  .whatsappHeroButton {
+    min-width: 0;
+  }
 
-    margin-top: 45px;
-
-    gap: 15px;
+  .heroNote {
+    font-size: 12px;
   }
 
   .operationalPanel {
-    padding: 22px;
+    padding: 18px;
 
     border-radius: 22px;
   }
 
-  .panelHeader {
-    flex-direction: column;
-  }
-
-  .status {
-    align-self: flex-start;
-  }
-
   .statsGrid {
     grid-template-columns: 1fr;
+
+    gap: 10px;
   }
 
   .statCard {
-    min-height: 115px;
+    min-height: 125px;
+
+    padding: 21px;
+  }
+
+  .statNumber {
+    font-size: 42px;
+  }
+
+  .statTitle {
+    font-size: 20px;
+  }
+
+  .statDescription {
+    font-size: 12px;
   }
 
   .panelContact {
     grid-template-columns: 1fr;
 
-    gap: 22px;
+    gap: 18px;
   }
 
   .contactOptions {
@@ -2418,21 +1874,23 @@
   }
 
   .contactOption {
-    flex: 1;
-
-    width: auto;
+    width: 100%;
   }
 
-  .references {
-    padding: 38px 20px;
+  .riskSection,
+  .processSection,
+  .knowledgeSection {
+    padding: 85px 20px;
   }
 
-  .referenceList {
-    gap: 15px;
+  .riskGrid {
+    grid-template-columns: 1fr;
   }
 
-  .referenceList i {
-    display: none;
+  .riskCard {
+    min-height: 285px;
+
+    padding: 27px;
   }
 
   .identity {
@@ -2491,17 +1949,6 @@
     border-radius: 20px;
   }
 
-  .riskSection,
-  .processSection,
-  .casesSection,
-  .knowledgeSection {
-    padding: 85px 20px;
-  }
-
-  .riskGrid {
-    grid-template-columns: 1fr;
-  }
-
   .processGrid {
     grid-template-columns: 1fr;
   }
@@ -2512,6 +1959,10 @@
 
   .messageBox {
     padding: 50px 28px;
+  }
+
+  .messageBox h2 {
+    font-size: clamp(38px, 11vw, 52px);
   }
 
   .faqSection {
@@ -2534,104 +1985,99 @@
     padding: 95px 20px;
   }
 
-  .footerSpace {
-    min-height: 190px;
+  .finalCtaContent h2 {
+    font-size: clamp(38px, 11vw, 55px);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .hero {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  .homeFormSection {
-    width: calc(100% - 24px);
-
-    margin: 45px auto;
-
-    padding: 50px 14px 55px;
-
-    border-radius: 20px;
+  .heroTitle {
+    font-size: clamp(40px, 13vw, 52px);
   }
 
-  .homeFormSection::before {
-    left: 7%;
-    right: 7%;
+  .heroTitle span {
+    font-size: clamp(40px, 13vw, 52px) !important;
   }
 
-  .homeFormHeader {
-    padding: 0 10px;
-
-    margin-bottom: 27px;
-  }
-
-  .homeFormHeader > span {
-    font-size: 10px;
-
-    letter-spacing: 0.14em;
-  }
-
-  .homeFormHeader h2 {
-    font-size: 32px;
-
-    line-height: 1.12;
-  }
-
-  .homeFormHeader p {
-    margin-top: 15px;
-
+  .heroDescription {
     font-size: 13px;
+
+    line-height: 1.7;
   }
 
-  .homeForm {
-    padding: 24px 18px;
+  .primaryButton {
+    min-height: 55px;
 
-    border-radius: 17px;
-  }
-
-  .homeFormGrid {
-    gap: 18px;
-  }
-
-  .homeFormField label,
-  .homeFormFieldFull label {
-    margin-bottom: 8px;
-
-    font-size: 13px;
-  }
-
-  .homeFormField input,
-  .homeFormField select,
-  .currencySelect,
-  .amountInput {
-    height: 54px;
-
-    font-size: 14px;
-  }
-
-  .homeFormFieldFull textarea {
-    min-height: 140px;
-
-    font-size: 14px;
-  }
-
-  .amountGroup {
-    grid-template-columns: 105px minmax(0, 1fr);
-
-    gap: 8px;
-  }
-
-  .currencySelect {
-    padding: 0 9px;
-
-    font-size: 13px;
-  }
-
-  .homeFormPrivacy {
     font-size: 12px;
   }
 
-  .homeFormButton {
-    height: 56px;
-
-    font-size: 14px;
+  .operationalPanel {
+    padding: 15px;
   }
 
-  .homeFormMessage {
+  .statCard {
+    min-height: 120px;
+
+    padding: 18px;
+  }
+
+  .statNumber {
+    font-size: 38px;
+  }
+
+  .statTitle {
+    font-size: 18px;
+  }
+
+  .statLabel {
+    font-size: 10px;
+  }
+
+  .statDescription {
+    font-size: 11px;
+  }
+
+  .panelContactText h3 {
+    font-size: 17px;
+  }
+
+  .panelContactText p {
+    font-size: 11px;
+  }
+
+  .riskCard {
+    min-height: 270px;
+
+    padding: 24px;
+  }
+
+  .messageBox {
+    padding: 45px 23px;
+  }
+
+  .messageBox > span {
+    font-size: 8px;
+  }
+
+  .messageBox p {
     font-size: 13px;
+  }
+
+  .messageWhatsAppButton {
+    width: 100%;
+  }
+
+  .finalButton {
+    width: 100%;
   }
 }
