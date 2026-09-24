@@ -37,7 +37,7 @@ function CheckIcon() {
 function MoneyIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2C7.58 2 4 4.24 4 7v10c0 2.76 3.58 5 8 5s8-2.24 8-5V7c0-2.76-3.58-5-8-5Zm0 2c3.31 0 6 1.35 6 3s-2.69 3-6 3-6-1.35-6-3 2.69-3 6-3Zm0 16c-3.31 0-6-1.35-6-3v-2.04C7.41 16.24 9.55 17 12 17s4.59-.76 6-2.04V17c0 1.65-2.69 3-6 3Zm0-5c-3.31 0-6-1.35-6-3V9.96C7.41 11.24 9.55 12 12 12s4.59- .76 6-2.04V12c0 1.65-2.69 3-6 3Z" />
+      <path d="M12 2C7.58 2 4 4.24 4 7v10c0 2.76 3.58 5 8 5s8-2.24 8-5V7c0-2.76-3.58-5-8-5Zm0 2c3.31 0 6 1.35 6 3s-2.69 3-6 3-6-1.35-6-3 2.69-3 6-3Zm0 16c-3.31 0-6-1.35-6-3v-2.04C7.41 16.24 9.55 17 12 17s4.59-.76 6-2.04V17c0 1.65-2.69 3-6 3Zm0-5c-3.31 0-6-1.35-6-3V9.96C7.41 11.24 9.55 12 12 12s4.59-.76 6-2.04V12c0 1.65-2.69 3-6 3Z" />
     </svg>
   );
 }
@@ -99,6 +99,9 @@ export default function Home() {
             ===================================================== */}
 
         <section className={styles.hero} id="inicio">
+          {/* Fondo independiente para animarlo desde CSS */}
+          <div className={styles.heroBackground}></div>
+
           <div className={styles.heroGlow}></div>
 
           <div className={styles.heroContent}>
@@ -114,14 +117,28 @@ export default function Home() {
             </h1>
 
             <p className={styles.heroDescription}>
-              te ayudamos a identificar señales de fraude, comprender tu
+              Te ayudamos a identificar señales de fraude, comprender tu
               situación y conocer las alternativas disponibles para proteger
               tu patrimonio.
             </p>
 
             <div className={styles.heroActions}>
-              <a href="#solicitar-evaluacion" className={styles.primaryButton}>
-                Solicitar Evaluación Gratuita
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.primaryButton} ${styles.whatsappHeroButton}`}
+              >
+                <span className={styles.whatsappHeroIcon}>
+                  <WhatsAppIcon />
+                </span>
+
+                <span className={styles.whatsappHeroText}>
+                  <strong>Solicitar Evaluación Gratuita</strong>
+                  <small>Atención directa por WhatsApp</small>
+                </span>
+
+                <span className={styles.whatsappHeroArrow}>→</span>
               </a>
             </div>
 
@@ -129,42 +146,7 @@ export default function Home() {
               <span className={styles.noteIcon}>
                 <CheckIcon />
               </span>
-              Respuesta inmediata en horario laboral gratuita
-            </div>
-
-            <div className={styles.trustBar}>
-              <div className={styles.trustItem}>
-                <span className={styles.trustIcon}>
-                  <span></span>
-                </span>
-
-                <div>
-                  <strong>Información protegida</strong>
-                  <span>Tratamiento confidencial</span>
-                </div>
-              </div>
-
-              <div className={styles.trustItem}>
-                <span className={styles.trustIcon}>
-                  <span></span>
-                </span>
-
-                <div>
-                  <strong>Atención clara</strong>
-                  <span>Proceso paso a paso</span>
-                </div>
-              </div>
-
-              <div className={styles.trustItem}>
-                <span className={styles.trustIcon}>
-                  <span></span>
-                </span>
-
-                <div>
-                  <strong>Análisis inicial</strong>
-                  <span>Sin compromiso</span>
-                </div>
-              </div>
+              Orientación inicial · Información confidencial
             </div>
           </div>
 
@@ -197,7 +179,7 @@ export default function Home() {
               <div className={styles.panelDivider}></div>
 
               {/* =================================================
-                  INDICADORES
+                  6 INDICADORES
                   ================================================= */}
 
               <div className={styles.statsGrid}>
@@ -316,6 +298,156 @@ export default function Home() {
         </section>
 
         {/* =====================================================
+            TIPOS DE FRAUDES MÁS COMUNES
+            ===================================================== */}
+
+        <section className={styles.riskSection} id="fraude">
+          <div className={styles.sectionIntro}>
+            <span>IDENTIFICACIÓN</span>
+
+            <h2>
+              Los tipos de fraudes
+              <br />
+              más comunes
+            </h2>
+
+            <p>
+              Identifica el tipo de fraude que sufriste y recibe orientación
+              para conocer los siguientes pasos.
+            </p>
+          </div>
+
+          <div className={styles.riskGrid}>
+            <article
+              className={`${styles.riskCard} ${styles.featuredRiskCard}`}
+            >
+              <span className={styles.cardNumber}>01</span>
+
+              <div className={styles.cardIcon}>
+                <InvestmentIcon />
+              </div>
+
+              <h3>Inversiones fraudulentas</h3>
+
+              <p>
+                Propuestas de inversión que prometen rendimientos atractivos
+                y pueden presentar señales de fraude o irregularidades.
+              </p>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.reportLink}
+              >
+                Denunciar →
+              </a>
+            </article>
+
+            <article
+              className={`${styles.riskCard} ${styles.featuredRiskCard}`}
+            >
+              <span className={styles.cardNumber}>02</span>
+
+              <div className={styles.cardIcon}>
+                <DigitalIcon />
+              </div>
+
+              <h3>Tareas remuneradas por internet</h3>
+
+              <p>
+                Ofertas de tareas o trabajos en línea que solicitan pagos,
+                depósitos o datos personales bajo falsas oportunidades.
+              </p>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.reportLink}
+              >
+                Denunciar →
+              </a>
+            </article>
+
+            <article
+              className={`${styles.riskCard} ${styles.featuredRiskCard}`}
+            >
+              <span className={styles.cardNumber}>03</span>
+
+              <div className={styles.cardIcon}>
+                <MoneyIcon />
+              </div>
+
+              <h3>Compras fraudulentas en línea</h3>
+
+              <p>
+                Compras realizadas en sitios o plataformas donde el producto
+                no llega, no corresponde a lo ofrecido o la operación resulta
+                sospechosa.
+              </p>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.reportLink}
+              >
+                Denunciar →
+              </a>
+            </article>
+
+            <article className={styles.riskCard}>
+              <span className={styles.cardNumber}>04</span>
+
+              <div className={styles.cardIcon}>
+                <IdentityIcon />
+              </div>
+
+              <h3>Retiro de AFORE no autorizado</h3>
+
+              <p>
+                Movimientos o retiros que no reconoces y que requieren revisar
+                la información y documentación relacionada.
+              </p>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.reportLink}
+              >
+                Denunciar →
+              </a>
+            </article>
+
+            <article className={styles.riskCard}>
+              <span className={styles.cardNumber}>05</span>
+
+              <div className={styles.cardIcon}>
+                <PhishingIcon />
+              </div>
+
+              <h3>Ofertas laborales fraudulentas</h3>
+
+              <p>
+                Supuestas oportunidades de empleo que pueden pedir dinero,
+                información personal o pagos para continuar con el proceso.
+              </p>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.reportLink}
+              >
+                Denunciar →
+              </a>
+            </article>
+          </div>
+        </section>
+
+        {/* =====================================================
             IDENTIDAD / RECUPERACIÓN DE FONDOS
             ===================================================== */}
 
@@ -376,13 +508,15 @@ export default function Home() {
                 </div>
 
                 <div className={styles.identityProblemContent}>
-                  <h3>Problema – Phishing y robo de fondos en inversiones</h3>
+                  <h3>
+                    Problema – Phishing y robo de fondos en inversiones
+                  </h3>
 
                   <p>
                     Si tus fondos fueron comprometidos mediante phishing,
                     suplantación, accesos no autorizados u otras formas de
-                    fraude digital, nuestro equipo puede ayudarte a organizar la
-                    información y analizar las operaciones relacionadas.
+                    fraude digital, nuestro equipo puede ayudarte a organizar
+                    la información y analizar las operaciones relacionadas.
                   </p>
                 </div>
               </div>
@@ -397,119 +531,6 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* =====================================================
-            TIPOS DE FRAUDES MÁS COMUNES
-            ===================================================== */}
-
-        <section className={styles.riskSection} id="fraude">
-          <div className={styles.sectionIntro}>
-            <span>IDENTIFICACIÓN</span>
-
-            <h2>
-              Los tipos de
-              <br />
-              fraudes más comunes
-            </h2>
-
-            <p>
-              Conoce algunos de los tipos de fraude más frecuentes y las
-              principales señales que pueden ayudarte a identificarlos.
-            </p>
-          </div>
-
-          <div className={styles.riskGrid}>
-            <article className={styles.riskCard}>
-              <span className={styles.cardNumber}>01</span>
-
-              <div className={styles.cardIcon}>
-                <MoneyIcon />
-              </div>
-
-              <h3>Fraude financiero</h3>
-
-              <p>
-                Operaciones, servicios o propuestas que presentan señales de
-                irregularidad.
-              </p>
-            </article>
-
-            <article className={styles.riskCard}>
-              <span className={styles.cardNumber}>02</span>
-
-              <div className={styles.cardIcon}>
-                <DigitalIcon />
-              </div>
-
-              <h3>Fraude digital</h3>
-
-              <p>
-                Engaños realizados mediante plataformas digitales, sitios web o
-                comunicaciones electrónicas.
-              </p>
-            </article>
-
-            <article className={styles.riskCard}>
-              <span className={styles.cardNumber}>03</span>
-
-              <div className={styles.cardIcon}>
-                <IdentityIcon />
-              </div>
-
-              <h3>Suplantación</h3>
-
-              <p>
-                Uso indebido de identidades, instituciones o información
-                personal para generar confianza.
-              </p>
-            </article>
-
-            <article className={styles.riskCard}>
-              <span className={styles.cardNumber}>04</span>
-
-              <div className={styles.cardIcon}>
-                <InvestmentIcon />
-              </div>
-
-              <h3>Inversiones sospechosas</h3>
-
-              <p>
-                Promesas de ganancias extraordinarias o condiciones que
-                requieren especial atención.
-              </p>
-            </article>
-
-            <article className={styles.riskCard}>
-              <span className={styles.cardNumber}>05</span>
-
-              <div className={styles.cardIcon}>
-                <PhishingIcon />
-              </div>
-
-              <h3>Phishing y engaños</h3>
-
-              <p>
-                Mensajes o comunicaciones diseñadas para obtener información o
-                provocar transferencias.
-              </p>
-            </article>
-
-            <article className={styles.riskCard}>
-              <span className={styles.cardNumber}>06</span>
-
-              <div className={styles.cardIcon}>
-                <PyramidIcon />
-              </div>
-
-              <h3>Esquemas piramidales</h3>
-
-              <p>
-                Modelos que dependen principalmente de incorporar nuevos
-                participantes para sostener sus operaciones.
-              </p>
-            </article>
           </div>
         </section>
 
@@ -598,8 +619,19 @@ export default function Home() {
               y recuperar el control mediante información clara.
             </p>
 
-            <a href="/contacto" className={styles.lightButton}>
-              Comenzar una evaluación
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.lightButton} ${styles.messageWhatsAppButton}`}
+            >
+              <span className={styles.contactIcon}>
+                <WhatsAppIcon />
+              </span>
+
+              <span>Hablar por WhatsApp</span>
+
+              <span>→</span>
             </a>
           </div>
         </section>
@@ -654,11 +686,13 @@ export default function Home() {
               <h3>¿Cómo identificar una inversión sospechosa?</h3>
 
               <p>
-                Conoce algunas señales que pueden ayudarte a detectar propuestas
-                de inversión que requieren mayor atención.
+                Conoce algunas señales que pueden ayudarte a detectar
+                propuestas de inversión que requieren mayor atención.
               </p>
 
-              <a href="/articulos/inversion-sospechosa">Leer artículo →</a>
+              <a href="/articulos/inversion-sospechosa">
+                Leer artículo →
+              </a>
             </article>
 
             <article className={styles.articleCard}>
@@ -667,8 +701,8 @@ export default function Home() {
               <h3>5 señales de alerta antes de transferir dinero</h3>
 
               <p>
-                Antes de realizar una operación, existen ciertos indicadores que
-                conviene revisar.
+                Antes de realizar una operación, existen ciertos indicadores
+                que conviene revisar.
               </p>
 
               <a href="/articulos/senales-alerta-transferir-dinero">
