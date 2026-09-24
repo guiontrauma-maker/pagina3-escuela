@@ -73,60 +73,51 @@ body {
 
 /* ========================================
    LEGIBILIDAD GLOBAL
-   ========================================
-
-   Estos tamaños tienen !important porque
-   algunas páginas tienen tamaños definidos
-   directamente en sus CSS individuales.
    ======================================== */
 
-
-/* Texto normal */
+/* Texto normal de TODAS las páginas */
 p,
 li {
-  font-size: 1.05rem !important;
-  line-height: 1.75 !important;
+  font-size: 1.12rem !important;
+  line-height: 1.78 !important;
 }
 
 
 /* Textos pequeños */
 small {
-  font-size: 0.95rem !important;
+  font-size: 1rem !important;
   line-height: 1.6 !important;
 }
 
 
-/* Etiquetas, indicadores y textos auxiliares */
+/* Etiquetas y textos auxiliares */
 label {
-  font-size: 1rem !important;
+  font-size: 1.05rem !important;
   line-height: 1.5 !important;
 }
 
 
 /* Textos dentro de spans */
 span {
-  font-size: 1rem !important;
+  font-size: 1.05rem !important;
   line-height: 1.5 !important;
 }
 
 
 /* Enlaces */
 a {
-  font-size: 1rem !important;
+  font-size: 1.05rem !important;
 }
 
 
 /* Botones */
 button {
-  font-size: 1rem !important;
+  font-size: 1.05rem !important;
 }
 
 
 /* ========================================
-   NO TOCAR LOS TÍTULOS
-   Los títulos que ya quedaron bien
-   conservan sus tamaños definidos
-   en cada página.
+   TÍTULOS
    ======================================== */
 
 h1,
@@ -139,26 +130,28 @@ h6 {
 }
 
 
-
-
-
 /* ========================================
-   MEJOR LEGIBILIDAD EN PANTALLAS GRANDES
+   PANTALLAS GRANDES
    ======================================== */
 
 @media (min-width: 1200px) {
   p,
   li {
-    font-size: 1.08rem !important;
+    font-size: 1.15rem !important;
   }
 
   small {
-    font-size: 0.98rem !important;
+    font-size: 1.02rem !important;
   }
 
   span,
   label {
-    font-size: 1.02rem !important;
+    font-size: 1.07rem !important;
+  }
+
+  a,
+  button {
+    font-size: 1.07rem !important;
   }
 }
 
@@ -170,12 +163,18 @@ h6 {
 @media (max-width: 900px) {
   p,
   li {
-    font-size: 1.05rem !important;
+    font-size: 1.1rem !important;
+    line-height: 1.75 !important;
   }
 
   span,
   label {
-    font-size: 1rem !important;
+    font-size: 1.04rem !important;
+  }
+
+  a,
+  button {
+    font-size: 1.04rem !important;
   }
 }
 
@@ -191,16 +190,21 @@ h6 {
 
   p,
   li {
-    font-size: 1.03rem !important;
-    line-height: 1.7 !important;
+    font-size: 1.06rem !important;
+    line-height: 1.72 !important;
   }
 
   small {
-    font-size: 0.95rem !important;
+    font-size: 0.98rem !important;
   }
 
   span,
   label {
-    font-size: 1rem !important;
+    font-size: 1.02rem !important;
+  }
+
+  a,
+  button {
+    font-size: 1.02rem !important;
   }
 }
