@@ -9,7 +9,6 @@ const WHATSAPP_URL = `https://wa.me/${contactConfig.whatsappNumber}?text=${encod
   contactConfig.whatsappMessage
 )}`;
 
-
 const EMAIL_URL =
   "mailto:aer@asesoriaespecializada.com?subject=Solicitud%20de%20asesor%C3%ADa";
 
@@ -43,7 +42,6 @@ function CheckIcon() {
 
 /* =========================================================
    ICONOS DE RIESGO
-   Todos son SVG monocromáticos
    ========================================================= */
 
 function MoneyIcon() {
@@ -94,11 +92,23 @@ function PyramidIcon() {
   );
 }
 
+/* =========================================================
+   INICIO
+   ========================================================= */
 
-          {/* ===================================================
-              PANEL
-              =================================================== */}
+export default function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
+  return (
+    <>
+      <Navbar />
+
+      <main>
+        {/* ===================================================
+            PANEL PRINCIPAL
+            =================================================== */}
+
+        <section>
           <div className={styles.panelWrapper}>
             <div className={styles.operationalPanel}>
               <div className={styles.panelHeader}>
@@ -117,7 +127,7 @@ function PyramidIcon() {
 
                 <div className={styles.status}>
                   <span></span>
-                  Respuesta agil 
+                  Respuesta agil
                 </div>
               </div>
 
@@ -138,25 +148,22 @@ function PyramidIcon() {
                 <div className={styles.statCard}>
                   <span className={styles.statIndex}>Nuestros</span>
 
-                  <strong className={styles.statNumber}>365 d </strong>
+                  <strong className={styles.statNumber}>365 d</strong>
 
                   <span className={styles.statLabel}>
                     Disponible todo el año
                     <br />
-                  
                   </span>
                 </div>
 
                 <div className={styles.statCard}>
-                  <span className={styles.statIndex}>Denuncias </span>
+                  <span className={styles.statIndex}>Denuncias</span>
 
                   <strong className={styles.statNumber}>
                     +10,000<span className={styles.statPlus}>h</span>
                   </strong>
 
-                  <span className={styles.statLabel}>
-                    atendidas
-                  </span>
+                  <span className={styles.statLabel}>atendidas</span>
                 </div>
               </div>
 
@@ -174,31 +181,30 @@ function PyramidIcon() {
 
                 <div className={styles.contactOptions}>
                   <a
-  href={WHATSAPP_URL}
-  target="_blank"
-  rel="noopener noreferrer"
-  className={`${styles.contactOption} ${styles.whatsappOption}`}
-  aria-label="Hablar ahora por WhatsApp"
-  title="Hablar ahora por WhatsApp"
->
-  <span className={styles.contactIcon}>
-    <WhatsAppIcon />
-  </span>
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styles.contactOption} ${styles.whatsappOption}`}
+                    aria-label="Hablar ahora por WhatsApp"
+                    title="Hablar ahora por WhatsApp"
+                  >
+                    <span className={styles.contactIcon}>
+                      <WhatsAppIcon />
+                    </span>
 
-  <span className={styles.contactText}>Hablar ahora</span>
-</a>
+                    <span className={styles.contactText}>Hablar ahora</span>
+                  </a>
 
-  <a
-  href={EMAIL_URL}
-  className={`${styles.contactOption} ${styles.emailOption}`}
-  aria-label="Contactar por correo electrónico"
-  title="Contactar por correo electrónico"
->
-  <span className={styles.contactIcon}>
-    <EmailIcon />
-  </span>
-
-</a>
+                  <a
+                    href={EMAIL_URL}
+                    className={`${styles.contactOption} ${styles.emailOption}`}
+                    aria-label="Contactar por correo electrónico"
+                    title="Contactar por correo electrónico"
+                  >
+                    <span className={styles.contactIcon}>
+                      <EmailIcon />
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -206,24 +212,16 @@ function PyramidIcon() {
         </section>
 
         {/* =====================================================
-    IDENTIDAD / RECUPERACIÓN DE FONDOS
-    ===================================================== */}
+            IDENTIDAD / RECUPERACIÓN DE FONDOS
+            ===================================================== */}
 
         <section className={styles.identity}>
           <div className={styles.identityInner}>
-            {/* =================================================
-        CONTENIDO IZQUIERDO
-        ================================================= */}
-
             <div className={styles.identityContent}>
               <h2>
                 Recupera tu dinero perdido con la ayuda de nuestros asesores
                 expertos
               </h2>
-
-              {/* =================================================
-          PROBLEMA 01
-          ================================================= */}
 
               <div className={styles.identityProblem}>
                 <div className={styles.identityProblemIcon}>
@@ -246,10 +244,6 @@ function PyramidIcon() {
                 </div>
               </div>
 
-              {/* =================================================
-          PROBLEMA 02
-          ================================================= */}
-
               <div className={styles.identityProblem}>
                 <div className={styles.identityProblemIcon}>
                   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -262,17 +256,13 @@ function PyramidIcon() {
 
                   <p>
                     La manipulación de precios y la falta de transparencia son
-                    prácticas que pueden presentarse en plataformas o brokers no
-                    regulados. Analizamos la información disponible para
+                    prácticas que pueden presentarse en plataformas o brokers
+                    no regulados. Analizamos la información disponible para
                     identificar posibles irregularidades y determinar las
                     alternativas correspondientes.
                   </p>
                 </div>
               </div>
-
-              {/* =================================================
-          PROBLEMA 03
-          ================================================= */}
 
               <div className={styles.identityProblem}>
                 <div className={styles.identityProblemIcon}>
@@ -287,16 +277,12 @@ function PyramidIcon() {
                   <p>
                     Si tus fondos fueron comprometidos mediante phishing,
                     suplantación, accesos no autorizados u otras formas de
-                    fraude digital, nuestro equipo puede ayudarte a organizar la
-                    información y analizar las operaciones relacionadas.
+                    fraude digital, nuestro equipo puede ayudarte a organizar
+                    la información y analizar las operaciones relacionadas.
                   </p>
                 </div>
               </div>
             </div>
-
-            {/* =================================================
-        ESPACIO PARA LA FOTO
-        ================================================= */}
 
             <div className={styles.identityImageWrapper}>
               <div className={styles.identityImageFrame}>
@@ -434,8 +420,8 @@ function PyramidIcon() {
             <h2>Cómo te ayudamos</h2>
 
             <p>
-              Convertimos información compleja en un proceso más claro, ordenado
-              y fácil de comprender.
+              Convertimos información compleja en un proceso más claro,
+              ordenado y fácil de comprender.
             </p>
           </div>
 
@@ -504,8 +490,8 @@ function PyramidIcon() {
 
             <p>
               Cuando ocurre un fraude, tomar decisiones puede resultar
-              complicado. Nuestro objetivo es ayudarte a entender la situación y
-              recuperar el control mediante información clara.
+              complicado. Nuestro objetivo es ayudarte a entender la situación
+              y recuperar el control mediante información clara.
             </p>
 
             <a href="/contacto" className={styles.lightButton}>
@@ -577,8 +563,8 @@ function PyramidIcon() {
               <h3>5 señales de alerta antes de transferir dinero</h3>
 
               <p>
-                Antes de realizar una operación, existen ciertos indicadores que
-                conviene revisar.
+                Antes de realizar una operación, existen ciertos indicadores
+                que conviene revisar.
               </p>
 
               <a href="/articulos/senales-alerta-transferir-dinero">
@@ -626,16 +612,14 @@ function PyramidIcon() {
                   setOpenFaq(openFaq === 0 ? null : 0);
                 }}
               >
-                ¿VALTARA puede recuperar mi
-                dinero?
+                ¿VALTARA puede recuperar mi dinero?
                 <span>+</span>
               </summary>
 
               <p>
-                VALTARA funciona como una
-                plataforma de orientación y seguimiento. La recuperación de
-                fondos depende de las características y circunstancias de cada
-                caso.
+                VALTARA funciona como una plataforma de orientación y
+                seguimiento. La recuperación de fondos depende de las
+                características y circunstancias de cada caso.
               </p>
             </details>
 
@@ -713,7 +697,10 @@ function PyramidIcon() {
               información.
             </p>
 
-            <a href="/identificacion-de-fraude" className={styles.finalButton}>
+            <a
+              href="/identificacion-de-fraude"
+              className={styles.finalButton}
+            >
               Iniciar evaluación
             </a>
 
