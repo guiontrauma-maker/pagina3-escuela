@@ -31,7 +31,6 @@ function CheckIcon() {
 
 /* =========================================================
    ICONOS DE RIESGO
-   Todos son SVG monocromáticos
    ========================================================= */
 
 function MoneyIcon() {
@@ -94,17 +93,21 @@ export default function Home() {
       <Navbar />
 
       <main className={styles.home}>
+
         {/* =====================================================
             HERO
             ===================================================== */}
 
         <section className={styles.hero} id="inicio">
-          {/* Fondo independiente para animarlo desde CSS */}
+
+          {/* Fondo animado del Hero */}
           <div className={styles.heroBackground}></div>
 
           <div className={styles.heroGlow}></div>
 
+          {/* CONTENIDO IZQUIERDO */}
           <div className={styles.heroContent}>
+
             <div className={styles.badge}>
               <span className={styles.badgeDot}></span>
               VALTARA
@@ -133,12 +136,7 @@ export default function Home() {
                   <WhatsAppIcon />
                 </span>
 
-                <span className={styles.whatsappHeroText}>
-                  <strong>Solicitar Evaluación Gratuita</strong>
-                  <small>Atención directa por WhatsApp</small>
-                </span>
-
-                <span className={styles.whatsappHeroArrow}>→</span>
+                <strong>Solicitar Evaluación Gratuita</strong>
               </a>
             </div>
 
@@ -146,118 +144,87 @@ export default function Home() {
               <span className={styles.noteIcon}>
                 <CheckIcon />
               </span>
+
               Orientación inicial · Información confidencial
             </div>
           </div>
 
           {/* ===================================================
-              PANEL
+              PANEL DERECHO
               =================================================== */}
 
           <div className={styles.panelWrapper}>
             <div className={styles.operationalPanel}>
-              <div className={styles.panelHeader}>
-                <div className={styles.panelHeaderContent}>
-                  <h2>
-                    Tu patrimonio,
-                    <br />
-                    bajo una segunda mirada.
-                  </h2>
-
-                  <p>
-                    Indicadores generales para ayudarte a comprender posibles
-                    situaciones de riesgo patrimonial.
-                  </p>
-                </div>
-
-                <div className={styles.status}>
-                  <span></span>
-                  Plataforma activa
-                </div>
-              </div>
-
-              <div className={styles.panelDivider}></div>
 
               {/* =================================================
-                  6 INDICADORES
+                  INDICADORES NUEVOS
                   ================================================= */}
 
               <div className={styles.statsGrid}>
+
+                {/* +12,000 */}
                 <div className={styles.statCard}>
-                  <span className={styles.statIndex}>Casos</span>
-
-                  <strong className={styles.statNumber}>+12,000</strong>
-
-                  <span className={styles.statLabel}>
-                    Casos
-                    <br />
-                    atendidos
-                  </span>
-                </div>
-
-                <div className={styles.statCard}>
-                  <span className={styles.statIndex}>Protección</span>
-
-                  <strong className={styles.statNumber}>100%</strong>
-
-                  <span className={styles.statLabel}>
-                    Información
-                    <br />
-                    protegida
-                  </span>
-                </div>
-
-                <div className={styles.statCard}>
-                  <span className={styles.statIndex}>Resultados</span>
-
-                  <strong className={styles.statNumber}>98%</strong>
-
-                  <span className={styles.statLabel}>
-                    Casos
-                    <br />
-                    resueltos
-                  </span>
-                </div>
-
-                <div className={styles.statCard}>
-                  <span className={styles.statIndex}>Atención</span>
-
                   <strong className={styles.statNumber}>
-                    24<span className={styles.statPlus}>h</span>
+                    +12,000
                   </strong>
 
                   <span className={styles.statLabel}>
-                    Respuesta
+                    DENUNCIAS
                     <br />
-                    ágil
+                    ATENDIDAS
                   </span>
                 </div>
 
+                {/* 100% Seguro */}
                 <div className={styles.statCard}>
-                  <span className={styles.statIndex}>Disponibilidad</span>
+                  <strong className={styles.statTitle}>
+                    100% Seguro
+                  </strong>
 
+                  <span className={styles.statDescription}>
+                    Tus datos viajan con cifrado de extremo a extremo.
+                    Nadie más que tú accede a tu denuncia.
+                  </span>
+                </div>
+
+                {/* 98% */}
+                <div className={styles.statCard}>
                   <strong className={styles.statNumber}>
-                    365<span className={styles.statPlus}>d</span>
+                    98%
                   </strong>
 
                   <span className={styles.statLabel}>
-                    Disponible
+                    CASOS
                     <br />
-                    todo el año
+                    RESUELTOS
                   </span>
                 </div>
 
+                {/* Respuesta ágil */}
                 <div className={styles.statCard}>
-                  <span className={styles.statIndex}>Análisis</span>
+                  <strong className={styles.statTitle}>
+                    Respuesta ágil
+                  </strong>
 
-                  <strong className={styles.statNumber}>18</strong>
+                  <span className={styles.statDescription}>
+                    Nuestro equipo analiza tu caso en menos de 24 horas y te
+                    contacta de inmediato.
+                  </span>
+                </div>
+
+                {/* 365 d */}
+                <div className={styles.statCard}>
+                  <strong className={styles.statNumber}>
+                    365 <span className={styles.statPlus}>d</span>
+                  </strong>
 
                   <span className={styles.statLabel}>
-                    Indicadores
+                    DISPONIBLE
                     <br />
-                    de riesgo
+                    TODO EL AÑO
                   </span>
                 </div>
+
               </div>
 
               {/* =================================================
@@ -265,6 +232,7 @@ export default function Home() {
                   ================================================= */}
 
               <div className={styles.panelContact}>
+
                 <div className={styles.panelContactText}>
                   <span>ORIENTACIÓN DIRECTA</span>
 
@@ -289,9 +257,12 @@ export default function Home() {
                       <WhatsAppIcon />
                     </span>
 
-                    <span className={styles.contactText}>Hablar ahora</span>
+                    <span className={styles.contactText}>
+                      Hablar ahora
+                    </span>
                   </a>
                 </div>
+
               </div>
             </div>
           </div>
@@ -302,8 +273,8 @@ export default function Home() {
             ===================================================== */}
 
         <section className={styles.riskSection} id="fraude">
+
           <div className={styles.sectionIntro}>
-            <span>IDENTIFICACIÓN</span>
 
             <h2>
               Los tipos de fraudes
@@ -315,14 +286,15 @@ export default function Home() {
               Identifica el tipo de fraude que sufriste y recibe orientación
               para conocer los siguientes pasos.
             </p>
+
           </div>
 
           <div className={styles.riskGrid}>
+
+            {/* 1. INVERSIONES */}
             <article
               className={`${styles.riskCard} ${styles.featuredRiskCard}`}
             >
-              <span className={styles.cardNumber}>01</span>
-
               <div className={styles.cardIcon}>
                 <InvestmentIcon />
               </div>
@@ -344,11 +316,10 @@ export default function Home() {
               </a>
             </article>
 
+            {/* 2. TAREAS REMUNERADAS */}
             <article
               className={`${styles.riskCard} ${styles.featuredRiskCard}`}
             >
-              <span className={styles.cardNumber}>02</span>
-
               <div className={styles.cardIcon}>
                 <DigitalIcon />
               </div>
@@ -370,11 +341,10 @@ export default function Home() {
               </a>
             </article>
 
+            {/* 3. COMPRAS FRAUDULENTAS */}
             <article
               className={`${styles.riskCard} ${styles.featuredRiskCard}`}
             >
-              <span className={styles.cardNumber}>03</span>
-
               <div className={styles.cardIcon}>
                 <MoneyIcon />
               </div>
@@ -397,9 +367,8 @@ export default function Home() {
               </a>
             </article>
 
+            {/* 4. AFORE */}
             <article className={styles.riskCard}>
-              <span className={styles.cardNumber}>04</span>
-
               <div className={styles.cardIcon}>
                 <IdentityIcon />
               </div>
@@ -421,14 +390,13 @@ export default function Home() {
               </a>
             </article>
 
+            {/* 5. OFERTAS LABORALES */}
             <article className={styles.riskCard}>
-              <span className={styles.cardNumber}>05</span>
-
               <div className={styles.cardIcon}>
                 <PhishingIcon />
               </div>
 
-              <h3>Ofertas laborales fraudulentas</h3>
+              <h3>Ofertas laborales falsas en el extranjero</h3>
 
               <p>
                 Supuestas oportunidades de empleo que pueden pedir dinero,
@@ -444,6 +412,30 @@ export default function Home() {
                 Denunciar →
               </a>
             </article>
+
+            {/* 6. PRÉSTAMOS */}
+            <article className={styles.riskCard}>
+              <div className={styles.cardIcon}>
+                <PyramidIcon />
+              </div>
+
+              <h3>Préstamos engañosos</h3>
+
+              <p>
+                Ofertas de crédito que solicitan anticipos, depósitos,
+                comisiones o información personal bajo condiciones engañosas.
+              </p>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.reportLink}
+              >
+                Denunciar →
+              </a>
+            </article>
+
           </div>
         </section>
 
@@ -453,7 +445,9 @@ export default function Home() {
 
         <section className={styles.identity}>
           <div className={styles.identityInner}>
+
             <div className={styles.identityContent}>
+
               <h2>
                 Recupera tu dinero perdido con la ayuda de nuestros asesores
                 expertos
@@ -467,7 +461,9 @@ export default function Home() {
                 </div>
 
                 <div className={styles.identityProblemContent}>
-                  <h3>Problema – Estafas en plataformas de trading</h3>
+                  <h3>
+                    Problema – Estafas en plataformas de trading
+                  </h3>
 
                   <p>
                     Las plataformas fraudulentas de trading prometen grandes
@@ -488,7 +484,9 @@ export default function Home() {
                 </div>
 
                 <div className={styles.identityProblemContent}>
-                  <h3>Problema – Manipulación de precios en plataformas</h3>
+                  <h3>
+                    Problema – Manipulación de precios en plataformas
+                  </h3>
 
                   <p>
                     La manipulación de precios y la falta de transparencia son
@@ -520,6 +518,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+
             </div>
 
             <div className={styles.identityImageWrapper}>
@@ -531,6 +530,7 @@ export default function Home() {
                 />
               </div>
             </div>
+
           </div>
         </section>
 
@@ -539,7 +539,9 @@ export default function Home() {
             ===================================================== */}
 
         <section className={styles.processSection} id="como-funciona">
+
           <div className={styles.processHeading}>
+
             <span>NUESTRO PROCESO</span>
 
             <h2>Cómo te ayudamos</h2>
@@ -548,9 +550,11 @@ export default function Home() {
               Convertimos información compleja en un proceso más claro,
               ordenado y fácil de comprender.
             </p>
+
           </div>
 
           <div className={styles.processGrid}>
+
             <article className={styles.processItem}>
               <span>01</span>
 
@@ -594,6 +598,7 @@ export default function Home() {
                 proceso.
               </p>
             </article>
+
           </div>
         </section>
 
@@ -602,10 +607,14 @@ export default function Home() {
             ===================================================== */}
 
         <section className={styles.messageSection}>
+
           <div className={styles.messageBox}>
+
             <div className={styles.messageAccent}></div>
 
-            <span>UNA SITUACIÓN DIFÍCIL NO TIENE QUE SER CONFUSA</span>
+            <span>
+              UNA SITUACIÓN DIFÍCIL NO TIENE QUE SER CONFUSA
+            </span>
 
             <h2>
               No estás frente
@@ -633,34 +642,7 @@ export default function Home() {
 
               <span>→</span>
             </a>
-          </div>
-        </section>
 
-        {/* =====================================================
-            TIPOS DE CASOS
-            ===================================================== */}
-
-        <section className={styles.casesSection}>
-          <div className={styles.sectionIntroCentered}>
-            <span>CASOS</span>
-
-            <h2>Situaciones que podemos ayudarte a identificar</h2>
-
-            <p>
-              Algunos de los escenarios más comunes relacionados con riesgos
-              patrimoniales y financieros.
-            </p>
-          </div>
-
-          <div className={styles.caseTags}>
-            <span>Fraude bancario</span>
-            <span>Inversiones fraudulentas</span>
-            <span>Criptomonedas</span>
-            <span>Phishing</span>
-            <span>Suplantación de identidad</span>
-            <span>Esquemas piramidales</span>
-            <span>Fraudes inmobiliarios</span>
-            <span>Comercio electrónico</span>
           </div>
         </section>
 
@@ -669,7 +651,9 @@ export default function Home() {
             ===================================================== */}
 
         <section className={styles.knowledgeSection}>
+
           <div className={styles.knowledgeHeading}>
+
             <span>CENTRO DE CONOCIMIENTO</span>
 
             <h2>
@@ -677,13 +661,18 @@ export default function Home() {
               <br />
               mejores decisiones.
             </h2>
+
           </div>
 
           <div className={styles.articleGrid}>
+
             <article className={styles.articleCard}>
+
               <span>PREVENCIÓN</span>
 
-              <h3>¿Cómo identificar una inversión sospechosa?</h3>
+              <h3>
+                ¿Cómo identificar una inversión sospechosa?
+              </h3>
 
               <p>
                 Conoce algunas señales que pueden ayudarte a detectar
@@ -693,12 +682,16 @@ export default function Home() {
               <a href="/articulos/inversion-sospechosa">
                 Leer artículo →
               </a>
+
             </article>
 
             <article className={styles.articleCard}>
+
               <span>SEGURIDAD</span>
 
-              <h3>5 señales de alerta antes de transferir dinero</h3>
+              <h3>
+                5 señales de alerta antes de transferir dinero
+              </h3>
 
               <p>
                 Antes de realizar una operación, existen ciertos indicadores
@@ -708,12 +701,16 @@ export default function Home() {
               <a href="/articulos/senales-alerta-transferir-dinero">
                 Leer artículo →
               </a>
+
             </article>
 
             <article className={styles.articleCard}>
+
               <span>ORIENTACIÓN</span>
 
-              <h3>¿Qué hacer después de una posible estafa?</h3>
+              <h3>
+                ¿Qué hacer después de una posible estafa?
+              </h3>
 
               <p>
                 Una guía inicial para organizar la información y comprender los
@@ -723,7 +720,9 @@ export default function Home() {
               <a href="/articulos/que-hacer-despues-de-una-estafa">
                 Leer artículo →
               </a>
+
             </article>
+
           </div>
         </section>
 
@@ -732,7 +731,9 @@ export default function Home() {
             ===================================================== */}
 
         <section className={styles.faqSection}>
+
           <div className={styles.faqHeading}>
+
             <span>PREGUNTAS FRECUENTES</span>
 
             <h2>
@@ -740,9 +741,11 @@ export default function Home() {
               <br />
               para tus dudas.
             </h2>
+
           </div>
 
           <div className={styles.faqList}>
+
             <details open={openFaq === 0}>
               <summary
                 onClick={(event) => {
@@ -811,6 +814,7 @@ export default function Home() {
                 transferencias hasta comprender mejor la situación.
               </p>
             </details>
+
           </div>
         </section>
 
@@ -819,9 +823,11 @@ export default function Home() {
             ===================================================== */}
 
         <section className={styles.finalCta}>
+
           <div className={styles.finalCtaGlow}></div>
 
           <div className={styles.finalCtaContent}>
+
             <span>VALTARA</span>
 
             <h2>
@@ -836,7 +842,9 @@ export default function Home() {
             </p>
 
             <a
-              href="/identificacion-de-fraude"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.finalButton}
             >
               Iniciar evaluación
@@ -845,16 +853,10 @@ export default function Home() {
             <div className={styles.finalMotto}>
               Tu patrimonio, nuestra prioridad.
             </div>
+
           </div>
         </section>
 
-        {/* =====================================================
-            FOOTER SPACE
-            ===================================================== */}
-
-        <div className={styles.footerSpace}>
-          <span>VALTARA</span>
-        </div>
       </main>
     </>
   );
