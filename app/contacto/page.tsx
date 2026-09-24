@@ -1,6 +1,5 @@
 "use client";
 
-import { FormEvent, useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import { contactConfig } from "@/components/contact/contactConfig";
 import styles from "./page.module.css";
@@ -13,54 +12,6 @@ const EMAIL_URL =
   "mailto:aer@asesoriaespecializada.com?subject=Solicitud%20de%20orientación";
 
 export default function ContactoPage() {
-  const [submitted, setSubmitted] = useState(false);
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      countryCode: formData.get("countryCode"),
-      phone: formData.get("phone"),
-      currency: formData.get("currency"),
-      amount: formData.get("amount"),
-      caseType: formData.get("caseType"),
-      description: formData.get("description"),
-      privacy: formData.get("privacy") === "on",
-    };
-
-    try {
-      const response = await fetch("/api/contacto", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(
-          result.message || "No fue posible enviar el formulario.",
-        );
-      }
-
-      setSubmitted(true);
-      form.reset();
-    } catch (error) {
-      console.error("Error al enviar el formulario:", error);
-
-      alert(
-        "No fue posible enviar la información. Por favor, inténtalo nuevamente.",
-      );
-    }
-  }
-
   return (
     <>
       <Navbar />
@@ -85,7 +36,7 @@ export default function ContactoPage() {
 
             <p>
               Si consideras que tu patrimonio pudo haber estado expuesto a una
-              situación irregular, puedes compartir la información de tu caso
+              situación irregular, puedes comunicarte directamente con nosotros
               para recibir una primera orientación.
             </p>
           </div>
@@ -94,242 +45,128 @@ export default function ContactoPage() {
             <span>01</span>
 
             <p>
-              La información inicial nos ayuda a comprender el contexto antes
-              de determinar cuáles podrían ser los siguientes pasos.
+              Una conversación inicial nos permite comprender el contexto y
+              conocer los elementos principales de tu situación antes de
+              determinar cuáles podrían ser los siguientes pasos.
             </p>
           </div>
         </section>
 
         {/* =====================================================
-            CONTENIDO PRINCIPAL
+            CONTACTO PRINCIPAL
             ===================================================== */}
 
         <section className={styles.mainSection}>
           <div className={styles.mainGrid}>
             {/* =================================================
-                FORMULARIO
+                CONTACTO DIRECTO
                 ================================================= */}
 
-            <div className={styles.formColumn}>
-              <div className={styles.formHeader}>
+            <div className={styles.contactColumn}>
+              <div className={styles.contactHeader}>
                 <span className={styles.sectionLabel}>
-                  INFORMACIÓN DEL CASO
+                  CONTACTO DIRECTO
                 </span>
 
                 <h2>
-                  Comparte los detalles
+                  Hablemos
                   <br />
-                  principales.
+                  <em>directamente.</em>
                 </h2>
 
                 <p>
-                  No necesitas conocer términos técnicos. Describe la situación
-                  con tus propias palabras y proporciona únicamente la
-                  información que consideres necesaria.
+                  Si prefieres no completar un formulario, puedes comunicarte
+                  directamente con nosotros. Explícanos brevemente qué ocurrió
+                  y te orientaremos sobre la información que puede ser útil para
+                  comprender tu situación.
                 </p>
               </div>
 
-              <form className={styles.caseForm} onSubmit={handleSubmit}>
-                {/* NOMBRE */}
+              {/* =================================================
+                  WHATSAPP PRINCIPAL
+                  ================================================= */}
 
-                <div className={styles.formGroup}>
-                  <label htmlFor="name">Nombre completo</label>
-
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Escribe tu nombre"
-                    required
-                  />
-                </div>
-
-                {/* CORREO */}
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="email">Correo electrónico</label>
-
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="nombre@correo.com"
-                    required
-                  />
-                </div>
-
-                {/* TELEFONO */}
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="phone">Número de teléfono</label>
-
-                  <div className={styles.phoneRow}>
-                    <select
-                      name="countryCode"
-                      aria-label="Código de país"
-                      defaultValue="+52"
-                    >
-                      <option value="+52">🇲🇽 +52</option>
-                      <option value="+1">🇺🇸 +1</option>
-                      <option value="+1">🇨🇦 +1</option>
-                      <option value="+34">🇪🇸 +34</option>
-                      <option value="+57">🇨🇴 +57</option>
-                      <option value="+54">🇦🇷 +54</option>
-                      <option value="+56">🇨🇱 +56</option>
-                      <option value="+51">🇵🇪 +51</option>
-                      <option value="+55">🇧🇷 +55</option>
-                      <option value="+44">🇬🇧 +44</option>
-                    </select>
-
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="Número de teléfono"
-                      required
-                    />
-                  </div>
-                </div>
-
-                {/* MONTO */}
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="amount">Monto aproximado involucrado</label>
-
-                  <div className={styles.amountRow}>
-                    <select
-                      name="currency"
-                      aria-label="Moneda"
-                      defaultValue="MXN"
-                    >
-                      <option value="MXN">MXN</option>
-                      <option value="USD">USD</option>
-                      <option value="EUR">EUR</option>
-                      <option value="COP">COP</option>
-                      <option value="ARS">ARS</option>
-                      <option value="CLP">CLP</option>
-                    </select>
-
-                    <input
-                      id="amount"
-                      name="amount"
-                      type="text"
-                      inputMode="decimal"
-                      placeholder="Ej. 150,000"
-                    />
-                  </div>
-
-                  <span className={styles.fieldHint}>
-                    Si no conoces el monto exacto, puedes proporcionar una
-                    cantidad aproximada.
+              <div className={styles.whatsappCard}>
+                <div className={styles.whatsappTop}>
+                  <span className={styles.whatsappLabel}>
+                    CANAL PRINCIPAL
                   </span>
+
+                  <span className={styles.whatsappNumber}>01</span>
                 </div>
 
-                {/* TIPO DE CASO */}
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="caseType">Tipo de situación</label>
-
-                  <select
-                    id="caseType"
-                    name="caseType"
-                    defaultValue=""
-                    required
+                <div className={styles.whatsappIcon}>
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
-                    <option value="" disabled>
-                      Selecciona una opción
-                    </option>
-
-                    <option value="fraude-bancario">Fraude bancario</option>
-
-                    <option value="inversion">Inversión sospechosa</option>
-
-                    <option value="criptomonedas">Criptomonedas</option>
-
-                    <option value="phishing">Phishing o engaño digital</option>
-
-                    <option value="suplantacion">
-                      Suplantación de identidad
-                    </option>
-
-                    <option value="inmobiliario">Fraude inmobiliario</option>
-
-                    <option value="comercio">Comercio electrónico</option>
-
-                    <option value="piramidal">Esquema piramidal</option>
-
-                    <option value="otro">Otro</option>
-                  </select>
+                    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.3-1.65a11.85 11.85 0 0 0 5.71 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.43ZM12.07 21.8h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.86 9.86 0 0 1-1.51-5.27C2.19 6.44 6.63 2 12.07 2a9.86 9.86 0 0 1 7.01 2.91 9.84 9.84 0 0 1 2.9 7c0 5.45-4.44 9.89-9.91 9.89Zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z" />
+                  </svg>
                 </div>
 
-                {/* DESCRIPCIÓN */}
+                <h3>Hablar por WhatsApp</h3>
 
-                <div className={styles.formGroup}>
-                  <label htmlFor="description">Describe lo ocurrido</label>
+                <p>
+                  Comunícate directamente con nuestro equipo para explicar tu
+                  situación y recibir una primera orientación.
+                </p>
 
-                  <textarea
-                    id="description"
-                    name="description"
-                    rows={7}
-                    placeholder="Cuéntanos brevemente qué ocurrió, cómo comenzó la situación y qué sucedió después..."
-                    required
-                  />
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.whatsappButton}
+                >
+                  Abrir conversación en WhatsApp
+                  <span>↗</span>
+                </a>
 
-                  <span className={styles.fieldHint}>
-                    Evita compartir contraseñas, códigos de seguridad, números
-                    completos de tarjetas o información que no sea necesaria
-                    para comprender el caso.
+                <span className={styles.whatsappHint}>
+                  Atención directa · Primera orientación
+                </span>
+              </div>
+
+              {/* =================================================
+                  CORREO
+                  ================================================= */}
+
+              <div className={styles.emailCard}>
+                <div>
+                  <span className={styles.emailLabel}>
+                    OTRA FORMA DE CONTACTO
                   </span>
+
+                  <h3>También puedes escribirnos por correo.</h3>
+
+                  <p>
+                    Si prefieres explicar tu situación con mayor detalle,
+                    puedes enviarnos un mensaje directamente.
+                  </p>
                 </div>
 
-                {/* CHECKBOX */}
+                <a href={EMAIL_URL} className={styles.emailButton}>
+                  aer@asesoriaespecializada.com
+                  <span>↗</span>
+                </a>
+              </div>
 
-                <label className={styles.checkboxRow}>
-                  <input type="checkbox" name="privacy" required />
+              {/* =================================================
+                  NOTA DE SEGURIDAD
+                  ================================================= */}
 
-                  <span>
-                    Confirmo que la información proporcionada es correcta y
-                    acepto que sea utilizada para analizar mi solicitud de
-                    orientación.
-                  </span>
-                </label>
+              <div className={styles.contactSecurity}>
+                <span className={styles.contactSecurityIcon}>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 4 0v2h-4V6Zm7 14H7V10h10v10Zm-5-3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+                  </svg>
+                </span>
 
-                {/* BOTÓN */}
-
-                <button type="submit" className={styles.submitButton}>
-                  Enviar información del caso
-                  <span>→</span>
-                </button>
-
-                {/* AVISO */}
-
-                <div className={styles.securityNote}>
-                  <span className={styles.lockIcon}>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 4 0v2h-4V6Zm7 14H7V10h10v10Zm-5-3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
-                    </svg>
-                  </span>
-
-                  <span>
-                    Tu información se trata con carácter confidencial y se
-                    utiliza únicamente para dar seguimiento a tu solicitud.
-                  </span>
-                </div>
-
-                {/* CONFIRMACIÓN */}
-
-                {submitted && (
-                  <div className={styles.successMessage}>
-                    <strong>Información recibida.</strong>
-
-                    <span>
-                      Tu solicitud quedó registrada para una primera revisión.
-                      Nos pondremos en contacto utilizando los datos
-                      proporcionados.
-                    </span>
-                  </div>
-                )}
-              </form>
+                <p>
+                  No compartas contraseñas, códigos de seguridad, números
+                  completos de tarjetas ni información confidencial que no sea
+                  necesaria para explicar tu situación.
+                </p>
+              </div>
             </div>
 
             {/* =================================================
@@ -340,15 +177,17 @@ export default function ContactoPage() {
               <div className={styles.sideCard}>
                 <span className={styles.sideNumber}>01</span>
 
-                <span className={styles.sideLabel}>ANTES DE ENVIAR</span>
+                <span className={styles.sideLabel}>
+                  ANTES DE CONTACTARNOS
+                </span>
 
                 <h3>
-                  Una buena descripción ayuda a entender mejor tu situación.
+                  Una explicación clara ayuda a comprender mejor tu situación.
                 </h3>
 
                 <p>
-                  Puedes comenzar explicando cómo conociste la propuesta, qué te
-                  ofrecieron, qué cantidad involucraste y qué ocurrió
+                  Puedes comenzar explicando cómo conociste la propuesta, qué
+                  te ofrecieron, qué cantidad involucraste y qué ocurrió
                   posteriormente.
                 </p>
               </div>
@@ -362,9 +201,11 @@ export default function ContactoPage() {
                   <span className={styles.stepNumber}>01</span>
 
                   <div>
-                    <strong>Recibimos tu información</strong>
+                    <strong>Escuchamos tu situación</strong>
 
-                    <p>Revisamos los datos iniciales que proporcionaste.</p>
+                    <p>
+                      Conocemos los datos iniciales que decidas compartir.
+                    </p>
                   </div>
                 </div>
 
@@ -375,8 +216,7 @@ export default function ContactoPage() {
                     <strong>Comprendemos el contexto</strong>
 
                     <p>
-                      Identificamos los elementos principales de la situación
-                      descrita.
+                      Identificamos los elementos principales de lo ocurrido.
                     </p>
                   </div>
                 </div>
@@ -396,11 +236,11 @@ export default function ContactoPage() {
               </div>
 
               <div className={styles.directContact}>
-                <span>¿PREFIERES CONTACTARNOS DIRECTAMENTE?</span>
+                <span>¿PREFIERES OTRO CANAL?</span>
 
                 <p>
-                  También puedes solicitar orientación mediante nuestros
-                  canales de contacto.
+                  También puedes comunicarte con nosotros mediante correo
+                  electrónico.
                 </p>
 
                 <div className={styles.directLinks}>
@@ -483,7 +323,7 @@ export default function ContactoPage() {
 
         <section className={styles.closingSection}>
           <div className={styles.closingContent}>
-            <span>VALTARA </span>
+            <span>VALTARA</span>
 
             <h2>
               Entender lo ocurrido
