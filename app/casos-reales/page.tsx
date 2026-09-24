@@ -928,7 +928,7 @@ export default function CasosReales() {
           <div>
 
             <span>
-              AER
+              VALTARA
             </span>
 
             <h2>
